@@ -20,12 +20,13 @@ class BlogSeeder extends Seeder
         $uiux = Divisi::where('slug', 'multimedia-ui-ux-design')->first();
         $bph = Divisi::where('slug', 'badan-pengurus-harian')->first();
 
-        $defaultDivisiId = $web?->id ?? Divisi::first()?->id ?? 1;
-        $authorId = $admin?->id ?? 1;
+        $defaultDivisi = Divisi::first();
+        $defaultDivisiId = $web ? $web->id : ($defaultDivisi ? $defaultDivisi->id : 1);
+        $authorId = $admin ? $admin->id : 1;
 
         $articles = [
             [
-                'divisi_id' => $web?->id ?? $defaultDivisiId,
+                'divisi_id' => $web ? $web->id : $defaultDivisiId,
                 'author_id' => $authorId,
                 'judul' => 'Mengenal Ekosistem Open Source Modern di Lingkungan Kampus',
                 'slug' => 'mengenal-ekosistem-open-source-modern-di-lingkungan-kampus',
@@ -38,7 +39,7 @@ class BlogSeeder extends Seeder
                 'published_at' => Carbon::now()->subDays(10),
             ],
             [
-                'divisi_id' => $web?->id ?? $defaultDivisiId,
+                'divisi_id' => $web ? $web->id : $defaultDivisiId,
                 'author_id' => $authorId,
                 'judul' => 'Panduan Memulai Inertia.js dengan Vue 3 dan Laravel 11',
                 'slug' => 'panduan-memulai-inertia-js-dengan-vue-3-dan-laravel-11',
@@ -51,7 +52,7 @@ class BlogSeeder extends Seeder
                 'published_at' => Carbon::now()->subDays(5),
             ],
             [
-                'divisi_id' => $uiux?->id ?? $defaultDivisiId,
+                'divisi_id' => $uiux ? $uiux->id : $defaultDivisiId,
                 'author_id' => $authorId,
                 'judul' => 'Prinsip Desain Antarmuka Glassmorphism & Aksesibilitas Web',
                 'slug' => 'prinsip-desain-antarmuka-glassmorphism-aksesibilitas-web',
@@ -64,7 +65,7 @@ class BlogSeeder extends Seeder
                 'published_at' => Carbon::now()->subDays(2),
             ],
             [
-                'divisi_id' => $bph?->id ?? $defaultDivisiId,
+                'divisi_id' => $bph ? $bph->id : $defaultDivisiId,
                 'author_id' => $authorId,
                 'judul' => 'Rilis Resmi Kepengurusan UKM LAOS Periode 2025/2026',
                 'slug' => 'rilis-resmi-kepengurusan-ukm-laos-periode-2025-2026',
@@ -86,4 +87,3 @@ class BlogSeeder extends Seeder
         }
     }
 }
-

@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use App\Models\Divisi;
 use App\Models\Pengurus;
 use Illuminate\Database\Seeder;
 
@@ -111,4 +110,3 @@ class PengurusSeeder extends Seeder
         }
     }
 }
-

@@ -15,7 +15,7 @@ class ShortlinkSeeder extends Seeder
     public function run(): void
     {
         $admin = User::first();
-        $userId = $admin?->id ?? 1;
+        $userId = $admin ? $admin->id : 1;
 
         $shortlinks = [
             [
@@ -60,4 +60,3 @@ class ShortlinkSeeder extends Seeder
         }
     }
 }
-

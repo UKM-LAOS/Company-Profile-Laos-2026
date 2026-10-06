@@ -4,7 +4,6 @@ namespace Database\Seeders;
 
 use App\Models\Divisi;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Str;
 
 class DivisiSeeder extends Seeder
 {
