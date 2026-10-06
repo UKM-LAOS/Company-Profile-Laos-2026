@@ -2,14 +2,11 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Divisi extends Model
 {
-    use HasFactory;
-
     protected $fillable = [
         'nama',
         'slug',
@@ -19,6 +16,8 @@ class Divisi extends Model
 
     /**
      * Get all blogs written under this division.
+     *
+     * @return HasMany<Blog, $this>
      */
     public function blogs(): HasMany
     {
@@ -27,6 +26,8 @@ class Divisi extends Model
 
     /**
      * Get all work programs organized by this division.
+     *
+     * @return HasMany<Program, $this>
      */
     public function programs(): HasMany
     {

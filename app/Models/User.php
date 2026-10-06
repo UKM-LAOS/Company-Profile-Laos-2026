@@ -7,6 +7,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Attributes\Hidden;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Carbon;
@@ -46,16 +47,20 @@ class User extends Authenticatable implements MustVerifyEmail
 
     /**
      * Get all blogs authored by this user.
+     *
+     * @return HasMany<Blog, $this>
      */
-    public function blogs(): \Illuminate\Database\Eloquent\Relations\HasMany
+    public function blogs(): HasMany
     {
         return $this->hasMany(Blog::class, 'author_id');
     }
 
     /**
      * Get all shortlinks created by this user.
+     *
+     * @return HasMany<Shortlink, $this>
      */
-    public function shortlinks(): \Illuminate\Database\Eloquent\Relations\HasMany
+    public function shortlinks(): HasMany
     {
         return $this->hasMany(Shortlink::class, 'user_id');
     }

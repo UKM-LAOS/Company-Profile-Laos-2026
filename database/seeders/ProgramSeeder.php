@@ -18,11 +18,12 @@ class ProgramSeeder extends Seeder
         $uiux = Divisi::where('slug', 'multimedia-ui-ux-design')->first();
         $keorg = Divisi::where('slug', 'keorganisasian-humas')->first();
 
-        $defaultDivisiId = $bph?->id ?? Divisi::first()?->id ?? 1;
+        $defaultDivisi = Divisi::first();
+        $defaultDivisiId = $bph ? $bph->id : ($defaultDivisi ? $defaultDivisi->id : 1);
 
         $programs = [
             [
-                'divisi_id' => $web?->id ?? $defaultDivisiId,
+                'divisi_id' => $web ? $web->id : $defaultDivisiId,
                 'judul_program' => 'LAOS Web & API Intensive Bootcamp',
                 'slug' => 'laos-web-api-intensive-bootcamp',
                 'location_name' => 'Lab Komputer Gd. Fasilkom UNEJ',
@@ -34,7 +35,7 @@ class ProgramSeeder extends Seeder
                 'gform_peserta' => 'https://forms.gle/laos-peserta-bootcamp',
             ],
             [
-                'divisi_id' => $uiux?->id ?? $defaultDivisiId,
+                'divisi_id' => $uiux ? $uiux->id : $defaultDivisiId,
                 'judul_program' => 'Design Sprint & Figma Masterclass',
                 'slug' => 'design-sprint-figma-masterclass',
                 'location_name' => 'Auditorium Fasilkom UNEJ / Hybrid Zoom',
@@ -46,7 +47,7 @@ class ProgramSeeder extends Seeder
                 'gform_peserta' => 'https://forms.gle/laos-peserta-design',
             ],
             [
-                'divisi_id' => $keorg?->id ?? $defaultDivisiId,
+                'divisi_id' => $keorg ? $keorg->id : $defaultDivisiId,
                 'judul_program' => 'Open Recruitment Pengurus & Anggota LAOS',
                 'slug' => 'open-recruitment-pengurus-anggota-laos',
                 'location_name' => 'Ruang UKM Gedung PKM UNEJ',

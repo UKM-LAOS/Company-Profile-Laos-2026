@@ -2,14 +2,13 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Blog extends Model
 {
-    use HasFactory, SoftDeletes;
+    use SoftDeletes;
 
     protected $fillable = [
         'divisi_id',
@@ -41,6 +40,8 @@ class Blog extends Model
 
     /**
      * Get the division associated with the blog post.
+     *
+     * @return BelongsTo<Divisi, $this>
      */
     public function divisi(): BelongsTo
     {
@@ -49,6 +50,8 @@ class Blog extends Model
 
     /**
      * Get the author (user) who wrote the blog post.
+     *
+     * @return BelongsTo<User, $this>
      */
     public function author(): BelongsTo
     {

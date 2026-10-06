@@ -106,3 +106,20 @@ browser belum dilakukan. Modal bersama belum menerapkan focus trap dan
 pengembalian fokus keyboard; ini tetap merupakan keterbatasan aksesibilitas yang
 perlu diperbaiki sebelum mengklaim pengalaman UI sempurna. Review ini memastikan
 fungsi CRUD yang diuji, bukan jaminan tidak adanya bug pada semua lingkungan.
+
+## Integrasi branch
+
+Perubahan fitur dicommit dari allowlist 13 file pada branch
+`devinayeon-shortlink`. Dua commit terbaru `origin/main` (`09ab007` dan `c075cc2`)
+diintegrasikan terlebih dahulu agar perbaikan proyek lain tetap terjaga.
+Konflik pada model Shortlink diselesaikan dengan mempertahankan HasFactory
+bertipe ShortlinkFactory yang dibutuhkan test fitur.
+
+Hasil check pada kode hasil integrasi: 75 dari 77 test lulus (seluruh 52 test
+shortlink lulus), PHPStan seluruh proyek nol error, Pint lulus, pemeriksaan tipe
+dan lint/format frontend terkait lulus, serta build lulus. Dua test lama masih
+gagal: `correct password must be provided to update password` (error bag) dan
+`profile information can be updated` (status verifikasi email). Pengguna telah
+mengizinkan commit/push dan merge dengan pengecualian kegagalan test lama.
+Catatan 24 error PHPStan di atas adalah hasil sebelum integrasi perbaikan main.
+Tidak ada file `.env` yang dibuat atau diisi.

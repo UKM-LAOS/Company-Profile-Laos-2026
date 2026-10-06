@@ -2,14 +2,13 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Program extends Model
 {
-    use HasFactory, SoftDeletes;
+    use SoftDeletes;
 
     protected $fillable = [
         'divisi_id',
@@ -41,6 +40,8 @@ class Program extends Model
 
     /**
      * Get the division that owns this work program.
+     *
+     * @return BelongsTo<Divisi, $this>
      */
     public function divisi(): BelongsTo
     {
