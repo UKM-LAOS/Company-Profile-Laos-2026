@@ -43,4 +43,20 @@ class User extends Authenticatable implements MustVerifyEmail
             'password' => 'hashed',
         ];
     }
+
+    /**
+     * Get all blogs authored by this user.
+     */
+    public function blogs(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(Blog::class, 'author_id');
+    }
+
+    /**
+     * Get all shortlinks created by this user.
+     */
+    public function shortlinks(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(Shortlink::class, 'user_id');
+    }
 }
