@@ -20,6 +20,10 @@ class RoleAndPermissionSeeder extends Seeder
         // Reset cached roles and permissions
         app()[PermissionRegistrar::class]->forgetCachedPermissions();
 
+        // Clean up any stale permissions not in the Enum
+        $validPermissions = array_map(fn ($c) => $c->value, PermissionEnum::cases());
+        Permission::whereNotIn('name', $validPermissions)->delete();
+
         // 1. Create permissions from Enum
         foreach (PermissionEnum::cases() as $permissionCase) {
             Permission::firstOrCreate([
@@ -47,25 +51,17 @@ class RoleAndPermissionSeeder extends Seeder
         // 3. Assign permissions to roles
         $superAdminRole->syncPermissions(Permission::all());
 
-        $adminRole->syncPermissions([
-            PermissionEnum::VIEW_DASHBOARD->value,
-            PermissionEnum::MANAGE_DIVISIONS->value,
-            PermissionEnum::MANAGE_WORK_PROGRAMS->value,
-            PermissionEnum::MANAGE_NEWS->value,
-            PermissionEnum::MANAGE_COMMITTEE->value,
-            PermissionEnum::MANAGE_USERS->value,
-            PermissionEnum::MANAGE_SHORTLINKS->value,
-            PermissionEnum::VIEW_CONTENT->value,
-            PermissionEnum::CREATE_CONTENT->value,
-            PermissionEnum::EDIT_CONTENT->value,
-            PermissionEnum::DELETE_CONTENT->value,
-            PermissionEnum::PUBLISH_CONTENT->value,
-            PermissionEnum::MANAGE_SETTINGS->value,
-        ]);
+        // Admin has all permissions
+        $adminRole->syncPermissions(Permission::all());
 
+        // Member has read-only permissions
         $memberRole->syncPermissions([
             PermissionEnum::VIEW_DASHBOARD->value,
-            PermissionEnum::VIEW_CONTENT->value,
+            PermissionEnum::VIEW_DIVISIONS->value,
+            PermissionEnum::VIEW_WORK_PROGRAMS->value,
+            PermissionEnum::VIEW_NEWS->value,
+            PermissionEnum::VIEW_COMMITTEE->value,
+            PermissionEnum::VIEW_SHORTLINKS->value,
         ]);
 
         // 4. Create default users for each role (if not existing)

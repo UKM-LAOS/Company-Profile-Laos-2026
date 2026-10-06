@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rule;
 use Illuminate\Validation\Rules\Password;
@@ -19,6 +20,7 @@ class UserController extends Controller
      */
     public function index(Request $request): Response
     {
+        Gate::authorize('view_users');
         $search = $request->input('search');
 
         $users = User::with('roles')
@@ -48,6 +50,8 @@ class UserController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
+        Gate::authorize('create_users');
+
         $validated = $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
@@ -62,6 +66,8 @@ class UserController extends Controller
             'email_verified_at' => now(),
         ]);
 
+        $user->markEmailAsVerified();
+
         $user->assignRole($validated['role']);
 
         return redirect()->back()->with('success', 'Pengguna berhasil ditambahkan.');
@@ -72,6 +78,8 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user): RedirectResponse
     {
+        Gate::authorize('edit_users');
+
         $validated = $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', Rule::unique(User::class)->ignore($user->id)],
@@ -86,6 +94,10 @@ class UserController extends Controller
             $user->password = Hash::make($validated['password']);
         }
 
+        if (! $user->hasVerifiedEmail()) {
+            $user->markEmailAsVerified();
+        }
+
         $user->save();
 
         $user->syncRoles([$validated['role']]);
@@ -98,6 +110,8 @@ class UserController extends Controller
      */
     public function destroy(User $user): RedirectResponse
     {
+        Gate::authorize('delete_users');
+
         if ($user->id === auth()->id()) {
             return redirect()->back()->with('error', 'Anda tidak dapat menghapus akun Anda sendiri.');
         }

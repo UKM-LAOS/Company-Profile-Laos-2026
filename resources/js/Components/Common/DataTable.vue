@@ -12,12 +12,13 @@ export interface TableColumn {
 withDefaults(
     defineProps<{
         columns: TableColumn[];
-        items: T[];
+        items?: T[];
         loading?: boolean;
         emptyTitle?: string;
         emptyDescription?: string;
     }>(),
     {
+        items: () => [],
         loading: false,
         emptyTitle: 'Tidak ada data ditemukan',
         emptyDescription:

@@ -62,7 +62,7 @@ function clear() {
             :value="localValue"
             @input="onInput"
             :placeholder="placeholder"
-            class="w-full rounded-2xl border border-slate-200/90 bg-white py-2.5 pr-10 pl-11 text-sm text-slate-800 placeholder-slate-400 shadow-xs transition-all duration-150 focus:border-emerald-500 focus:bg-white focus:ring-2 focus:ring-emerald-500/20 focus:outline-none dark:border-slate-800 dark:bg-slate-900 dark:text-slate-100 dark:placeholder-slate-500 dark:focus:border-emerald-500 dark:focus:ring-emerald-500/20"
+            class="w-full rounded-2xl border border-slate-200/90 bg-white py-2.5 pr-10 pl-11 text-sm text-slate-800 placeholder-slate-400 shadow-xs transition-all duration-150 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 focus:outline-none dark:border-slate-800 dark:bg-slate-900 dark:text-white dark:placeholder-slate-500 dark:focus:border-emerald-500 dark:focus:bg-slate-900 dark:focus:ring-emerald-500/20"
         />
 
         <!-- Clear Button -->
@@ -70,7 +70,7 @@ function clear() {
             v-if="localValue"
             type="button"
             @click="clear"
-            class="absolute inset-y-0 right-0 flex cursor-pointer items-center pr-3.5 text-slate-400 transition-colors hover:text-slate-600 dark:text-slate-500 dark:hover:text-slate-300"
+            class="absolute inset-y-0 right-0 flex cursor-pointer items-center pr-3.5 text-slate-400 transition-colors hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-200"
             title="Hapus pencarian"
         >
             <AppIcon name="close" class-name="h-4 w-4" />

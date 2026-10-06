@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -25,8 +26,13 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::middleware(['auth', 'can:manage_users'])->group(function () {
+Route::middleware(['auth', 'can:view_users'])->group(function () {
     Route::resource('users', UserController::class)->except(['create', 'show', 'edit']);
+});
+
+Route::middleware(['auth', 'can:view_roles'])->group(function () {
+    Route::resource('roles', RoleController::class)->except(['create', 'show', 'edit']);
+    Route::put('/roles/{role}/permissions', [RoleController::class, 'syncPermissions'])->name('roles.permissions.sync');
 });
 
 require __DIR__.'/auth.php';

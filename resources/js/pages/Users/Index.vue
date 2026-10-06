@@ -10,8 +10,11 @@ import SearchInput from '@/Components/Common/SearchInput.vue';
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 import DeleteUserConfirmModal from './Partials/DeleteUserConfirmModal.vue';
 import UserFormModal, { type UserItem } from './Partials/UserFormModal.vue';
+import { usePermission } from '@/lib/usePermission';
 import { Head, router, usePage } from '@inertiajs/vue3';
 import { computed, ref } from 'vue';
+
+const { can } = usePermission();
 
 interface PaginatedUsers {
     data: UserItem[];
@@ -176,7 +179,7 @@ function formatDate(dateStr: string): string {
                     </p>
                 </div>
 
-                <div class="flex items-center gap-3">
+                <div v-if="can('create_users')" class="flex items-center gap-3">
                     <AppButton
                         type="button"
                         variant="primary"
@@ -271,6 +274,7 @@ function formatDate(dateStr: string): string {
                     <div class="flex items-center justify-end gap-1.5">
                         <!-- Edit Button -->
                         <button
+                            v-if="can('edit_users')"
                             type="button"
                             @click="openEditModal(item)"
                             class="inline-flex h-8 w-8 cursor-pointer items-center justify-center rounded-xl text-slate-500 transition-colors hover:bg-slate-100 hover:text-slate-800 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-200"
@@ -280,25 +284,27 @@ function formatDate(dateStr: string): string {
                         </button>
 
                         <!-- Delete Button (Disabled for self) -->
-                        <button
-                            v-if="item.id !== currentUser.id"
-                            type="button"
-                            @click="openDeleteModal(item)"
-                            class="inline-flex h-8 w-8 cursor-pointer items-center justify-center rounded-xl text-rose-500 transition-colors hover:bg-rose-50 hover:text-rose-700 dark:text-rose-400 dark:hover:bg-rose-950/50 dark:hover:text-rose-300"
-                            title="Hapus Pengguna"
-                        >
-                            <AppIcon name="trash" class-name="h-4 w-4" />
-                        </button>
-                        <span
-                            v-else
-                            class="inline-flex h-8 w-8 cursor-not-allowed items-center justify-center text-slate-300 dark:text-slate-600"
-                            title="Tidak dapat menghapus akun Anda sendiri"
-                        >
-                            <AppIcon
-                                name="trash"
-                                class-name="h-4 w-4 opacity-40"
-                            />
-                        </span>
+                        <template v-if="can('delete_users')">
+                            <button
+                                v-if="item.id !== currentUser.id"
+                                type="button"
+                                @click="openDeleteModal(item)"
+                                class="inline-flex h-8 w-8 cursor-pointer items-center justify-center rounded-xl text-rose-500 transition-colors hover:bg-rose-50 hover:text-rose-700 dark:text-rose-400 dark:hover:bg-rose-950/50 dark:hover:text-rose-300"
+                                title="Hapus Pengguna"
+                            >
+                                <AppIcon name="trash" class-name="h-4 w-4" />
+                            </button>
+                            <span
+                                v-else
+                                class="inline-flex h-8 w-8 cursor-not-allowed items-center justify-center text-slate-300 dark:text-slate-600"
+                                title="Tidak dapat menghapus akun Anda sendiri"
+                            >
+                                <AppIcon
+                                    name="trash"
+                                    class-name="h-4 w-4 opacity-40"
+                                />
+                            </span>
+                        </template>
                     </div>
                 </template>
 
