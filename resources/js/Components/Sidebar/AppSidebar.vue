@@ -67,8 +67,12 @@ const menuGroups: MenuGroup[] = [
             },
             {
                 title: 'Kelola Pengurus',
-                href: '#',
+                href:
+                    typeof route === 'function'
+                        ? route('pengurus.index')
+                        : '/pengurus',
                 icon: 'pengurus',
+                routeName: 'pengurus.index',
                 permission: 'view_committee',
             },
         ],
