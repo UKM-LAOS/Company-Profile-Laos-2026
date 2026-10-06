@@ -12,12 +12,19 @@ export default defineConfig({
             input: ['resources/css/app.css', 'resources/js/app.ts'],
             refresh: true,
             fonts: [
+                bunny('Poppins', {
+                    weights: [300, 400, 500, 600, 700],
+                    optimizedFallbacks: false,
+                }),
                 bunny('Instrument Sans', {
                     weights: [400, 500, 600],
+                    optimizedFallbacks: false,
                 }),
             ],
         }),
-        inertia(),
+        inertia({
+            ssr: false,
+        }),
         tailwindcss(),
         vue({
             template: {
@@ -32,6 +39,7 @@ export default defineConfig({
         }),
     ]),
     server: {
+        host: 'localhost',
         watch: {
             ignored: [
                 '**/.agents/**',

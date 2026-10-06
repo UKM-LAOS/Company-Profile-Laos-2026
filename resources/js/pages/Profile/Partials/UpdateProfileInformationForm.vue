@@ -1,7 +1,7 @@
 <script setup lang="ts">
+import AppButton from '@/Components/AppButton.vue';
 import InputError from '@/Components/InputError.vue';
 import InputLabel from '@/Components/InputLabel.vue';
-import PrimaryButton from '@/Components/PrimaryButton.vue';
 import TextInput from '@/Components/TextInput.vue';
 import { Link, useForm, usePage } from '@inertiajs/vue3';
 
@@ -21,12 +21,14 @@ const form = useForm({
 <template>
     <section>
         <header>
-            <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100">
-                Profile Information
+            <h2
+                class="text-base font-semibold text-slate-900 dark:text-slate-100"
+            >
+                Informasi Profil
             </h2>
 
-            <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
-                Update your account's profile information and email address.
+            <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">
+                Perbarui nama dan alamat email akun Anda.
             </p>
         </header>
 
@@ -35,12 +37,12 @@ const form = useForm({
             class="mt-6 space-y-6"
         >
             <div>
-                <InputLabel for="name" value="Name" />
+                <InputLabel for="name" value="Nama" />
 
                 <TextInput
                     id="name"
                     type="text"
-                    class="mt-1 block w-full"
+                    class="mt-1.5 block w-full"
                     v-model="form.name"
                     required
                     autofocus
@@ -56,7 +58,7 @@ const form = useForm({
                 <TextInput
                     id="email"
                     type="email"
-                    class="mt-1 block w-full"
+                    class="mt-1.5 block w-full"
                     v-model="form.email"
                     required
                     autocomplete="username"
@@ -66,40 +68,49 @@ const form = useForm({
             </div>
 
             <div v-if="mustVerifyEmail && user.email_verified_at === null">
-                <p class="mt-2 text-sm text-gray-800 dark:text-gray-200">
-                    Your email address is unverified.
+                <p class="mt-2 text-sm text-slate-800 dark:text-slate-200">
+                    Alamat email Anda belum terverifikasi.
                     <Link
                         :href="route('verification.send')"
                         method="post"
                         as="button"
-                        class="rounded-md text-sm text-gray-600 underline hover:text-gray-900 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:outline-none dark:text-gray-400 dark:hover:text-gray-100 dark:focus:ring-offset-gray-800"
+                        class="rounded-md text-sm text-slate-600 underline hover:text-slate-900 focus:outline-none dark:text-slate-400 dark:hover:text-slate-100"
                     >
-                        Click here to re-send the verification email.
+                        Klik di sini untuk mengirim ulang email verifikasi.
                     </Link>
                 </p>
 
                 <div
                     v-show="status === 'verification-link-sent'"
-                    class="mt-2 text-sm font-medium text-green-600 dark:text-green-400"
+                    class="mt-2 text-sm font-medium text-emerald-600 dark:text-emerald-400"
                 >
-                    A new verification link has been sent to your email address.
+                    Tautan verifikasi baru telah dikirimkan ke alamat email
+                    Anda.
                 </div>
             </div>
 
-            <div class="flex items-center gap-4">
-                <PrimaryButton :disabled="form.processing">Save</PrimaryButton>
+            <div class="flex items-center gap-4 pt-2">
+                <AppButton
+                    type="submit"
+                    variant="primary"
+                    size="md"
+                    :disabled="form.processing"
+                    :loading="form.processing"
+                >
+                    Simpan Perubahan
+                </AppButton>
 
                 <Transition
-                    enter-active-class="transition ease-in-out"
+                    enter-active-class="transition ease-in-out duration-200"
                     enter-from-class="opacity-0"
-                    leave-active-class="transition ease-in-out"
+                    leave-active-class="transition ease-in-out duration-200"
                     leave-to-class="opacity-0"
                 >
                     <p
                         v-if="form.recentlySuccessful"
-                        class="text-sm text-gray-600 dark:text-gray-400"
+                        class="text-sm font-medium text-emerald-600 dark:text-emerald-400"
                     >
-                        Saved.
+                        Tersimpan.
                     </p>
                 </Transition>
             </div>

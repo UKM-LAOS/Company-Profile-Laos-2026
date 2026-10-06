@@ -1,4 +1,4 @@
-export type RoleName = 'super_admin' | 'admin' | 'member' | (string & {});
+export type RoleName = string;
 
 export type PermissionName =
     | 'manage_users'

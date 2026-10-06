@@ -2,7 +2,6 @@
 
 namespace App\Providers;
 
-use App\Enums\Role;
 use Carbon\CarbonImmutable;
 use Illuminate\Support\Facades\Date;
 use Illuminate\Support\Facades\DB;
@@ -29,7 +28,7 @@ class AppServiceProvider extends ServiceProvider
 
         // Implicitly grant "Super Admin" role all permissions
         Gate::before(function ($user, $ability) {
-            return $user->hasRole(Role::SUPER_ADMIN->value) ? true : null;
+            return $user->hasRole('super_admin') ? true : null;
         });
     }
 

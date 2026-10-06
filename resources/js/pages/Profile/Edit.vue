@@ -17,35 +17,33 @@ defineProps<{
     <AuthenticatedLayout>
         <template #header>
             <h2
-                class="text-xl leading-tight font-semibold text-gray-800 dark:text-gray-200"
+                class="text-xl leading-tight font-semibold text-slate-800 dark:text-slate-200"
             >
                 Profile
             </h2>
         </template>
 
-        <div class="py-12">
-            <div class="mx-auto max-w-7xl space-y-6 sm:px-6 lg:px-8">
-                <div
-                    class="bg-white p-4 shadow sm:rounded-lg sm:p-8 dark:bg-gray-800"
-                >
-                    <UpdateProfileInformationForm
-                        :must-verify-email="mustVerifyEmail"
-                        :status="status"
-                        class="max-w-xl"
-                    />
-                </div>
+        <div class="max-w-4xl space-y-6">
+            <div
+                class="rounded-2xl border border-slate-200/80 bg-white p-5 shadow-xs sm:p-8 dark:border-slate-800/80 dark:bg-slate-900"
+            >
+                <UpdateProfileInformationForm
+                    :must-verify-email="mustVerifyEmail"
+                    :status="status"
+                    class="max-w-xl"
+                />
+            </div>
 
-                <div
-                    class="bg-white p-4 shadow sm:rounded-lg sm:p-8 dark:bg-gray-800"
-                >
-                    <UpdatePasswordForm class="max-w-xl" />
-                </div>
+            <div
+                class="rounded-2xl border border-slate-200/80 bg-white p-4 shadow-xs sm:p-8 dark:border-slate-800/80 dark:bg-slate-900"
+            >
+                <UpdatePasswordForm class="max-w-xl" />
+            </div>
 
-                <div
-                    class="bg-white p-4 shadow sm:rounded-lg sm:p-8 dark:bg-gray-800"
-                >
-                    <DeleteUserForm class="max-w-xl" />
-                </div>
+            <div
+                class="rounded-2xl border border-slate-200/80 bg-white p-4 shadow-xs sm:p-8 dark:border-slate-800/80 dark:bg-slate-900"
+            >
+                <DeleteUserForm class="max-w-xl" />
             </div>
         </div>
     </AuthenticatedLayout>
