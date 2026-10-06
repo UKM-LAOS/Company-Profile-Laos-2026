@@ -352,7 +352,10 @@ function formatDate(dateStr: string): string {
 
                             <!-- Edit Role Name (Hidden/Disabled for super_admin) -->
                             <button
-                                v-if="can('edit_roles') && item.name !== 'super_admin'"
+                                v-if="
+                                    can('edit_roles') &&
+                                    item.name !== 'super_admin'
+                                "
                                 type="button"
                                 class="cursor-pointer rounded-xl p-1.5 text-slate-400 transition-colors hover:bg-slate-100 hover:text-slate-600 dark:hover:bg-slate-800 dark:hover:text-slate-300"
                                 title="Ubah Nama Peran"
@@ -363,7 +366,10 @@ function formatDate(dateStr: string): string {
 
                             <!-- Delete Role (Hidden/Disabled for super_admin) -->
                             <button
-                                v-if="can('delete_roles') && item.name !== 'super_admin'"
+                                v-if="
+                                    can('delete_roles') &&
+                                    item.name !== 'super_admin'
+                                "
                                 type="button"
                                 class="cursor-pointer rounded-xl p-1.5 text-slate-400 transition-colors hover:bg-rose-50 hover:text-rose-600 dark:hover:bg-rose-950/40 dark:hover:text-rose-400"
                                 title="Hapus Peran"
