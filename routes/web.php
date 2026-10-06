@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RoleController;
+use App\Http\Controllers\ShortlinkController;
 use App\Http\Controllers\UserController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -33,6 +34,10 @@ Route::middleware(['auth', 'can:view_users'])->group(function () {
 Route::middleware(['auth', 'can:view_roles'])->group(function () {
     Route::resource('roles', RoleController::class)->except(['create', 'show', 'edit']);
     Route::put('/roles/{role}/permissions', [RoleController::class, 'syncPermissions'])->name('roles.permissions.sync');
+});
+
+Route::middleware(['auth', 'can:view_shortlinks'])->group(function () {
+    Route::resource('shortlinks', ShortlinkController::class)->only(['index', 'store', 'update', 'destroy']);
 });
 
 require __DIR__.'/auth.php';

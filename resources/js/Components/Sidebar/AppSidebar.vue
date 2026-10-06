@@ -103,8 +103,12 @@ const menuGroups: MenuGroup[] = [
         items: [
             {
                 title: 'Shortlink',
-                href: '#',
+                href:
+                    typeof route === 'function'
+                        ? route('shortlinks.index')
+                        : '/shortlinks',
                 icon: 'shortlink',
+                routeName: 'shortlinks.index',
                 permission: 'view_shortlinks',
             },
         ],

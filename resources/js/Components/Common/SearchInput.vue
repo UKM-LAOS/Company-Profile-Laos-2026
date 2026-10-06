@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import AppIcon from '@/Components/AppIcon.vue';
-import { ref, watch } from 'vue';
+import { onUnmounted, ref, watch } from 'vue';
 
 const props = withDefaults(
     defineProps<{
@@ -22,6 +22,15 @@ const emit = defineEmits<{
 const localValue = ref(props.modelValue);
 let timeout: ReturnType<typeof setTimeout> | null = null;
 
+function cancelPendingSearch() {
+    if (timeout !== null) {
+        clearTimeout(timeout);
+        timeout = null;
+    }
+}
+
+onUnmounted(cancelPendingSearch);
+
 watch(
     () => props.modelValue,
     (newVal) => {
@@ -34,13 +43,15 @@ function onInput(e: Event) {
     localValue.value = val;
     emit('update:modelValue', val);
 
-    if (timeout) clearTimeout(timeout);
+    cancelPendingSearch();
     timeout = setTimeout(() => {
+        timeout = null;
         emit('search', val);
     }, props.debounce);
 }
 
 function clear() {
+    cancelPendingSearch();
     localValue.value = '';
     emit('update:modelValue', '');
     emit('search', '');
