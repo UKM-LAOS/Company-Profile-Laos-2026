@@ -267,10 +267,7 @@ const insertYoutube = () => {
             </div>
 
             <!-- Editor Content -->
-            <EditorContent
-                :editor="editor"
-                class="flex-1 overflow-y-auto"
-            />
+            <EditorContent :editor="editor" class="flex-1 overflow-y-auto" />
         </div>
         <p v-if="error" class="mt-1.5 text-sm text-rose-500">
             {{ error }}
@@ -279,15 +276,23 @@ const insertYoutube = () => {
         <!-- Image Modal -->
         <Modal :show="showImageModal" max-width="md" @close="closeImageModal">
             <div class="p-6">
-                <h2 class="text-lg font-medium text-slate-900 dark:text-slate-100 mb-4">
+                <h2
+                    class="mb-4 text-lg font-medium text-slate-900 dark:text-slate-100"
+                >
                     Sisipkan Gambar
                 </h2>
 
-                <div class="mb-5 flex space-x-4 border-b border-slate-200 dark:border-slate-700">
+                <div
+                    class="mb-5 flex space-x-4 border-b border-slate-200 dark:border-slate-700"
+                >
                     <button
                         type="button"
                         class="pb-2 text-sm font-medium transition-colors"
-                        :class="imageInputType === 'link' ? 'border-b-2 border-emerald-500 text-emerald-600 dark:text-emerald-400' : 'text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300'"
+                        :class="
+                            imageInputType === 'link'
+                                ? 'border-b-2 border-emerald-500 text-emerald-600 dark:text-emerald-400'
+                                : 'text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300'
+                        "
                         @click="imageInputType = 'link'"
                     >
                         URL Tautan
@@ -295,7 +300,11 @@ const insertYoutube = () => {
                     <button
                         type="button"
                         class="pb-2 text-sm font-medium transition-colors"
-                        :class="imageInputType === 'upload' ? 'border-b-2 border-emerald-500 text-emerald-600 dark:text-emerald-400' : 'text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300'"
+                        :class="
+                            imageInputType === 'upload'
+                                ? 'border-b-2 border-emerald-500 text-emerald-600 dark:text-emerald-400'
+                                : 'text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300'
+                        "
                         @click="imageInputType = 'upload'"
                     >
                         Unggah File
@@ -320,18 +329,23 @@ const insertYoutube = () => {
                         <input
                             type="file"
                             accept="image/*"
-                            class="mt-1 block w-full text-sm text-slate-500 file:mr-4 file:rounded-full file:border-0 file:bg-emerald-50 file:px-4 file:py-2 file:text-sm file:font-semibold file:text-emerald-700 hover:file:bg-emerald-100 dark:file:bg-emerald-900/50 dark:file:text-emerald-400 dark:text-slate-300"
+                            class="mt-1 block w-full text-sm text-slate-500 file:mr-4 file:rounded-full file:border-0 file:bg-emerald-50 file:px-4 file:py-2 file:text-sm file:font-semibold file:text-emerald-700 hover:file:bg-emerald-100 dark:text-slate-300 dark:file:bg-emerald-900/50 dark:file:text-emerald-400"
                             @change="handleImageFileChange"
                         />
                     </div>
                 </div>
 
                 <div class="mt-6 flex justify-end gap-3">
-                    <SecondaryButton @click="closeImageModal">Batal</SecondaryButton>
+                    <SecondaryButton @click="closeImageModal"
+                        >Batal</SecondaryButton
+                    >
                     <AppButton
                         type="button"
                         variant="primary"
-                        :disabled="(imageInputType === 'link' && !imageUrl) || (imageInputType === 'upload' && !imageFile)"
+                        :disabled="
+                            (imageInputType === 'link' && !imageUrl) ||
+                            (imageInputType === 'upload' && !imageFile)
+                        "
                         @click="insertImage"
                     >
                         Sisipkan
@@ -341,9 +355,15 @@ const insertYoutube = () => {
         </Modal>
 
         <!-- YouTube Modal -->
-        <Modal :show="showYoutubeModal" max-width="md" @close="closeYoutubeModal">
+        <Modal
+            :show="showYoutubeModal"
+            max-width="md"
+            @close="closeYoutubeModal"
+        >
             <div class="p-6">
-                <h2 class="text-lg font-medium text-slate-900 dark:text-slate-100 mb-4">
+                <h2
+                    class="mb-4 text-lg font-medium text-slate-900 dark:text-slate-100"
+                >
                     Sisipkan Video YouTube
                 </h2>
 
@@ -359,7 +379,9 @@ const insertYoutube = () => {
                 </div>
 
                 <div class="mt-6 flex justify-end gap-3">
-                    <SecondaryButton @click="closeYoutubeModal">Batal</SecondaryButton>
+                    <SecondaryButton @click="closeYoutubeModal"
+                        >Batal</SecondaryButton
+                    >
                     <AppButton
                         type="button"
                         variant="primary"
@@ -412,7 +434,7 @@ const insertYoutube = () => {
     color: #475569;
     border-left-width: 0.25rem;
     border-left-color: #cbd5e1;
-    quotes: "\201C""\201D""\2018""\2019";
+    quotes: '\201C' '\201D' '\2018' '\2019';
     margin-top: 1.6em;
     margin-bottom: 1.6em;
     padding-left: 1em;

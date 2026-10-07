@@ -37,15 +37,15 @@ const form = useForm({
 });
 
 const divisiOptions = computed(() => {
-    return props.divisis.map(d => ({
+    return props.divisis.map((d) => ({
         value: String(d.id),
-        label: d.nama
+        label: d.nama,
     }));
 });
 
 const statusOptions = [
     { value: 'draft', label: 'Draf (Simpan tanpa dipublikasikan)' },
-    { value: 'published', label: 'Terbit (Publikasikan sekarang)' }
+    { value: 'published', label: 'Terbit (Publikasikan sekarang)' },
 ];
 
 function submit() {
@@ -68,24 +68,40 @@ function submit() {
                     title="Kembali"
                 >
                     <span class="sr-only">Kembali</span>
-                    <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <svg
+                        class="h-4 w-4"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
                         <polyline points="15 18 9 12 15 6" />
                     </svg>
                 </Link>
                 <div>
-                    <h1 class="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl dark:text-white">
+                    <h1
+                        class="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl dark:text-white"
+                    >
                         {{ isEdit ? 'Ubah Berita' : 'Tambah Berita' }}
                     </h1>
                 </div>
             </div>
         </template>
 
-        <div class="mx-auto max-w-5xl rounded-2xl border border-slate-200/80 bg-white p-6 shadow-xs dark:border-slate-800/80 dark:bg-slate-900 md:p-8">
+        <div
+            class="mx-auto max-w-5xl rounded-2xl border border-slate-200/80 bg-white p-6 shadow-xs md:p-8 dark:border-slate-800/80 dark:bg-slate-900"
+        >
             <form @submit.prevent="submit" class="space-y-8">
                 <!-- Data Utama -->
                 <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
                     <div class="col-span-1 md:col-span-2">
-                        <InputLabel for="judul" value="Judul Artikel" required />
+                        <InputLabel
+                            for="judul"
+                            value="Judul Artikel"
+                            required
+                        />
                         <TextInput
                             id="judul"
                             v-model="form.judul"
@@ -109,11 +125,19 @@ function submit() {
                             required
                             autocomplete="off"
                         />
-                        <InputError :message="form.errors.kategori" class="mt-2" />
+                        <InputError
+                            :message="form.errors.kategori"
+                            class="mt-2"
+                        />
                     </div>
 
                     <div>
-                        <InputLabel for="divisi_id" value="Divisi Terkait" required class="mb-1" />
+                        <InputLabel
+                            for="divisi_id"
+                            value="Divisi Terkait"
+                            required
+                            class="mb-1"
+                        />
                         <AppDropdownFilter
                             id="divisi_id"
                             v-model="form.divisi_id"
@@ -122,7 +146,10 @@ function submit() {
                             :searchable="true"
                             :full-width="true"
                         />
-                        <InputError :message="form.errors.divisi_id" class="mt-2" />
+                        <InputError
+                            :message="form.errors.divisi_id"
+                            class="mt-2"
+                        />
                     </div>
                 </div>
 
@@ -138,19 +165,30 @@ function submit() {
                 <!-- Metadata & Setting -->
                 <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
                     <div class="col-span-1 md:col-span-2">
-                        <InputLabel for="meta_description" value="Meta Description (Opsional)" />
+                        <InputLabel
+                            for="meta_description"
+                            value="Meta Description (Opsional)"
+                        />
                         <textarea
                             id="meta_description"
                             v-model="form.meta_description"
                             rows="2"
-                            class="mt-1 block w-full rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm text-slate-800 placeholder-slate-400 shadow-xs transition-colors duration-150 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100 dark:placeholder-slate-500 dark:focus:border-emerald-500 dark:focus:ring-emerald-500/20"
+                            class="mt-1 block w-full rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm text-slate-800 placeholder-slate-400 shadow-xs transition-colors duration-150 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 focus:outline-none dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100 dark:placeholder-slate-500 dark:focus:border-emerald-500 dark:focus:ring-emerald-500/20"
                             placeholder="Deskripsi singkat untuk keperluan SEO dan pencarian..."
                         ></textarea>
-                        <InputError :message="form.errors.meta_description" class="mt-2" />
+                        <InputError
+                            :message="form.errors.meta_description"
+                            class="mt-2"
+                        />
                     </div>
 
                     <div>
-                        <InputLabel for="status" value="Status Publikasi" required class="mb-1" />
+                        <InputLabel
+                            for="status"
+                            value="Status Publikasi"
+                            required
+                            class="mb-1"
+                        />
                         <AppDropdownFilter
                             id="status"
                             v-model="form.status"
@@ -158,13 +196,22 @@ function submit() {
                             :options="statusOptions"
                             :full-width="true"
                         />
-                        <InputError :message="form.errors.status" class="mt-2" />
+                        <InputError
+                            :message="form.errors.status"
+                            class="mt-2"
+                        />
                     </div>
 
                     <div class="flex items-center">
                         <div class="mt-6 flex items-center">
-                            <Checkbox id="is_unggulan" v-model:checked="form.is_unggulan" />
-                            <label for="is_unggulan" class="ml-2 text-sm font-medium text-slate-700 dark:text-slate-300 cursor-pointer">
+                            <Checkbox
+                                id="is_unggulan"
+                                v-model:checked="form.is_unggulan"
+                            />
+                            <label
+                                for="is_unggulan"
+                                class="ml-2 cursor-pointer text-sm font-medium text-slate-700 dark:text-slate-300"
+                            >
                                 Jadikan Artikel Unggulan (Pinned)
                             </label>
                         </div>
@@ -172,10 +219,12 @@ function submit() {
                 </div>
 
                 <!-- Aksi -->
-                <div class="flex items-center justify-end gap-3 pt-6 border-t border-slate-200 dark:border-slate-800">
+                <div
+                    class="flex items-center justify-end gap-3 border-t border-slate-200 pt-6 dark:border-slate-800"
+                >
                     <Link
                         :href="route('blogs.index')"
-                        class="inline-flex h-10 items-center justify-center rounded-xl bg-white px-4 text-sm font-semibold text-slate-700 shadow-xs ring-1 ring-inset ring-slate-300 transition-all hover:bg-slate-50 dark:bg-slate-800 dark:text-slate-200 dark:ring-slate-700 dark:hover:bg-slate-700"
+                        class="inline-flex h-10 items-center justify-center rounded-xl bg-white px-4 text-sm font-semibold text-slate-700 shadow-xs ring-1 ring-slate-300 transition-all ring-inset hover:bg-slate-50 dark:bg-slate-800 dark:text-slate-200 dark:ring-slate-700 dark:hover:bg-slate-700"
                     >
                         Batal
                     </Link>
