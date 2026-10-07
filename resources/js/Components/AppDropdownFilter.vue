@@ -15,6 +15,7 @@ const props = withDefaults(
         searchable?: boolean;
         id?: string;
         ariaLabel?: string;
+        fullWidth?: boolean;
     }>(),
     {
         modelValue: '',
@@ -22,6 +23,7 @@ const props = withDefaults(
         searchable: false,
         id: undefined,
         ariaLabel: undefined,
+        fullWidth: false,
     },
 );
 
@@ -121,7 +123,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-    <div ref="rootRef" class="relative inline-block text-left">
+    <div ref="rootRef" :class="['relative text-left', fullWidth ? 'block w-full' : 'inline-block']">
         <!-- Trigger button -->
         <button
             :id="id"
@@ -130,6 +132,7 @@ onUnmounted(() => {
             :aria-expanded="isOpen"
             class="group inline-flex h-11 min-w-[145px] cursor-pointer items-center justify-between gap-2.5 rounded-xl border px-3.5 text-sm font-medium transition-all duration-200 select-none focus:outline-none"
             :class="[
+                fullWidth ? 'w-full' : '',
                 modelValue
                     ? 'border-emerald-300 bg-emerald-50/70 text-emerald-800 shadow-xs dark:border-emerald-800/80 dark:bg-emerald-950/40 dark:text-emerald-300'
                     : 'border-slate-200 bg-white text-slate-700 shadow-xs hover:border-slate-300 hover:bg-slate-50/50 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:border-slate-600',
@@ -184,7 +187,7 @@ onUnmounted(() => {
         >
             <div
                 v-if="isOpen"
-                class="absolute left-0 z-40 mt-2 min-w-[200px] max-w-[320px] origin-top-left rounded-2xl border border-slate-200/90 bg-white/95 p-1.5 shadow-xl shadow-slate-900/10 backdrop-blur-md dark:border-slate-700/90 dark:bg-slate-900/95 dark:shadow-black/50"
+                :class="['absolute z-40 mt-2 origin-top-left rounded-2xl border border-slate-200/90 bg-white/95 p-1.5 shadow-xl shadow-slate-900/10 backdrop-blur-md dark:border-slate-700/90 dark:bg-slate-900/95 dark:shadow-black/50', fullWidth ? 'left-0 right-0 w-full' : 'left-0 min-w-[200px] max-w-[320px]']"
             >
                 <!-- Quick search input if list is long -->
                 <div v-if="isSearchable" class="p-1 pb-1.5">

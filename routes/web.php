@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PengurusController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RoleController;
@@ -45,6 +46,10 @@ Route::middleware(['auth', 'can:view_committee'])->group(function () {
     Route::resource('pengurus', PengurusController::class)
         ->only(['index', 'store', 'update', 'destroy'])
         ->parameters(['pengurus' => 'pengurus']);
+});
+
+Route::middleware(['auth', 'can:view_news'])->group(function () {
+    Route::resource('blogs', BlogController::class);
 });
 
 require __DIR__.'/auth.php';

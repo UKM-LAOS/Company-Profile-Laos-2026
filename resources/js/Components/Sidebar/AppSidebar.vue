@@ -61,8 +61,12 @@ const menuGroups: MenuGroup[] = [
             },
             {
                 title: 'Kelola Berita',
-                href: '#',
+                href:
+                    typeof route === 'function'
+                        ? route('blogs.index')
+                        : '/blogs',
                 icon: 'berita',
+                routeName: 'blogs.index',
                 permission: 'view_news',
             },
             {
