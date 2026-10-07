@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\PengurusController;
+use App\Http\Controllers\DivisiController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\ShortlinkController;
@@ -38,6 +40,16 @@ Route::middleware(['auth', 'can:view_roles'])->group(function () {
 
 Route::middleware(['auth', 'can:view_shortlinks'])->group(function () {
     Route::resource('shortlinks', ShortlinkController::class)->only(['index', 'store', 'update', 'destroy']);
+});
+
+Route::middleware(['auth', 'can:view_committee'])->group(function () {
+    Route::resource('pengurus', PengurusController::class)
+        ->only(['index', 'store', 'update', 'destroy'])
+        ->parameters(['pengurus' => 'pengurus']);
+});
+
+Route::middleware(['auth', 'can:view_divisions'])->group(function () {
+    Route::resource('divisis', DivisiController::class)->except(['create', 'show', 'edit']);
 });
 
 require __DIR__.'/auth.php';

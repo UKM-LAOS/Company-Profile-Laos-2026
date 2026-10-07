@@ -49,8 +49,12 @@ const menuGroups: MenuGroup[] = [
         items: [
             {
                 title: 'Kelola Divisi',
-                href: '#',
+                href:
+                    typeof route === 'function'
+                        ? route('divisis.index')
+                        : '/divisis',
                 icon: 'divisi',
+                routeName: 'divisis.index',
                 permission: 'view_divisions',
             },
             {
@@ -67,8 +71,12 @@ const menuGroups: MenuGroup[] = [
             },
             {
                 title: 'Kelola Pengurus',
-                href: '#',
+                href:
+                    typeof route === 'function'
+                        ? route('pengurus.index')
+                        : '/pengurus',
                 icon: 'pengurus',
+                routeName: 'pengurus.index',
                 permission: 'view_committee',
             },
         ],
