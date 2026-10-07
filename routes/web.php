@@ -51,6 +51,7 @@ Route::middleware(['auth', 'can:view_committee'])->group(function () {
 
 Route::middleware(['auth', 'can:view_news'])->group(function () {
     Route::resource('blogs', BlogController::class);
+});
   
 Route::middleware(['auth', 'can:view_divisions'])->group(function () {
     Route::resource('divisis', DivisiController::class)->except(['create', 'show', 'edit']);
