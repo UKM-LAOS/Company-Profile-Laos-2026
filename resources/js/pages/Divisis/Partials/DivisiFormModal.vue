@@ -24,18 +24,23 @@ const form = useForm({
 const logoPreview = ref<string | null>(null);
 const fileInput = ref<HTMLInputElement | null>(null);
 
-watch(() => props.show, (show) => {
-    if (show) {
-        if (props.divisi) {
-            form.nama = props.divisi.nama;
-            form.deskripsi = props.divisi.deskripsi || '';
-            logoPreview.value = props.divisi.logo ? `/storage/${props.divisi.logo}` : null;
-        } else {
-            form.reset();
-            logoPreview.value = null;
+watch(
+    () => props.show,
+    (show) => {
+        if (show) {
+            if (props.divisi) {
+                form.nama = props.divisi.nama;
+                form.deskripsi = props.divisi.deskripsi || '';
+                logoPreview.value = props.divisi.logo
+                    ? `/storage/${props.divisi.logo}`
+                    : null;
+            } else {
+                form.reset();
+                logoPreview.value = null;
+            }
         }
-    }
-});
+    },
+);
 
 const handleFileChange = (e: Event) => {
     const target = e.target as HTMLInputElement;
@@ -97,7 +102,7 @@ const closeModal = () => {
                     <textarea
                         id="deskripsi"
                         v-model="form.deskripsi"
-                        class="mt-1 block w-full border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm"
+                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-indigo-600 dark:focus:ring-indigo-600"
                         rows="3"
                     ></textarea>
                     <InputError :message="form.errors.deskripsi" class="mt-2" />
@@ -111,18 +116,24 @@ const closeModal = () => {
                         type="file"
                         accept="image/*"
                         @change="handleFileChange"
-                        class="mt-1 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-indigo-50 file:text-indigo-700 hover:file:bg-indigo-100 dark:file:bg-gray-700 dark:file:text-gray-300"
+                        class="mt-1 block w-full text-sm text-gray-500 file:mr-4 file:rounded-md file:border-0 file:bg-indigo-50 file:px-4 file:py-2 file:text-sm file:font-semibold file:text-indigo-700 hover:file:bg-indigo-100 dark:file:bg-gray-700 dark:file:text-gray-300"
                     />
                     <InputError :message="form.errors.logo" class="mt-2" />
-                    
+
                     <div v-if="logoPreview" class="mt-4">
-                        <p class="text-sm text-gray-500 mb-2">Preview:</p>
-                        <img :src="logoPreview" alt="Logo Preview" class="h-20 w-20 object-contain rounded-md border border-gray-200 dark:border-gray-700" />
+                        <p class="mb-2 text-sm text-gray-500">Preview:</p>
+                        <img
+                            :src="logoPreview"
+                            alt="Logo Preview"
+                            class="h-20 w-20 rounded-md border border-gray-200 object-contain dark:border-gray-700"
+                        />
                     </div>
                 </div>
 
                 <div class="mt-6 flex justify-end">
-                    <SecondaryButton @click="closeModal"> Batal </SecondaryButton>
+                    <SecondaryButton @click="closeModal">
+                        Batal
+                    </SecondaryButton>
 
                     <PrimaryButton
                         class="ml-3"

@@ -151,7 +151,7 @@ onUnmounted(() => {
                 </span>
             </span>
 
-            <span class="flex items-center gap-1 shrink-0">
+            <span class="flex shrink-0 items-center gap-1">
                 <!-- Clear button when active -->
                 <span
                     v-if="modelValue"
@@ -168,7 +168,11 @@ onUnmounted(() => {
                 <AppIcon
                     name="chevron-down"
                     class-name="h-4 w-4 text-slate-400 transition-transform duration-200 ease-out dark:text-slate-500"
-                    :class="isOpen ? 'rotate-180 text-emerald-600 dark:text-emerald-400' : ''"
+                    :class="
+                        isOpen
+                            ? 'rotate-180 text-emerald-600 dark:text-emerald-400'
+                            : ''
+                    "
                 />
             </span>
         </button>
@@ -184,7 +188,7 @@ onUnmounted(() => {
         >
             <div
                 v-if="isOpen"
-                class="absolute left-0 z-40 mt-2 min-w-[200px] max-w-[320px] origin-top-left rounded-2xl border border-slate-200/90 bg-white/95 p-1.5 shadow-xl shadow-slate-900/10 backdrop-blur-md dark:border-slate-700/90 dark:bg-slate-900/95 dark:shadow-black/50"
+                class="absolute left-0 z-40 mt-2 max-w-[320px] min-w-[200px] origin-top-left rounded-2xl border border-slate-200/90 bg-white/95 p-1.5 shadow-xl shadow-slate-900/10 backdrop-blur-md dark:border-slate-700/90 dark:bg-slate-900/95 dark:shadow-black/50"
             >
                 <!-- Quick search input if list is long -->
                 <div v-if="isSearchable" class="p-1 pb-1.5">
@@ -206,7 +210,7 @@ onUnmounted(() => {
 
                 <!-- Scrollable list of options -->
                 <div
-                    class="max-h-60 space-y-0.5 overflow-y-auto pr-0.5 text-sm overscroll-contain [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-slate-200 dark:[&::-webkit-scrollbar-thumb]:bg-slate-700"
+                    class="max-h-60 space-y-0.5 overflow-y-auto overscroll-contain pr-0.5 text-sm [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-slate-200 dark:[&::-webkit-scrollbar-thumb]:bg-slate-700"
                 >
                     <!-- All / Reset option -->
                     <button
@@ -214,7 +218,7 @@ onUnmounted(() => {
                         class="flex w-full items-center justify-between rounded-xl px-3 py-2 text-left text-xs font-medium transition-colors sm:text-sm"
                         :class="
                             !modelValue
-                                ? 'bg-emerald-50 text-emerald-700 font-semibold dark:bg-emerald-950/60 dark:text-emerald-300'
+                                ? 'bg-emerald-50 font-semibold text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-300'
                                 : 'text-slate-700 hover:bg-slate-100/80 dark:text-slate-300 dark:hover:bg-slate-800/80'
                         "
                         @click="selectOption('')"
@@ -235,7 +239,7 @@ onUnmounted(() => {
                         class="flex w-full items-center justify-between gap-2 rounded-xl px-3 py-2 text-left text-xs transition-colors sm:text-sm"
                         :class="
                             modelValue === opt.value
-                                ? 'bg-emerald-50 text-emerald-700 font-semibold dark:bg-emerald-950/60 dark:text-emerald-300'
+                                ? 'bg-emerald-50 font-semibold text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-300'
                                 : 'text-slate-700 hover:bg-slate-100/80 hover:text-slate-900 dark:text-slate-300 dark:hover:bg-slate-800/80 dark:hover:text-white'
                         "
                         @click="selectOption(opt.value)"

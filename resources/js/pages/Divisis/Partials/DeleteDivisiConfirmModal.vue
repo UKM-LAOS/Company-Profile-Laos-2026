@@ -56,7 +56,8 @@ function deleteDivisi() {
                 <span class="font-bold text-slate-900 dark:text-white">
                     {{ divisi?.nama }}
                 </span>
-                ? Semua data program kerja dan blog yang terkait dengan divisi ini juga akan ikut terhapus dari sistem.
+                ? Semua data program kerja dan blog yang terkait dengan divisi
+                ini juga akan ikut terhapus dari sistem.
             </p>
 
             <div
