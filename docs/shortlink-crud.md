@@ -23,12 +23,12 @@ UI, test, serta review arsitektur dan perubahan akhir.
 
 ## Perilaku
 
-| Route | Permission |
-| --- | --- |
-| `GET /shortlinks` | `view_shortlinks` |
-| `POST /shortlinks` | `view_shortlinks` + `create_shortlinks` |
-| `PUT/PATCH /shortlinks/{shortlink}` | `view_shortlinks` + `edit_shortlinks` |
-| `DELETE /shortlinks/{shortlink}` | `view_shortlinks` + `delete_shortlinks` |
+| Route                               | Permission                              |
+| ----------------------------------- | --------------------------------------- |
+| `GET /shortlinks`                   | `view_shortlinks`                       |
+| `POST /shortlinks`                  | `view_shortlinks` + `create_shortlinks` |
+| `PUT/PATCH /shortlinks/{shortlink}` | `view_shortlinks` + `edit_shortlinks`   |
+| `DELETE /shortlinks/{shortlink}`    | `view_shortlinks` + `delete_shortlinks` |
 
 Semua route memerlukan login. Super Admin mengikuti bypass Gate proyek.
 Daftar menampilkan 10 record per halaman, terbaru terlebih dahulu; pencarian
