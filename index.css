@@ -1,0 +1,4055 @@
+.tentang-kami-redesign-container1 {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tentang-kami-redesign-thq-tentang-kami-redesign-elm {
+    width: 100%;
+    height: 3335px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 0;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.tentang-kami-redesign-thq-image19-elm1 {
+    top: 655px;
+    left: -1px;
+    width: 1282px;
+    height: 561px;
+    opacity: 0.48;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-group456480385-elm {
+    top: 73px;
+    left: -4px;
+    width: 1289px;
+    height: 582px;
+    display: flex;
+    opacity: 0.5;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+
+.tentang-kami-redesign-thq-frame456480451-elm {
+    top: 0px;
+    left: 202px;
+    width: 77px;
+    height: 77px;
+    display: flex;
+    opacity: 0.3;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 50px 0 6px 6px;
+    background-size: cover;
+    background-image: url("public/external/tq_ssifslisvg-4np-200h.png");
+}
+
+.tentang-kami-redesign-thq-frame456480452-elm {
+    top: 0px;
+    left: 303px;
+    width: 77px;
+    height: 77px;
+    display: flex;
+    opacity: 0.3;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 0 0 6px 6px;
+    background-size: cover;
+    background-image: url("public/external/tq_xm19e4pvgi-th9q-200h.png");
+}
+
+.tentang-kami-redesign-thq-frame456480453-elm {
+    top: 0px;
+    left: 404px;
+    width: 77px;
+    height: 77px;
+    display: flex;
+    opacity: 0.3;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 50px;
+    background-size: cover;
+    background-image: url("public/external/tq_2cehcsej_0-mych-200h.png");
+}
+
+.tentang-kami-redesign-thq-frame456480454-elm {
+    top: 0px;
+    left: 505px;
+    width: 77px;
+    height: 77px;
+    display: flex;
+    opacity: 0.3;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 0 0 6px 6px;
+    background-size: cover;
+    background-image: url("public/external/tq_6dboydlznn-1trh-200h.png");
+}
+
+.tentang-kami-redesign-thq-frame456480456-elm {
+    top: 0px;
+    left: 707px;
+    width: 77px;
+    height: 77px;
+    display: flex;
+    opacity: 0.3;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 0 50px 6px 6px;
+    background-size: cover;
+    background-image: url("public/external/tq_1sbh8ey1bj-pyew-200h.png");
+}
+
+.tentang-kami-redesign-thq-frame456480458-elm {
+    top: 0px;
+    left: 909px;
+    width: 77px;
+    height: 77px;
+    display: flex;
+    opacity: 0.3;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 0 0 6px 6px;
+    background-size: cover;
+    background-image: url("public/external/tq_uft3ix3aec-5h3k-200h.png");
+}
+
+.tentang-kami-redesign-thq-frame456480459-elm {
+    top: 0px;
+    left: 1010px;
+    width: 77px;
+    height: 77px;
+    display: flex;
+    opacity: 0.3;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 0 0 6px 6px;
+    background-size: cover;
+    background-image: url("public/external/tq_dd6vy9apmd-b3ln-200h.png");
+}
+
+.tentang-kami-redesign-thq-frame456480462-elm {
+    top: 101px;
+    left: 0px;
+    width: 77px;
+    height: 77px;
+    display: flex;
+    opacity: 0.3;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 0 0 6px 6px;
+    background-size: cover;
+    background-image: url("public/external/tq_gv91mwcoup-wjm-200h.png");
+}
+
+.tentang-kami-redesign-thq-frame456480463-elm {
+    top: 101px;
+    left: 101px;
+    width: 77px;
+    height: 77px;
+    display: flex;
+    opacity: 0.3;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 50px;
+    background-size: cover;
+    background-image: url("public/external/tq_wrnj9dtvyo-t4db-200h.png");
+}
+
+.tentang-kami-redesign-thq-frame456480464-elm {
+    top: 101px;
+    left: 202px;
+    width: 77px;
+    height: 77px;
+    display: flex;
+    opacity: 0.3;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 0 0 6px 6px;
+    background-size: cover;
+    background-image: url("public/external/tq_c0ude4dpzv-ydpl-200h.png");
+}
+
+.tentang-kami-redesign-thq-frame456480467-elm {
+    top: 101px;
+    left: 505px;
+    width: 77px;
+    height: 77px;
+    display: flex;
+    opacity: 0.3;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 0 0 6px 6px;
+    background-size: cover;
+    background-image: url("public/external/tq_kjpubtwxw7-u8d-200h.png");
+}
+
+.tentang-kami-redesign-thq-frame456480468-elm {
+    top: 101px;
+    left: 606px;
+    width: 77px;
+    height: 77px;
+    display: flex;
+    opacity: 0.3;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 50px;
+    background-size: cover;
+    background-image: url("public/external/tq_qnksa1buzc-7iyt-200h.png");
+}
+
+.tentang-kami-redesign-thq-frame456480469-elm {
+    top: 101px;
+    left: 707px;
+    width: 77px;
+    height: 77px;
+    display: flex;
+    opacity: 0.3;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 0 0 6px 6px;
+    background-size: cover;
+    background-image: url("public/external/tq_n91kap-g8a-np49-200h.png");
+}
+
+.tentang-kami-redesign-thq-frame456480470-elm {
+    top: 101px;
+    left: 808px;
+    width: 77px;
+    height: 77px;
+    display: flex;
+    opacity: 0.3;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 50px;
+    background-size: cover;
+    background-image: url("public/external/tq_0ud3d7bawg-w6uo-200h.png");
+}
+
+.tentang-kami-redesign-thq-frame456480471-elm {
+    top: 101px;
+    left: 909px;
+    width: 77px;
+    height: 77px;
+    display: flex;
+    opacity: 0.3;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 0 0 6px 6px;
+    background-size: cover;
+    background-image: url("public/external/tq_jwi_bqz_rm-sxa8-200h.png");
+}
+
+.tentang-kami-redesign-thq-frame456480472-elm {
+    top: 101px;
+    left: 1010px;
+    width: 77px;
+    height: 77px;
+    display: flex;
+    opacity: 0.3;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 0 50px 50px 6px;
+    background-size: cover;
+    background-image: url("public/external/tq_aaxwialpoj-rtrs-200h.png");
+}
+
+.tentang-kami-redesign-thq-frame456480473-elm {
+    top: 101px;
+    left: 1111px;
+    width: 77px;
+    height: 77px;
+    display: flex;
+    opacity: 0.3;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 50px;
+    background-size: cover;
+    background-image: url("public/external/tq_sutek2ianj-1ifg-200h.png");
+}
+
+.tentang-kami-redesign-thq-frame456480474-elm {
+    top: 101px;
+    left: 1212px;
+    width: 77px;
+    height: 77px;
+    display: flex;
+    opacity: 0.3;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 0 50px 6px 6px;
+    background-size: cover;
+    background-image: url("public/external/tq_qa2w3tl2mp-mnnf-200h.png");
+}
+
+.tentang-kami-redesign-thq-frame456480488-elm {
+    top: 303px;
+    left: 0px;
+    width: 77px;
+    height: 77px;
+    display: flex;
+    opacity: 0.3;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 0 50px 6px 6px;
+    background-size: cover;
+    background-image: url("public/external/tq_p9ecylgp_z-mybs-200h.png");
+}
+
+.tentang-kami-redesign-thq-frame456480501-elm {
+    top: 404px;
+    left: 0px;
+    width: 77px;
+    height: 77px;
+    display: flex;
+    opacity: 0.3;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 0 50px 50px 6px;
+    background-size: cover;
+    background-image: url("public/external/tq_yoyhwa8b6c-ldj-200h.png");
+}
+
+.tentang-kami-redesign-thq-frame456480476-elm {
+    top: 202px;
+    left: 101px;
+    width: 77px;
+    height: 77px;
+    display: flex;
+    opacity: 0.3;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 50px;
+    background-size: cover;
+    background-image: url("public/external/tq_jtelxzoidb-yh2d-200h.png");
+}
+
+.tentang-kami-redesign-thq-frame456480515-elm {
+    top: 505px;
+    left: 101px;
+    width: 77px;
+    height: 77px;
+    display: flex;
+    opacity: 0.3;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 0 50px 6px 6px;
+    background-size: cover;
+    background-image: url("public/external/tq_wjy9ff2f5f-d92e-200h.png");
+}
+
+.tentang-kami-redesign-thq-frame456480477-elm {
+    top: 202px;
+    left: 202px;
+    width: 77px;
+    height: 77px;
+    display: flex;
+    opacity: 0.3;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 50px 0 50px 6px;
+    background-size: cover;
+    background-image: url("public/external/tq_ejn3qxjxdf-vowm-200h.png");
+}
+
+.tentang-kami-redesign-thq-frame456480490-elm {
+    top: 303px;
+    left: 202px;
+    width: 77px;
+    height: 77px;
+    display: flex;
+    opacity: 0.3;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 0 0 6px 6px;
+    background-size: cover;
+    background-image: url("public/external/tq_cukqgvkgtp-q7um-200h.png");
+}
+
+.tentang-kami-redesign-thq-frame456480503-elm {
+    top: 404px;
+    left: 202px;
+    width: 77px;
+    height: 77px;
+    display: flex;
+    opacity: 0.3;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 0 50px 6px 6px;
+    background-size: cover;
+    background-image: url("public/external/tq_prg23mhhv--kve-200h.png");
+}
+
+.tentang-kami-redesign-thq-frame456480491-elm {
+    top: 303px;
+    left: 303px;
+    width: 77px;
+    height: 77px;
+    display: flex;
+    opacity: 0.3;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 0 0 6px 50px;
+    background-size: cover;
+    background-image: url("public/external/tq_clkqgyj5xy-c8vs-200h.png");
+}
+
+.tentang-kami-redesign-thq-frame456480504-elm {
+    top: 404px;
+    left: 303px;
+    width: 77px;
+    height: 77px;
+    display: flex;
+    opacity: 0.3;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 50px 0 6px 6px;
+    background-size: cover;
+    background-image: url("public/external/tq_lefea3hjvu-rya-200h.png");
+}
+
+.tentang-kami-redesign-thq-frame456480517-elm {
+    top: 505px;
+    left: 303px;
+    width: 77px;
+    height: 77px;
+    display: flex;
+    opacity: 0.3;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 0 0 6px 6px;
+    background-size: cover;
+    background-image: url("public/external/tq_yczgqtk8nf-xyyo-200h.png");
+}
+
+.tentang-kami-redesign-thq-frame456480479-elm {
+    top: 202px;
+    left: 404px;
+    width: 77px;
+    height: 77px;
+    display: flex;
+    opacity: 0.3;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 50px;
+    background-size: cover;
+    background-image: url("public/external/tq_ra0iftlh32-40t-200h.png");
+}
+
+.tentang-kami-redesign-thq-frame456480492-elm {
+    top: 303px;
+    left: 404px;
+    width: 77px;
+    height: 77px;
+    display: flex;
+    opacity: 0.3;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 0 0 6px 6px;
+    background-size: cover;
+    background-image: url("public/external/tq_brllyyvd4h-8xbj-200h.png");
+}
+
+.tentang-kami-redesign-thq-frame456480480-elm {
+    top: 202px;
+    left: 505px;
+    width: 77px;
+    height: 77px;
+    display: flex;
+    opacity: 0.3;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 50px;
+    background-size: cover;
+    background-image: url("public/external/tq_kwk39gr8uc-8k1u-200h.png");
+}
+
+.tentang-kami-redesign-thq-frame456480493-elm {
+    top: 303px;
+    left: 505px;
+    width: 77px;
+    height: 77px;
+    display: flex;
+    opacity: 0.3;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 50px;
+    background-size: cover;
+    background-image: url("public/external/tq_v54yscuoud-wxwf-200h.png");
+}
+
+.tentang-kami-redesign-thq-frame456480519-elm {
+    top: 505px;
+    left: 505px;
+    width: 77px;
+    height: 77px;
+    display: flex;
+    opacity: 0.3;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 0 0 6px 6px;
+    background-size: cover;
+    background-image: url("public/external/tq_5eyght5azl-k93-200h.png");
+}
+
+.tentang-kami-redesign-thq-frame456480481-elm {
+    top: 202px;
+    left: 606px;
+    width: 77px;
+    height: 77px;
+    display: flex;
+    opacity: 0.3;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 0 0 6px 50px;
+    background-size: cover;
+    background-image: url("public/external/tq_w11obb8a_w-mzsj-200h.png");
+}
+
+.tentang-kami-redesign-thq-frame456480494-elm {
+    top: 303px;
+    left: 606px;
+    width: 77px;
+    height: 77px;
+    display: flex;
+    opacity: 0.3;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 0 0 6px 6px;
+    background-size: cover;
+    background-image: url("public/external/tq_gmib_2wrcm-r8qi-200h.png");
+}
+
+.tentang-kami-redesign-thq-frame456480507-elm {
+    top: 404px;
+    left: 606px;
+    width: 77px;
+    height: 77px;
+    display: flex;
+    opacity: 0.3;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 50px 0 6px 6px;
+    background-size: cover;
+    background-image: url("public/external/tq_uvccnko1ye-mabp-200h.png");
+}
+
+.tentang-kami-redesign-thq-frame456480520-elm {
+    top: 505px;
+    left: 606px;
+    width: 77px;
+    height: 77px;
+    display: flex;
+    opacity: 0.3;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 50px;
+    background-size: cover;
+    background-image: url("public/external/tq_ud2cae1_m6-mo5-200h.png");
+}
+
+.tentang-kami-redesign-thq-frame456480482-elm {
+    top: 202px;
+    left: 707px;
+    width: 77px;
+    height: 77px;
+    display: flex;
+    opacity: 0.3;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 0 0 50px 6px;
+    background-size: cover;
+    background-image: url("public/external/tq_-ket7tccje-7o4-200h.png");
+}
+
+.tentang-kami-redesign-thq-frame456480508-elm {
+    top: 404px;
+    left: 707px;
+    width: 77px;
+    height: 77px;
+    display: flex;
+    opacity: 0.3;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 0 0 6px 6px;
+    background-size: cover;
+    background-image: url("public/external/tq_fvxj_-yshh-u19-200h.png");
+}
+
+.tentang-kami-redesign-thq-frame456480483-elm {
+    top: 202px;
+    left: 808px;
+    width: 77px;
+    height: 77px;
+    display: flex;
+    opacity: 0.3;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 50px;
+    background-size: cover;
+    background-image: url("public/external/tq_2ptsj66dsv-pxfg-200h.png");
+}
+
+.tentang-kami-redesign-thq-frame456480496-elm {
+    top: 303px;
+    left: 808px;
+    width: 77px;
+    height: 77px;
+    display: flex;
+    opacity: 0.3;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 0 0 6px 6px;
+    background-size: cover;
+    background-image: url("public/external/tq_41chc_xevn-utzei-200h.png");
+}
+
+.tentang-kami-redesign-thq-frame456480509-elm {
+    top: 404px;
+    left: 808px;
+    width: 77px;
+    height: 77px;
+    display: flex;
+    opacity: 0.3;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 50px;
+    background-size: cover;
+    background-image: url("public/external/tq_cb3fdjgfoi-rxv-200h.png");
+}
+
+.tentang-kami-redesign-thq-frame456480522-elm {
+    top: 505px;
+    left: 808px;
+    width: 77px;
+    height: 77px;
+    display: flex;
+    opacity: 0.3;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 50px 0 50px 6px;
+    background-size: cover;
+    background-image: url("public/external/tq_jaorb4sibf-li6h-200h.png");
+}
+
+.tentang-kami-redesign-thq-frame456480510-elm {
+    top: 404px;
+    left: 909px;
+    width: 77px;
+    height: 77px;
+    display: flex;
+    opacity: 0.3;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 0 0 6px 6px;
+    background-size: cover;
+    background-image: url("public/external/tq_stihfizb68-ac6-200h.png");
+}
+
+.tentang-kami-redesign-thq-frame456480523-elm {
+    top: 505px;
+    left: 909px;
+    width: 77px;
+    height: 77px;
+    display: flex;
+    opacity: 0.3;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 0 0 6px 6px;
+    background-size: cover;
+    background-image: url("public/external/tq_fyksr1-tp4-kup-200h.png");
+}
+
+.tentang-kami-redesign-thq-frame456480485-elm {
+    top: 202px;
+    left: 1010px;
+    width: 77px;
+    height: 77px;
+    display: flex;
+    opacity: 0.3;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 50px;
+    background-size: cover;
+    background-image: url("public/external/tq_y6bbj_jhmo-pfhc-200h.png");
+}
+
+.tentang-kami-redesign-thq-frame456480498-elm {
+    top: 303px;
+    left: 1010px;
+    width: 77px;
+    height: 77px;
+    display: flex;
+    opacity: 0.3;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 0 0 6px 6px;
+    background-size: cover;
+    background-image: url("public/external/tq__atkjffxgk-qmj9-200h.png");
+}
+
+.tentang-kami-redesign-thq-frame456480524-elm {
+    top: 505px;
+    left: 1010px;
+    width: 77px;
+    height: 77px;
+    display: flex;
+    opacity: 0.3;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 50px;
+    background-size: cover;
+    background-image: url("public/external/tq_zxf88znvfq-tvo-200h.png");
+}
+
+.tentang-kami-redesign-thq-frame456480486-elm {
+    top: 202px;
+    left: 1111px;
+    width: 77px;
+    height: 77px;
+    display: flex;
+    opacity: 0.3;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 0 0 6px 6px;
+    background-size: cover;
+    background-image: url("public/external/tq_q4khg6a-cb-ebpb-200h.png");
+}
+
+.tentang-kami-redesign-thq-frame456480487-elm {
+    top: 202px;
+    left: 1212px;
+    width: 77px;
+    height: 77px;
+    display: flex;
+    opacity: 0.3;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 0 0 6px 6px;
+    background-size: cover;
+    background-image: url("public/external/tq_k0hmydjoa7-pv4f-200h.png");
+}
+
+.tentang-kami-redesign-thq-frame456480513-elm {
+    top: 404px;
+    left: 1212px;
+    width: 77px;
+    height: 77px;
+    display: flex;
+    opacity: 0.3;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 50px 0 6px 6px;
+    background-size: cover;
+    background-image: url("public/external/tq__p-z8ihwtm-i6o5-200h.png");
+}
+
+.tentang-kami-redesign-thq-frame456480526-elm {
+    top: 505px;
+    left: 1212px;
+    width: 77px;
+    height: 77px;
+    display: flex;
+    opacity: 0.3;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 50px;
+    background-size: cover;
+    background-image: url("public/external/tq_do4epfzln3-3cs8-200h.png");
+}
+
+.tentang-kami-redesign-thq-frame456480357-elm {
+    gap: 29px;
+    top: 171px;
+    left: 70px;
+    width: 678px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    flex-direction: column;
+}
+
+.tentang-kami-redesign-thq-text-elm10 {
+    color: rgba(93, 93, 93, 1);
+    width: 670px;
+    height: auto;
+    font-size: 64px;
+    font-style: SemiBold;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 600;
+    line-height: 71px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.tentang-kami-redesign-thq-text-elm11 {
+    color: rgba(93, 93, 93, 1);
+}
+
+.tentang-kami-redesign-thq-text-elm13 {
+    color: rgba(93, 93, 93, 1);
+    height: auto;
+    font-size: 24px;
+    align-self: stretch;
+    font-style: Medium;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: 37px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.tentang-kami-redesign-thq-button-elm1 {
+    gap: 10px;
+    top: 549px;
+    left: 70px;
+    width: 242px;
+    height: 56px;
+    display: flex;
+    padding: 10px 33px;
+    position: absolute;
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.15000000596046448);
+    align-items: center;
+    flex-shrink: 0;
+    border-color: rgba(255, 255, 255, 1);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 50px;
+    background-color: rgba(45, 204, 112, 1);
+}
+
+.tentang-kami-redesign-thq-text-elm14 {
+    color: rgba(255, 255, 255, 1);
+    height: auto;
+    text-align: center;
+    line-height: 24px;
+}
+
+.tentang-kami-redesign-thq-iconly-bold-arrow-right3-elm1 {
+    width: 15px;
+    height: 15px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 0;
+}
+
+.tentang-kami-redesign-thq-iconly-bold-arrow-right3-elm2 {
+    top: 0px;
+    left: 0px;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+}
+
+.tentang-kami-redesign-thq-arrow-right3-elm1 {
+    top: 4.0625px;
+    left: 1.875px;
+    width: 11.25px;
+    height: 6.875px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+
+.tentang-kami-redesign-thq-arrow-right3-elm2 {
+    top: 0px;
+    left: 0px;
+    width: 11px;
+    height: 7px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-navbar-dekstop-unregister-default-elm {
+    gap: 477px;
+    top: 0px;
+    left: 0px;
+    width: 1280px;
+    height: 100px;
+    display: flex;
+    padding: 16px 78px;
+    position: absolute;
+    box-shadow: 0px -1px 3px 0px rgba(0, 0, 0, 0.25);
+    align-items: center;
+    flex-shrink: 0;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.tentang-kami-redesign-thq-logo-elm10 {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tentang-kami-redesign-thq-laos1-elm10 {
+    width: 38px;
+    height: 38px;
+}
+
+.tentang-kami-redesign-thq-text-elm15 {
+    color: rgba(45, 204, 112, 1);
+    height: auto;
+    text-align: left;
+    line-height: 26px;
+}
+
+.tentang-kami-redesign-thq-nav-elm {
+    gap: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tentang-kami-redesign-thq-text-elm16 {
+    color: rgba(93, 93, 93, 1);
+    height: auto;
+    text-align: left;
+    line-height: 24px;
+}
+
+.tentang-kami-redesign-thq-text-elm17 {
+    color: rgba(93, 93, 93, 1);
+    height: auto;
+    text-align: left;
+    line-height: 24px;
+}
+
+.tentang-kami-redesign-thq-text-elm18 {
+    color: rgba(93, 93, 93, 1);
+    height: auto;
+    text-align: left;
+    line-height: 24px;
+}
+
+.tentang-kami-redesign-thq-text-elm19 {
+    color: rgba(45, 204, 112, 1);
+    height: auto;
+    text-align: left;
+    line-height: 24px;
+}
+
+.tentang-kami-redesign-thq-text-elm20 {
+    color: rgba(93, 93, 93, 1);
+    height: auto;
+    text-align: left;
+    line-height: 24px;
+}
+
+.tentang-kami-redesign-thq-group456480424-elm {
+    top: 3040px;
+    left: 0px;
+    width: 1280px;
+    height: 295px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+
+.tentang-kami-redesign-thq-rectangle1091-elm {
+    top: 0px;
+    left: 0px;
+    width: 1280px;
+    height: 253px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-rectangle1092-elm {
+    top: 253px;
+    left: 0px;
+    width: 1280px;
+    height: 42px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-text-elm21 {
+    top: 260px;
+    left: 481px;
+    color: var(--dl-color-default-light01);
+    width: 318px;
+    height: auto;
+    position: absolute;
+    font-size: 15px;
+    font-style: Regular;
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 400;
+    line-height: 24px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.tentang-kami-redesign-thq-group456480423-elm {
+    top: 35px;
+    left: 97px;
+    width: 1086px;
+    height: 183px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+
+.tentang-kami-redesign-thq-frame456480600-elm {
+    gap: 30px;
+    top: 0px;
+    left: 0px;
+    width: 288px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    flex-direction: column;
+}
+
+.tentang-kami-redesign-thq-frame456480379-elm {
+    gap: 24px;
+    display: flex;
+    align-self: stretch;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.tentang-kami-redesign-thq-logo-elm11 {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tentang-kami-redesign-thq-laos1-elm11 {
+    width: 38px;
+    height: 38px;
+}
+
+.tentang-kami-redesign-thq-text-elm22 {
+    color: rgba(255, 255, 255, 1);
+    height: auto;
+    text-align: left;
+    line-height: 26px;
+}
+
+.tentang-kami-redesign-thq-text-elm23 {
+    color: rgba(255, 255, 255, 1);
+    height: auto;
+    font-size: 13px;
+    align-self: stretch;
+    font-style: Regular;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 400;
+    line-height: 24px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.tentang-kami-redesign-thq-frame456480381-elm {
+    gap: 14.076482772827148px;
+    width: 118px;
+    display: flex;
+    align-items: flex-start;
+    flex-shrink: 0;
+    flex-direction: column;
+}
+
+.tentang-kami-redesign-thq-frame456480380-elm {
+    gap: 5.926939964294434px;
+    display: flex;
+    align-self: stretch;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.tentang-kami-redesign-thq-group182-elm {
+    width: 19px;
+    height: 18.85844612121582px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+
+.tentang-kami-redesign-thq-ellipse5-elm {
+    top: 0px;
+    left: 0px;
+    width: 19px;
+    height: 19px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-vector-elm1 {
+    top: 5.18607234954834px;
+    left: 5.18607234954834px;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-group183-elm {
+    width: 19px;
+    height: 18.85844612121582px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+
+.tentang-kami-redesign-thq-ellipse6-elm {
+    top: 0px;
+    left: -0.00004437565803527832px;
+    width: 19px;
+    height: 19px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-vector-elm2 {
+    top: 5.657525539398193px;
+    left: 5.6575446128845215px;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-group184-elm {
+    width: 19px;
+    height: 18.85844612121582px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+
+.tentang-kami-redesign-thq-ellipse7-elm1 {
+    top: 0px;
+    left: -0.00004437565803527832px;
+    width: 19px;
+    height: 19px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-vector-elm3 {
+    top: 5.657525539398193px;
+    left: 5.657473564147949px;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-group456480369-elm {
+    width: 19px;
+    height: 18.85844612121582px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+
+.tentang-kami-redesign-thq-ellipse7-elm2 {
+    top: 0px;
+    left: 0.00011098384857177734px;
+    width: 19px;
+    height: 19px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-mingcutelinkedinline-elm {
+    top: 4.7146196365356445px;
+    left: 4.714677333831787px;
+    width: 9.42922306060791px;
+    height: 9.42922306060791px;
+    display: flex;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+}
+
+.tentang-kami-redesign-thq-group-elm {
+    top: 1.1786446571350098px;
+    left: 1.178633689880371px;
+    width: 7.071917533874512px;
+    height: 8.177494049072266px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+
+.tentang-kami-redesign-thq-vector-elm4 {
+    top: 0px;
+    left: 0px;
+    width: 7px;
+    height: 7px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-group456480370-elm {
+    width: 19px;
+    height: 18.85844612121582px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+
+.tentang-kami-redesign-thq-ellipse7-elm3 {
+    top: 0px;
+    left: 0.00004437565803527832px;
+    width: 19px;
+    height: 19px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-linemdyoutube-elm {
+    top: 4.7146196365356445px;
+    left: 4.7146382331848145px;
+    width: 9px;
+    height: 9px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-frame456480382-elm {
+    gap: 19px;
+    top: 20px;
+    left: 307px;
+    width: 247px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    flex-direction: column;
+}
+
+.tentang-kami-redesign-thq-text-elm24 {
+    color: rgba(255, 255, 255, 1);
+    height: auto;
+    font-size: 16px;
+    align-self: stretch;
+    font-style: SemiBold;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 600;
+    line-height: 24px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.tentang-kami-redesign-thq-text-elm25 {
+    color: rgba(255, 255, 255, 1);
+    height: auto;
+    font-size: 13px;
+    align-self: stretch;
+    font-style: Medium;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: 24px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.tentang-kami-redesign-thq-frame456480384-elm {
+    gap: 19px;
+    top: 20px;
+    left: 573px;
+    width: 247px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    flex-direction: column;
+}
+
+.tentang-kami-redesign-thq-text-elm31 {
+    color: rgba(255, 255, 255, 1);
+    height: auto;
+    font-size: 16px;
+    align-self: stretch;
+    font-style: SemiBold;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 600;
+    line-height: 24px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.tentang-kami-redesign-thq-text-elm32 {
+    color: rgba(255, 255, 255, 1);
+    height: auto;
+    font-size: 13px;
+    align-self: stretch;
+    font-style: Medium;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: 24px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.tentang-kami-redesign-thq-frame456480599-elm {
+    gap: 19px;
+    top: 20px;
+    left: 839px;
+    width: 247px;
+    height: 163px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    flex-direction: column;
+}
+
+.tentang-kami-redesign-thq-text-elm37 {
+    color: rgba(255, 255, 255, 1);
+    height: auto;
+    font-size: 16px;
+    align-self: stretch;
+    font-style: SemiBold;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 600;
+    line-height: 24px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.tentang-kami-redesign-thq-frame456480598-elm {
+    gap: 2px;
+    width: 219px;
+    display: flex;
+    align-items: flex-start;
+    flex-shrink: 0;
+    flex-direction: column;
+}
+
+.tentang-kami-redesign-thq-frame456480595-elm {
+    gap: 6px;
+    display: flex;
+    align-self: stretch;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.tentang-kami-redesign-thq-mdilocation-elm {
+    width: 14px;
+    height: 14px;
+}
+
+.tentang-kami-redesign-thq-text-elm38 {
+    color: rgba(255, 255, 255, 1);
+    width: 199px;
+    height: auto;
+    font-size: 13px;
+    font-style: Medium;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: 24px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.tentang-kami-redesign-thq-frame456480596-elm {
+    gap: 6px;
+    display: flex;
+    align-self: stretch;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.tentang-kami-redesign-thq-icbaselineemail-elm {
+    width: 14px;
+    height: 14px;
+}
+
+.tentang-kami-redesign-thq-text-elm39 {
+    color: rgba(255, 255, 255, 1);
+    width: 199px;
+    height: auto;
+    font-size: 13px;
+    font-style: Medium;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: 24px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.tentang-kami-redesign-thq-frame456480597-elm {
+    gap: 6px;
+    display: flex;
+    align-self: stretch;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.tentang-kami-redesign-thq-icbaselinephone-elm {
+    width: 14px;
+    height: 14px;
+}
+
+.tentang-kami-redesign-thq-text-elm40 {
+    color: rgba(255, 255, 255, 1);
+    width: 199px;
+    height: auto;
+    font-size: 13px;
+    font-style: Medium;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: 24px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.tentang-kami-redesign-thq-group456480387-elm {
+    top: 91px;
+    left: 748px;
+    width: 522px;
+    height: 522px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+
+.tentang-kami-redesign-thq-frame456480527-elm {
+    top: 0px;
+    left: 0px;
+    width: 522px;
+    height: 522px;
+    display: flex;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 500px;
+}
+
+.tentang-kami-redesign-thq-group456480386-elm {
+    top: 108px;
+    left: 17px;
+    width: 451.00018310546875px;
+    height: 414.1000061035156px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+
+.tentang-kami-redesign-thq-image3-elm {
+    top: 0.00009765475988388062px;
+    left: 9.094947017729282e-13px;
+    width: 290px;
+    height: 414px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-image2-elm {
+    top: 139.4001007080078px;
+    left: 187.5749969482422px;
+    width: 263px;
+    height: 275px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-frame456480528-elm {
+    gap: 24px;
+    top: 695px;
+    left: 70px;
+    width: 1140px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    flex-shrink: 0;
+    flex-direction: column;
+}
+
+.tentang-kami-redesign-thq-text-elm41 {
+    color: rgba(30, 30, 30, 1);
+    height: auto;
+    font-size: 36px;
+    align-self: stretch;
+    font-style: Medium;
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: 71px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.tentang-kami-redesign-thq-text-elm42 {
+    color: rgba(99, 99, 99, 1);
+    height: auto;
+    font-size: 20px;
+    align-self: stretch;
+    font-style: Medium;
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: 33px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.tentang-kami-redesign-thq-frame456480446-elm {
+    gap: 34px;
+    top: 981px;
+    left: 70px;
+    width: 1140px;
+    display: flex;
+    position: absolute;
+    align-self: stretch;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.tentang-kami-redesign-thq-group456480383-elm {
+    width: 1134px;
+    height: 137px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+
+.tentang-kami-redesign-thq-text-elm43 {
+    color: rgba(30, 30, 30, 1);
+    width: 1134px;
+    height: auto;
+    position: absolute;
+    font-size: 36px;
+    align-self: stretch;
+    font-style: Medium;
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: 71px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.tentang-kami-redesign-thq-text-elm44 {
+    top: 71px;
+    left: 172px;
+    color: rgba(99, 99, 99, 1);
+    width: 796px;
+    height: auto;
+    position: absolute;
+    font-size: 20px;
+    align-self: stretch;
+    font-style: Medium;
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: 33px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.tentang-kami-redesign-thq-frame456480445-elm {
+    gap: 35px;
+    display: flex;
+    align-self: stretch;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.tentang-kami-redesign-thq-group456480388-elm {
+    width: 319px;
+    height: 298px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+
+.tentang-kami-redesign-thq-logo-laos-elm {
+    top: 0px;
+    left: 0px;
+    width: 319px;
+    height: 298px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-frame456480435-elm {
+    gap: 30px;
+    width: 735px;
+    display: flex;
+    align-items: flex-start;
+    flex-shrink: 0;
+    flex-direction: column;
+}
+
+.tentang-kami-redesign-thq-frame456480433-elm {
+    gap: 33px;
+    display: flex;
+    align-self: stretch;
+    align-items: center;
+    flex-shrink: 0;
+    justify-content: center;
+}
+
+.tentang-kami-redesign-thq-octicontypography16-elm {
+    width: 40px;
+    height: 40px;
+}
+
+.tentang-kami-redesign-thq-text-elm45 {
+    color: rgba(30, 30, 30, 1);
+    width: 662px;
+    height: auto;
+    font-size: 20px;
+    font-style: SemiBold;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 600;
+    line-height: 31px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.tentang-kami-redesign-thq-text-elm46 {
+    font-weight: 600;
+}
+
+.tentang-kami-redesign-thq-text-elm47 {
+    color: rgba(30, 30, 30, 1);
+}
+
+.tentang-kami-redesign-thq-frame456480431-elm {
+    gap: 33px;
+    display: flex;
+    align-self: stretch;
+    align-items: center;
+    flex-shrink: 0;
+    justify-content: center;
+}
+
+.tentang-kami-redesign-thq-mdicolor-elm {
+    width: 40px;
+    height: 40px;
+}
+
+.tentang-kami-redesign-thq-text-elm49 {
+    color: rgba(30, 30, 30, 1);
+    width: 662px;
+    height: auto;
+    font-size: 20px;
+    font-style: SemiBold;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 600;
+    line-height: 34px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.tentang-kami-redesign-thq-text-elm50 {
+    font-weight: 600;
+}
+
+.tentang-kami-redesign-thq-text-elm51 {
+    color: rgba(30, 30, 30, 1);
+}
+
+.tentang-kami-redesign-thq-frame456480432-elm {
+    gap: 33px;
+    display: flex;
+    align-self: stretch;
+    align-items: center;
+    flex-shrink: 0;
+    justify-content: center;
+}
+
+.tentang-kami-redesign-thq-raphaelopensource-elm {
+    width: 40px;
+    height: 40px;
+}
+
+.tentang-kami-redesign-thq-text-elm53 {
+    color: rgba(30, 30, 30, 1);
+    width: 662px;
+    height: auto;
+    font-size: 20px;
+    font-style: SemiBold;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 600;
+    line-height: 71px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.tentang-kami-redesign-thq-text-elm54 {
+    font-weight: 600;
+}
+
+.tentang-kami-redesign-thq-text-elm55 {
+    color: rgba(30, 30, 30, 1);
+}
+
+.tentang-kami-redesign-thq-frame456480529-elm {
+    gap: 34px;
+    top: 1490px;
+    left: 70px;
+    width: 1140px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    flex-direction: column;
+}
+
+.tentang-kami-redesign-thq-text-elm57 {
+    color: rgba(30, 30, 30, 1);
+    height: auto;
+    font-size: 36px;
+    align-self: stretch;
+    font-style: Medium;
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: 71px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.tentang-kami-redesign-thq-frame456480423-elm1 {
+    gap: 10px;
+    height: 235px;
+    display: flex;
+    padding: 33px 20px;
+    align-self: stretch;
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.15000000596046448);
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 12px;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.tentang-kami-redesign-thq-frame456480420-elm {
+    gap: 18px;
+    width: 930px;
+    height: 168px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    flex-direction: column;
+}
+
+.tentang-kami-redesign-thq-simpleiconsopensourcehardware-elm {
+    width: 64px;
+    height: 64px;
+}
+
+.tentang-kami-redesign-thq-text-elm58 {
+    color: rgba(99, 99, 99, 1);
+    width: 930px;
+    height: auto;
+    font-size: 20px;
+    font-style: Medium;
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: 30px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.tentang-kami-redesign-thq-frame456480533-elm {
+    gap: 34px;
+    top: 1846px;
+    left: 70px;
+    width: 1140px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    flex-shrink: 0;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tentang-kami-redesign-thq-text-elm59 {
+    color: rgba(30, 30, 30, 1);
+    height: auto;
+    font-size: 36px;
+    align-self: stretch;
+    font-style: Medium;
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: 71px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.tentang-kami-redesign-thq-frame456480532-elm {
+    gap: 15px;
+    display: flex;
+    align-self: stretch;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.tentang-kami-redesign-thq-frame456480423-elm2 {
+    gap: 10px;
+    width: 370px;
+    height: 235px;
+    display: flex;
+    padding: 33px 20px;
+    position: relative;
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.15000000596046448);
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.tentang-kami-redesign-thq-frame456480530-elm1 {
+    gap: 15px;
+    top: 13px;
+    left: 20px;
+    width: 330px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    flex-shrink: 0;
+    flex-direction: column;
+}
+
+.tentang-kami-redesign-thq-mdilinux-elm {
+    width: 64px;
+    height: 64px;
+}
+
+.tentang-kami-redesign-thq-text-elm60 {
+    color: rgba(99, 99, 99, 1);
+    height: auto;
+    font-size: 20px;
+    align-self: stretch;
+    font-style: Medium;
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: 30px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.tentang-kami-redesign-thq-frame456480530-elm2 {
+    gap: 10px;
+    width: 370px;
+    height: 235px;
+    display: flex;
+    padding: 33px 20px;
+    position: relative;
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.15000000596046448);
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.tentang-kami-redesign-thq-frame456480530-elm3 {
+    gap: 15px;
+    top: 13px;
+    left: 20px;
+    width: 330px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    flex-shrink: 0;
+    flex-direction: column;
+}
+
+.tentang-kami-redesign-thq-simpleiconscrowdsource-elm {
+    width: 64px;
+    height: 64px;
+}
+
+.tentang-kami-redesign-thq-text-elm61 {
+    color: rgba(99, 99, 99, 1);
+    height: auto;
+    font-size: 20px;
+    align-self: stretch;
+    font-style: Medium;
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: 30px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.tentang-kami-redesign-thq-frame456480531-elm {
+    gap: 10px;
+    width: 370px;
+    height: 235px;
+    display: flex;
+    padding: 33px 20px;
+    position: relative;
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.15000000596046448);
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.tentang-kami-redesign-thq-frame456480530-elm4 {
+    gap: 15px;
+    top: 13px;
+    left: 20px;
+    width: 330px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    flex-shrink: 0;
+    flex-direction: column;
+}
+
+.tentang-kami-redesign-thq-grommeticonscloudlinux-elm {
+    width: 64px;
+    height: 64px;
+}
+
+.tentang-kami-redesign-thq-text-elm62 {
+    color: rgba(99, 99, 99, 1);
+    height: auto;
+    font-size: 20px;
+    align-self: stretch;
+    font-style: Medium;
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: 30px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.tentang-kami-redesign-thq-frame456480557-elm {
+    gap: 11px;
+    top: 2202px;
+    left: 382px;
+    width: 516px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    flex-shrink: 0;
+    flex-direction: column;
+}
+
+.tentang-kami-redesign-thq-frame456480535-elm {
+    gap: 10px;
+    width: 370px;
+    height: 54px;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    flex-shrink: 0;
+    border-color: rgba(30, 30, 30, 1);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 50px;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.tentang-kami-redesign-thq-text-elm63 {
+    color: rgba(30, 30, 30, 1);
+    height: auto;
+    font-size: 24px;
+    font-style: Medium;
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: 71px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.tentang-kami-redesign-thq-text-elm64 {
+    color: rgba(30, 30, 30, 1);
+    height: auto;
+    font-size: 32px;
+    align-self: stretch;
+    font-style: SemiBold;
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 600;
+    line-height: 71px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.tentang-kami-redesign-thq-frame456480608-elm {
+    gap: 34px;
+    top: 2378px;
+    left: 69px;
+    width: 1141px;
+    height: 209px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    flex-shrink: 0;
+    flex-direction: column;
+}
+
+.tentang-kami-redesign-thq-frame456480604-elm {
+    gap: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.tentang-kami-redesign-thq-frame456480540-elm1 {
+    gap: 7.979149341583252px;
+    width: 218.62867736816406px;
+    height: 187.50999450683594px;
+    display: flex;
+    padding: 26.331192016601562px 15.958298683166504px;
+    position: relative;
+    box-shadow: 0px 0px 4.787489414215088px 0px
+        rgba(0, 0, 0, 0.15000000596046448);
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 9.574978828430176px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.tentang-kami-redesign-thq-image20-elm1 {
+    top: 4.78737211227417px;
+    left: 213.8411865234375px;
+    width: 209px;
+    height: 135px;
+    position: absolute;
+    border-radius: 9.574978828430176px;
+}
+
+.tentang-kami-redesign-thq-image19-elm2 {
+    top: 4.78737211227417px;
+    left: 213.8411865234375px;
+    width: 209px;
+    height: 134px;
+    position: absolute;
+    border-radius: 9.574978828430176px;
+}
+
+.tentang-kami-redesign-thq-logo-elm12 {
+    gap: 7.979149341583252px;
+    top: 12.766521453857422px;
+    left: 65.42902374267578px;
+    width: 81px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+}
+
+.tentang-kami-redesign-thq-laos1-elm12 {
+    width: 16px;
+    height: 16px;
+}
+
+.tentang-kami-redesign-thq-text-elm65 {
+    color: rgba(255, 255, 255, 1);
+    height: auto;
+    font-size: 11.170808792114258px;
+    font-style: SemiBold;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 600;
+    line-height: 20.74578857421875px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.tentang-kami-redesign-thq-rectangle1115-elm1 {
+    top: 43.88520050048828px;
+    left: 61.439449310302734px;
+    width: 95px;
+    height: 97px;
+    position: absolute;
+    border-color: rgba(255, 255, 255, 1);
+    border-style: solid;
+    border-width: 0.7979149222373962px;
+    border-radius: 9.574978828430176px 9.574978828430176px 0 0;
+}
+
+.tentang-kami-redesign-thq-frame456480545-elm10 {
+    gap: 3.989574670791626px;
+    top: 144.4224853515625px;
+    left: 63.833194732666016px;
+    width: 91px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    flex-shrink: 0;
+    flex-direction: column;
+}
+
+.tentang-kami-redesign-thq-frame456480543-elm10 {
+    display: flex;
+    align-self: stretch;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tentang-kami-redesign-thq-text-elm66 {
+    color: rgba(30, 30, 30, 1);
+    height: auto;
+    font-size: 12.76663875579834px;
+    align-self: stretch;
+    font-style: Regular;
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 400;
+    line-height: 0px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.tentang-kami-redesign-thq-text-elm67 {
+    color: rgba(99, 99, 99, 1);
+    height: auto;
+    font-size: 9.574978828430176px;
+    align-self: stretch;
+    font-style: Regular;
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 400;
+    line-height: 0px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.tentang-kami-redesign-thq-frame456480544-elm10 {
+    gap: 6.38331937789917px;
+    display: flex;
+    align-items: center;
+}
+
+.tentang-kami-redesign-thq-group456480389-elm1 {
+    width: 8px;
+    height: 7.979148864746094px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+
+.tentang-kami-redesign-thq-ellipse41-elm1 {
+    top: 0px;
+    left: 0px;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-riinstagramfill-elm1 {
+    top: 1.5957881212234497px;
+    left: 1.5956460237503052px;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-group456480390-elm1 {
+    width: 8px;
+    height: 7.979148864746094px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+
+.tentang-kami-redesign-thq-ellipse42-elm1 {
+    top: 0px;
+    left: 0px;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-icbaselinefacebook-elm1 {
+    top: 1.5957881212234497px;
+    left: 1.5958094596862793px;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-group456480391-elm1 {
+    width: 8px;
+    height: 7.979148864746094px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+
+.tentang-kami-redesign-thq-ellipse43-elm1 {
+    top: 0px;
+    left: 0px;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-mditwitter-elm1 {
+    top: 1.5957881212234497px;
+    left: 1.5959727764129639px;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-group456480392-elm1 {
+    width: 8px;
+    height: 7.979148864746094px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+
+.tentang-kami-redesign-thq-ellipse44-elm1 {
+    top: 0px;
+    left: 0px;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-mdilinkedin-elm1 {
+    top: 1.5957881212234497px;
+    left: 1.595647931098938px;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-frame456480543-elm11 {
+    gap: 7.979149341583252px;
+    width: 218.62867736816406px;
+    height: 187.50999450683594px;
+    display: flex;
+    padding: 26.331192016601562px 15.958298683166504px;
+    position: relative;
+    box-shadow: 0px 0px 4.787489414215088px 0px
+        rgba(0, 0, 0, 0.15000000596046448);
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 9.574978828430176px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.tentang-kami-redesign-thq-image20-elm2 {
+    top: 4.78737211227417px;
+    left: 213.8414306640625px;
+    width: 209px;
+    height: 135px;
+    position: absolute;
+    border-radius: 9.574978828430176px;
+}
+
+.tentang-kami-redesign-thq-image19-elm3 {
+    top: 4.78737211227417px;
+    left: 213.8414306640625px;
+    width: 209px;
+    height: 134px;
+    position: absolute;
+    border-radius: 9.574978828430176px;
+}
+
+.tentang-kami-redesign-thq-logo-elm13 {
+    gap: 7.979149341583252px;
+    top: 12.766521453857422px;
+    left: 65.42926025390625px;
+    width: 81px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+}
+
+.tentang-kami-redesign-thq-laos1-elm13 {
+    width: 16px;
+    height: 16px;
+}
+
+.tentang-kami-redesign-thq-text-elm68 {
+    color: rgba(255, 255, 255, 1);
+    height: auto;
+    font-size: 11.170808792114258px;
+    font-style: SemiBold;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 600;
+    line-height: 20.74578857421875px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.tentang-kami-redesign-thq-rectangle1115-elm2 {
+    top: 43.88520050048828px;
+    left: 61.4396858215332px;
+    width: 95px;
+    height: 97px;
+    position: absolute;
+    border-color: rgba(255, 255, 255, 1);
+    border-style: solid;
+    border-width: 0.7979149222373962px;
+    border-radius: 9.574978828430176px 9.574978828430176px 0 0;
+}
+
+.tentang-kami-redesign-thq-frame456480545-elm11 {
+    gap: 3.989574670791626px;
+    top: 144.4224853515625px;
+    left: 63.833431243896484px;
+    width: 91px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    flex-shrink: 0;
+    flex-direction: column;
+}
+
+.tentang-kami-redesign-thq-frame456480543-elm12 {
+    width: 146.81634521484375px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    flex-direction: column;
+}
+
+.tentang-kami-redesign-thq-text-elm69 {
+    color: rgba(30, 30, 30, 1);
+    height: auto;
+    font-size: 12.76663875579834px;
+    align-self: stretch;
+    font-style: Regular;
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 400;
+    line-height: 0px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.tentang-kami-redesign-thq-text-elm70 {
+    color: rgba(99, 99, 99, 1);
+    height: auto;
+    font-size: 9.574978828430176px;
+    align-self: stretch;
+    font-style: Regular;
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 400;
+    line-height: 0px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.tentang-kami-redesign-thq-frame456480544-elm11 {
+    gap: 6.38331937789917px;
+    display: flex;
+    align-items: center;
+}
+
+.tentang-kami-redesign-thq-group456480389-elm2 {
+    width: 8px;
+    height: 7.979148864746094px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+
+.tentang-kami-redesign-thq-ellipse41-elm2 {
+    top: 0px;
+    left: 0px;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-riinstagramfill-elm2 {
+    top: 1.5957881212234497px;
+    left: 1.5958822965621948px;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-group456480390-elm2 {
+    width: 8px;
+    height: 7.979148864746094px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+
+.tentang-kami-redesign-thq-ellipse42-elm2 {
+    top: 0px;
+    left: 0px;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-icbaselinefacebook-elm2 {
+    top: 1.5957881212234497px;
+    left: 1.596045732498169px;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-group456480391-elm2 {
+    width: 8px;
+    height: 7.979148864746094px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+
+.tentang-kami-redesign-thq-ellipse43-elm2 {
+    top: 0px;
+    left: 0px;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-mditwitter-elm2 {
+    top: 1.5957881212234497px;
+    left: 1.595720887184143px;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-group456480392-elm2 {
+    width: 8px;
+    height: 7.979148864746094px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+
+.tentang-kami-redesign-thq-ellipse44-elm2 {
+    top: 0px;
+    left: 0px;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-mdilinkedin-elm2 {
+    top: 1.5957881212234497px;
+    left: 1.5958842039108276px;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-frame456480544-elm12 {
+    gap: 7.979149341583252px;
+    width: 218.62867736816406px;
+    height: 187.50999450683594px;
+    display: flex;
+    padding: 26.331192016601562px 15.958298683166504px;
+    position: relative;
+    box-shadow: 0px 0px 4.787489414215088px 0px
+        rgba(0, 0, 0, 0.15000000596046448);
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 9.574978828430176px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.tentang-kami-redesign-thq-image20-elm3 {
+    top: 4.78737211227417px;
+    left: 213.84117126464844px;
+    width: 209px;
+    height: 135px;
+    position: absolute;
+    border-radius: 9.574978828430176px;
+}
+
+.tentang-kami-redesign-thq-image19-elm4 {
+    top: 4.78737211227417px;
+    left: 213.84117126464844px;
+    width: 209px;
+    height: 134px;
+    position: absolute;
+    border-radius: 9.574978828430176px;
+}
+
+.tentang-kami-redesign-thq-logo-elm14 {
+    gap: 7.979149341583252px;
+    top: 12.766521453857422px;
+    left: 65.42900848388672px;
+    width: 81px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+}
+
+.tentang-kami-redesign-thq-laos1-elm14 {
+    width: 16px;
+    height: 16px;
+}
+
+.tentang-kami-redesign-thq-text-elm71 {
+    color: rgba(255, 255, 255, 1);
+    height: auto;
+    font-size: 11.170808792114258px;
+    font-style: SemiBold;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 600;
+    line-height: 20.74578857421875px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.tentang-kami-redesign-thq-rectangle1115-elm3 {
+    top: 43.88520050048828px;
+    left: 61.43943405151367px;
+    width: 95px;
+    height: 97px;
+    position: absolute;
+    border-color: rgba(255, 255, 255, 1);
+    border-style: solid;
+    border-width: 0.7979149222373962px;
+    border-radius: 9.574978828430176px 9.574978828430176px 0 0;
+}
+
+.tentang-kami-redesign-thq-frame456480545-elm12 {
+    gap: 3.989574670791626px;
+    top: 144.4224853515625px;
+    left: 63.83317947387695px;
+    width: 91px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    flex-shrink: 0;
+    flex-direction: column;
+}
+
+.tentang-kami-redesign-thq-frame456480543-elm13 {
+    display: flex;
+    align-self: stretch;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tentang-kami-redesign-thq-text-elm72 {
+    color: rgba(30, 30, 30, 1);
+    width: 172px;
+    height: auto;
+    font-size: 12.76663875579834px;
+    font-style: Regular;
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 400;
+    line-height: 0px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.tentang-kami-redesign-thq-text-elm73 {
+    color: rgba(99, 99, 99, 1);
+    height: auto;
+    font-size: 9.574978828430176px;
+    align-self: stretch;
+    font-style: Regular;
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 400;
+    line-height: 0px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.tentang-kami-redesign-thq-frame456480544-elm13 {
+    gap: 6.38331937789917px;
+    display: flex;
+    align-items: center;
+}
+
+.tentang-kami-redesign-thq-group456480389-elm3 {
+    width: 8px;
+    height: 7.979148864746094px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+
+.tentang-kami-redesign-thq-ellipse41-elm3 {
+    top: 0px;
+    left: 0px;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-riinstagramfill-elm3 {
+    top: 1.5957881212234497px;
+    left: 1.5956302881240845px;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-group456480390-elm3 {
+    width: 8px;
+    height: 7.979148864746094px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+
+.tentang-kami-redesign-thq-ellipse42-elm3 {
+    top: 0px;
+    left: 0px;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-icbaselinefacebook-elm3 {
+    top: 1.5957881212234497px;
+    left: 1.5957937240600586px;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-group456480391-elm3 {
+    width: 8px;
+    height: 7.979148864746094px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+
+.tentang-kami-redesign-thq-ellipse43-elm3 {
+    top: 0px;
+    left: 0px;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-mditwitter-elm3 {
+    top: 1.5957881212234497px;
+    left: 1.5959571599960327px;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-group456480392-elm3 {
+    width: 8px;
+    height: 7.979148864746094px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+
+.tentang-kami-redesign-thq-ellipse44-elm3 {
+    top: 0px;
+    left: 0px;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-mdilinkedin-elm3 {
+    top: 1.5957881212234497px;
+    left: 1.5956321954727173px;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-frame456480545-elm13 {
+    gap: 7.979149341583252px;
+    width: 218.62867736816406px;
+    height: 187.50999450683594px;
+    display: flex;
+    padding: 26.331192016601562px 15.958298683166504px;
+    position: relative;
+    box-shadow: 0px 0px 4.787489414215088px 0px
+        rgba(0, 0, 0, 0.15000000596046448);
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 9.574978828430176px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.tentang-kami-redesign-thq-image20-elm4 {
+    top: 4.78737211227417px;
+    left: 213.84092712402344px;
+    width: 209px;
+    height: 135px;
+    position: absolute;
+    border-radius: 9.574978828430176px;
+}
+
+.tentang-kami-redesign-thq-image19-elm5 {
+    top: 4.78737211227417px;
+    left: 213.84092712402344px;
+    width: 209px;
+    height: 134px;
+    position: absolute;
+    border-radius: 9.574978828430176px;
+}
+
+.tentang-kami-redesign-thq-logo-elm15 {
+    gap: 7.979149341583252px;
+    top: 12.766521453857422px;
+    left: 65.42875671386719px;
+    width: 81px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+}
+
+.tentang-kami-redesign-thq-laos1-elm15 {
+    width: 16px;
+    height: 16px;
+}
+
+.tentang-kami-redesign-thq-text-elm74 {
+    color: rgba(255, 255, 255, 1);
+    height: auto;
+    font-size: 11.170808792114258px;
+    font-style: SemiBold;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 600;
+    line-height: 20.74578857421875px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.tentang-kami-redesign-thq-rectangle1115-elm4 {
+    top: 43.88520050048828px;
+    left: 61.43918228149414px;
+    width: 95px;
+    height: 97px;
+    position: absolute;
+    border-color: rgba(255, 255, 255, 1);
+    border-style: solid;
+    border-width: 0.7979149222373962px;
+    border-radius: 9.574978828430176px 9.574978828430176px 0 0;
+}
+
+.tentang-kami-redesign-thq-frame456480545-elm14 {
+    gap: 3.989574670791626px;
+    top: 144.4224853515625px;
+    left: 63.83292770385742px;
+    width: 91px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    flex-shrink: 0;
+    flex-direction: column;
+}
+
+.tentang-kami-redesign-thq-frame456480543-elm14 {
+    display: flex;
+    align-self: stretch;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tentang-kami-redesign-thq-text-elm75 {
+    color: rgba(30, 30, 30, 1);
+    width: 197px;
+    height: auto;
+    font-size: 12.76663875579834px;
+    font-style: Regular;
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 400;
+    line-height: 0px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.tentang-kami-redesign-thq-text-elm76 {
+    color: rgba(99, 99, 99, 1);
+    height: auto;
+    font-size: 9.574978828430176px;
+    align-self: stretch;
+    font-style: Regular;
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 400;
+    line-height: 0px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.tentang-kami-redesign-thq-frame456480544-elm14 {
+    gap: 6.38331937789917px;
+    display: flex;
+    align-items: center;
+}
+
+.tentang-kami-redesign-thq-group456480389-elm4 {
+    width: 8px;
+    height: 7.979148864746094px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+
+.tentang-kami-redesign-thq-ellipse41-elm4 {
+    top: 0px;
+    left: 0px;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-riinstagramfill-elm4 {
+    top: 1.5957881212234497px;
+    left: 1.5958665609359741px;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-group456480390-elm4 {
+    width: 8px;
+    height: 7.979148864746094px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+
+.tentang-kami-redesign-thq-ellipse42-elm4 {
+    top: 0px;
+    left: 0px;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-icbaselinefacebook-elm4 {
+    top: 1.5957881212234497px;
+    left: 1.5960299968719482px;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-group456480391-elm4 {
+    width: 8px;
+    height: 7.979148864746094px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+
+.tentang-kami-redesign-thq-ellipse43-elm4 {
+    top: 0px;
+    left: 0px;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-mditwitter-elm4 {
+    top: 1.5957881212234497px;
+    left: 1.5957051515579224px;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-group456480392-elm4 {
+    width: 8px;
+    height: 7.979148864746094px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+
+.tentang-kami-redesign-thq-ellipse44-elm4 {
+    top: 0px;
+    left: 0px;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-mdilinkedin-elm4 {
+    top: 1.5957881212234497px;
+    left: 1.595868468284607px;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-frame456480606-elm {
+    gap: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.tentang-kami-redesign-thq-frame456480540-elm2 {
+    gap: 7.979149341583252px;
+    width: 218.62867736816406px;
+    height: 187.50999450683594px;
+    display: flex;
+    padding: 26.331192016601562px 15.958298683166504px;
+    position: relative;
+    box-shadow: 0px 0px 4.787489414215088px 0px
+        rgba(0, 0, 0, 0.15000000596046448);
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 9.574978828430176px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.tentang-kami-redesign-thq-image20-elm5 {
+    top: 4.78737211227417px;
+    left: 213.8411865234375px;
+    width: 209px;
+    height: 135px;
+    position: absolute;
+    border-radius: 9.574978828430176px;
+}
+
+.tentang-kami-redesign-thq-image19-elm6 {
+    top: 4.78737211227417px;
+    left: 213.8411865234375px;
+    width: 209px;
+    height: 134px;
+    position: absolute;
+    border-radius: 9.574978828430176px;
+}
+
+.tentang-kami-redesign-thq-logo-elm16 {
+    gap: 7.979149341583252px;
+    top: 12.766521453857422px;
+    left: 65.42902374267578px;
+    width: 81px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+}
+
+.tentang-kami-redesign-thq-laos1-elm16 {
+    width: 16px;
+    height: 16px;
+}
+
+.tentang-kami-redesign-thq-text-elm77 {
+    color: rgba(255, 255, 255, 1);
+    height: auto;
+    font-size: 11.170808792114258px;
+    font-style: SemiBold;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 600;
+    line-height: 20.74578857421875px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.tentang-kami-redesign-thq-rectangle1115-elm5 {
+    top: 43.88520050048828px;
+    left: 61.439449310302734px;
+    width: 95px;
+    height: 97px;
+    position: absolute;
+    border-color: rgba(255, 255, 255, 1);
+    border-style: solid;
+    border-width: 0.7979149222373962px;
+    border-radius: 9.574978828430176px 9.574978828430176px 0 0;
+}
+
+.tentang-kami-redesign-thq-frame456480545-elm15 {
+    gap: 3.989574670791626px;
+    top: 144.4224853515625px;
+    left: 63.833194732666016px;
+    width: 91px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    flex-shrink: 0;
+    flex-direction: column;
+}
+
+.tentang-kami-redesign-thq-frame456480543-elm15 {
+    display: flex;
+    align-self: stretch;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tentang-kami-redesign-thq-text-elm78 {
+    color: rgba(30, 30, 30, 1);
+    height: auto;
+    font-size: 12.76663875579834px;
+    align-self: stretch;
+    font-style: Regular;
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 400;
+    line-height: 0px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.tentang-kami-redesign-thq-text-elm79 {
+    color: rgba(99, 99, 99, 1);
+    height: auto;
+    font-size: 9.574978828430176px;
+    align-self: stretch;
+    font-style: Regular;
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 400;
+    line-height: 0px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.tentang-kami-redesign-thq-frame456480544-elm15 {
+    gap: 6.38331937789917px;
+    display: flex;
+    align-items: center;
+}
+
+.tentang-kami-redesign-thq-group456480389-elm5 {
+    width: 8px;
+    height: 7.979148864746094px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+
+.tentang-kami-redesign-thq-ellipse41-elm5 {
+    top: 0px;
+    left: 0px;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-riinstagramfill-elm5 {
+    top: 1.5957881212234497px;
+    left: 1.5956460237503052px;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-group456480390-elm5 {
+    width: 8px;
+    height: 7.979148864746094px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+
+.tentang-kami-redesign-thq-ellipse42-elm5 {
+    top: 0px;
+    left: 0px;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-icbaselinefacebook-elm5 {
+    top: 1.5957881212234497px;
+    left: 1.5958094596862793px;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-group456480391-elm5 {
+    width: 8px;
+    height: 7.979148864746094px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+
+.tentang-kami-redesign-thq-ellipse43-elm5 {
+    top: 0px;
+    left: 0px;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-mditwitter-elm5 {
+    top: 1.5957881212234497px;
+    left: 1.5959727764129639px;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-group456480392-elm5 {
+    width: 8px;
+    height: 7.979148864746094px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+
+.tentang-kami-redesign-thq-ellipse44-elm5 {
+    top: 0px;
+    left: 0px;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-mdilinkedin-elm5 {
+    top: 1.5957881212234497px;
+    left: 1.595647931098938px;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-frame456480543-elm16 {
+    gap: 7.979149341583252px;
+    width: 218.62867736816406px;
+    height: 187.50999450683594px;
+    display: flex;
+    padding: 26.331192016601562px 15.958298683166504px;
+    position: relative;
+    box-shadow: 0px 0px 4.787489414215088px 0px
+        rgba(0, 0, 0, 0.15000000596046448);
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 9.574978828430176px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.tentang-kami-redesign-thq-image20-elm6 {
+    top: 4.78737211227417px;
+    left: 213.8414306640625px;
+    width: 209px;
+    height: 135px;
+    position: absolute;
+    border-radius: 9.574978828430176px;
+}
+
+.tentang-kami-redesign-thq-image19-elm7 {
+    top: 4.78737211227417px;
+    left: 213.8414306640625px;
+    width: 209px;
+    height: 134px;
+    position: absolute;
+    border-radius: 9.574978828430176px;
+}
+
+.tentang-kami-redesign-thq-logo-elm17 {
+    gap: 7.979149341583252px;
+    top: 12.766521453857422px;
+    left: 65.42926025390625px;
+    width: 81px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+}
+
+.tentang-kami-redesign-thq-laos1-elm17 {
+    width: 16px;
+    height: 16px;
+}
+
+.tentang-kami-redesign-thq-text-elm80 {
+    color: rgba(255, 255, 255, 1);
+    height: auto;
+    font-size: 11.170808792114258px;
+    font-style: SemiBold;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 600;
+    line-height: 20.74578857421875px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.tentang-kami-redesign-thq-rectangle1115-elm6 {
+    top: 43.88520050048828px;
+    left: 61.4396858215332px;
+    width: 95px;
+    height: 97px;
+    position: absolute;
+    border-color: rgba(255, 255, 255, 1);
+    border-style: solid;
+    border-width: 0.7979149222373962px;
+    border-radius: 9.574978828430176px 9.574978828430176px 0 0;
+}
+
+.tentang-kami-redesign-thq-frame456480545-elm16 {
+    gap: 3.989574670791626px;
+    top: 144.4224853515625px;
+    left: 63.833431243896484px;
+    width: 91px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    flex-shrink: 0;
+    flex-direction: column;
+}
+
+.tentang-kami-redesign-thq-frame456480543-elm17 {
+    width: 146.81634521484375px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    flex-direction: column;
+}
+
+.tentang-kami-redesign-thq-text-elm81 {
+    color: rgba(30, 30, 30, 1);
+    height: auto;
+    font-size: 12.76663875579834px;
+    align-self: stretch;
+    font-style: Regular;
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 400;
+    line-height: 0px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.tentang-kami-redesign-thq-text-elm82 {
+    color: rgba(99, 99, 99, 1);
+    height: auto;
+    font-size: 9.574978828430176px;
+    align-self: stretch;
+    font-style: Regular;
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 400;
+    line-height: 0px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.tentang-kami-redesign-thq-frame456480544-elm16 {
+    gap: 6.38331937789917px;
+    display: flex;
+    align-items: center;
+}
+
+.tentang-kami-redesign-thq-group456480389-elm6 {
+    width: 8px;
+    height: 7.979148864746094px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+
+.tentang-kami-redesign-thq-ellipse41-elm6 {
+    top: 0px;
+    left: 0px;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-riinstagramfill-elm6 {
+    top: 1.5957881212234497px;
+    left: 1.5958822965621948px;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-group456480390-elm6 {
+    width: 8px;
+    height: 7.979148864746094px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+
+.tentang-kami-redesign-thq-ellipse42-elm6 {
+    top: 0px;
+    left: 0px;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-icbaselinefacebook-elm6 {
+    top: 1.5957881212234497px;
+    left: 1.596045732498169px;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-group456480391-elm6 {
+    width: 8px;
+    height: 7.979148864746094px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+
+.tentang-kami-redesign-thq-ellipse43-elm6 {
+    top: 0px;
+    left: 0px;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-mditwitter-elm6 {
+    top: 1.5957881212234497px;
+    left: 1.595720887184143px;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-group456480392-elm6 {
+    width: 8px;
+    height: 7.979148864746094px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+
+.tentang-kami-redesign-thq-ellipse44-elm6 {
+    top: 0px;
+    left: 0px;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-mdilinkedin-elm6 {
+    top: 1.5957881212234497px;
+    left: 1.5958842039108276px;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-frame456480544-elm17 {
+    gap: 7.979149341583252px;
+    width: 218.62867736816406px;
+    height: 187.50999450683594px;
+    display: flex;
+    padding: 26.331192016601562px 15.958298683166504px;
+    position: relative;
+    box-shadow: 0px 0px 4.787489414215088px 0px
+        rgba(0, 0, 0, 0.15000000596046448);
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 9.574978828430176px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.tentang-kami-redesign-thq-image20-elm7 {
+    top: 4.78737211227417px;
+    left: 213.84117126464844px;
+    width: 209px;
+    height: 135px;
+    position: absolute;
+    border-radius: 9.574978828430176px;
+}
+
+.tentang-kami-redesign-thq-image19-elm8 {
+    top: 4.78737211227417px;
+    left: 213.84117126464844px;
+    width: 209px;
+    height: 134px;
+    position: absolute;
+    border-radius: 9.574978828430176px;
+}
+
+.tentang-kami-redesign-thq-logo-elm18 {
+    gap: 7.979149341583252px;
+    top: 12.766521453857422px;
+    left: 65.42900848388672px;
+    width: 81px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+}
+
+.tentang-kami-redesign-thq-laos1-elm18 {
+    width: 16px;
+    height: 16px;
+}
+
+.tentang-kami-redesign-thq-text-elm83 {
+    color: rgba(255, 255, 255, 1);
+    height: auto;
+    font-size: 11.170808792114258px;
+    font-style: SemiBold;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 600;
+    line-height: 20.74578857421875px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.tentang-kami-redesign-thq-rectangle1115-elm7 {
+    top: 43.88520050048828px;
+    left: 61.43943405151367px;
+    width: 95px;
+    height: 97px;
+    position: absolute;
+    border-color: rgba(255, 255, 255, 1);
+    border-style: solid;
+    border-width: 0.7979149222373962px;
+    border-radius: 9.574978828430176px 9.574978828430176px 0 0;
+}
+
+.tentang-kami-redesign-thq-frame456480545-elm17 {
+    gap: 3.989574670791626px;
+    top: 144.4224853515625px;
+    left: 63.83317947387695px;
+    width: 91px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    flex-shrink: 0;
+    flex-direction: column;
+}
+
+.tentang-kami-redesign-thq-frame456480543-elm18 {
+    display: flex;
+    align-self: stretch;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tentang-kami-redesign-thq-text-elm84 {
+    color: rgba(30, 30, 30, 1);
+    width: 172px;
+    height: auto;
+    font-size: 12.76663875579834px;
+    font-style: Regular;
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 400;
+    line-height: 0px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.tentang-kami-redesign-thq-text-elm85 {
+    color: rgba(99, 99, 99, 1);
+    height: auto;
+    font-size: 9.574978828430176px;
+    align-self: stretch;
+    font-style: Regular;
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 400;
+    line-height: 0px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.tentang-kami-redesign-thq-frame456480544-elm18 {
+    gap: 6.38331937789917px;
+    display: flex;
+    align-items: center;
+}
+
+.tentang-kami-redesign-thq-group456480389-elm7 {
+    width: 8px;
+    height: 7.979148864746094px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+
+.tentang-kami-redesign-thq-ellipse41-elm7 {
+    top: 0px;
+    left: 0px;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-riinstagramfill-elm7 {
+    top: 1.5957881212234497px;
+    left: 1.5956302881240845px;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-group456480390-elm7 {
+    width: 8px;
+    height: 7.979148864746094px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+
+.tentang-kami-redesign-thq-ellipse42-elm7 {
+    top: 0px;
+    left: 0px;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-icbaselinefacebook-elm7 {
+    top: 1.5957881212234497px;
+    left: 1.5957937240600586px;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-group456480391-elm7 {
+    width: 8px;
+    height: 7.979148864746094px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+
+.tentang-kami-redesign-thq-ellipse43-elm7 {
+    top: 0px;
+    left: 0px;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-mditwitter-elm7 {
+    top: 1.5957881212234497px;
+    left: 1.5959571599960327px;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-group456480392-elm7 {
+    width: 8px;
+    height: 7.979148864746094px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+
+.tentang-kami-redesign-thq-ellipse44-elm7 {
+    top: 0px;
+    left: 0px;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-mdilinkedin-elm7 {
+    top: 1.5957881212234497px;
+    left: 1.5956321954727173px;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-frame456480545-elm18 {
+    gap: 7.979149341583252px;
+    width: 218.62867736816406px;
+    height: 187.50999450683594px;
+    display: flex;
+    padding: 26.331192016601562px 15.958298683166504px;
+    position: relative;
+    box-shadow: 0px 0px 4.787489414215088px 0px
+        rgba(0, 0, 0, 0.15000000596046448);
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 9.574978828430176px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.tentang-kami-redesign-thq-image20-elm8 {
+    top: 4.78737211227417px;
+    left: 213.84092712402344px;
+    width: 209px;
+    height: 135px;
+    position: absolute;
+    border-radius: 9.574978828430176px;
+}
+
+.tentang-kami-redesign-thq-image19-elm9 {
+    top: 4.78737211227417px;
+    left: 213.84092712402344px;
+    width: 209px;
+    height: 134px;
+    position: absolute;
+    border-radius: 9.574978828430176px;
+}
+
+.tentang-kami-redesign-thq-logo-elm19 {
+    gap: 7.979149341583252px;
+    top: 12.766521453857422px;
+    left: 65.42875671386719px;
+    width: 81px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+}
+
+.tentang-kami-redesign-thq-laos1-elm19 {
+    width: 16px;
+    height: 16px;
+}
+
+.tentang-kami-redesign-thq-text-elm86 {
+    color: rgba(255, 255, 255, 1);
+    height: auto;
+    font-size: 11.170808792114258px;
+    font-style: SemiBold;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 600;
+    line-height: 20.74578857421875px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.tentang-kami-redesign-thq-rectangle1115-elm8 {
+    top: 43.88520050048828px;
+    left: 61.43918228149414px;
+    width: 95px;
+    height: 97px;
+    position: absolute;
+    border-color: rgba(255, 255, 255, 1);
+    border-style: solid;
+    border-width: 0.7979149222373962px;
+    border-radius: 9.574978828430176px 9.574978828430176px 0 0;
+}
+
+.tentang-kami-redesign-thq-frame456480545-elm19 {
+    gap: 3.989574670791626px;
+    top: 144.4224853515625px;
+    left: 63.83292770385742px;
+    width: 91px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    flex-shrink: 0;
+    flex-direction: column;
+}
+
+.tentang-kami-redesign-thq-frame456480543-elm19 {
+    display: flex;
+    align-self: stretch;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tentang-kami-redesign-thq-text-elm87 {
+    color: rgba(30, 30, 30, 1);
+    width: 197px;
+    height: auto;
+    font-size: 12.76663875579834px;
+    font-style: Regular;
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 400;
+    line-height: 0px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.tentang-kami-redesign-thq-text-elm88 {
+    color: rgba(99, 99, 99, 1);
+    height: auto;
+    font-size: 9.574978828430176px;
+    align-self: stretch;
+    font-style: Regular;
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 400;
+    line-height: 0px;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.tentang-kami-redesign-thq-frame456480544-elm19 {
+    gap: 6.38331937789917px;
+    display: flex;
+    align-items: center;
+}
+
+.tentang-kami-redesign-thq-group456480389-elm8 {
+    width: 8px;
+    height: 7.979148864746094px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+
+.tentang-kami-redesign-thq-ellipse41-elm8 {
+    top: 0px;
+    left: 0px;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-riinstagramfill-elm8 {
+    top: 1.5957881212234497px;
+    left: 1.5958665609359741px;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-group456480390-elm8 {
+    width: 8px;
+    height: 7.979148864746094px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+
+.tentang-kami-redesign-thq-ellipse42-elm8 {
+    top: 0px;
+    left: 0px;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-icbaselinefacebook-elm8 {
+    top: 1.5957881212234497px;
+    left: 1.5960299968719482px;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-group456480391-elm8 {
+    width: 8px;
+    height: 7.979148864746094px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+
+.tentang-kami-redesign-thq-ellipse43-elm8 {
+    top: 0px;
+    left: 0px;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-mditwitter-elm8 {
+    top: 1.5957881212234497px;
+    left: 1.5957051515579224px;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-group456480392-elm8 {
+    width: 8px;
+    height: 7.979148864746094px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+
+.tentang-kami-redesign-thq-ellipse44-elm8 {
+    top: 0px;
+    left: 0px;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-mdilinkedin-elm8 {
+    top: 1.5957881212234497px;
+    left: 1.595868468284607px;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-thq-button-elm2 {
+    gap: 10px;
+    top: 2819px;
+    left: 518px;
+    width: 307px;
+    height: 56px;
+    display: flex;
+    padding: 10px 33px;
+    position: absolute;
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.15000000596046448);
+    align-items: center;
+    flex-shrink: 0;
+    border-color: rgba(255, 255, 255, 1);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 50px;
+    background-color: rgba(45, 204, 112, 1);
+}
+
+.tentang-kami-redesign-thq-text-elm89 {
+    color: rgba(255, 255, 255, 1);
+    height: auto;
+    text-align: center;
+    line-height: 24px;
+}
+
+.tentang-kami-redesign-thq-iconly-bold-arrow-right3-elm3 {
+    width: 15px;
+    height: 15px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 0;
+}
+
+.tentang-kami-redesign-thq-iconly-bold-arrow-right3-elm4 {
+    top: 0px;
+    left: 0px;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+}
+
+.tentang-kami-redesign-thq-arrow-right3-elm3 {
+    top: 4.0625px;
+    left: 1.875px;
+    width: 11.25px;
+    height: 6.875px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+}
+
+.tentang-kami-redesign-thq-arrow-right3-elm4 {
+    top: 0px;
+    left: 0px;
+    width: 11px;
+    height: 7px;
+    position: absolute;
+}
+
+.tentang-kami-redesign-link {
+    display: contents;
+}
+
+.tentang-kami-redesign-container2 {
+    right: 50px;
+    border: 1px solid #ffffff5c;
+    bottom: 30px;
+    display: flex;
+    z-index: 22;
+    position: fixed;
+    box-shadow: 5px 5px 10px 0px rgba(31, 31, 31, 0.4);
+    min-height: auto;
+    align-items: center;
+    padding-top: 8px;
+    padding-left: 12px;
+    border-radius: 8px;
+    padding-right: 12px;
+    padding-bottom: 8px;
+    backdrop-filter: blur(6px);
+    background-color: rgba(41, 41, 41, 0.41);
+}
+
+.tentang-kami-redesign-icon1 {
+    width: 24px;
+    margin-right: 4px;
+}
+
+.tentang-kami-redesign-text9 {
+    color: white;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+}

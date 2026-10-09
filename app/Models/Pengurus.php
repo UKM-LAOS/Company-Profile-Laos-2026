@@ -6,6 +6,7 @@ use Database\Factories\PengurusFactory;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\Storage;
 
@@ -18,6 +19,7 @@ class Pengurus extends Model
         'nama',
         'jabatan',
         'periode',
+        'divisi_id',
         'foto',
         'sosmed',
         'urutan',
@@ -37,10 +39,21 @@ class Pengurus extends Model
     protected function casts(): array
     {
         return [
+            'divisi_id' => 'integer',
             'sosmed' => 'array',
             'urutan' => 'integer',
             'aktif' => 'boolean',
         ];
+    }
+
+    /**
+     * Division this committee member belongs to, if assigned.
+     *
+     * @return BelongsTo<Divisi, $this>
+     */
+    public function divisi(): BelongsTo
+    {
+        return $this->belongsTo(Divisi::class, 'divisi_id');
     }
 
     /**
