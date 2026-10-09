@@ -17,6 +17,8 @@ Route::get('/', function () {
         'canRegister' => Route::has('register'),
         'laravelVersion' => Application::VERSION,
         'phpVersion' => PHP_VERSION,
+        'divisis' => \App\Models\Divisi::all(),
+        'programs' => \App\Models\Program::all(),
     ]);
 })->name('home');
 

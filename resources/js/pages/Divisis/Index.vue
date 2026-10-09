@@ -47,19 +47,21 @@ const openDeleteModal = (divisi: any) => {
     <Head title="Kelola Divisi" />
 
     <AuthenticatedLayout>
-        <div class="p-6 sm:p-8">
-            <div class="mb-6 flex flex-col md:flex-row justify-between items-start md:items-center">
+        <template #header>
+            <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                 <div>
-                    <h1 class="text-3xl font-bold text-slate-800 dark:text-slate-200">Kelola Divisi</h1>
-                    <p class="text-slate-500 dark:text-slate-400 mt-1">Manajemen struktur 5 divisi teknis dan operasional UKM LAOS Fasilkom UNEJ periode kepengurusan aktif.</p>
+                    <h1 class="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl dark:text-white">Kelola Divisi</h1>
+                    <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">Manajemen struktur 5 divisi teknis dan operasional UKM LAOS Fasilkom UNEJ periode kepengurusan aktif.</p>
                 </div>
             </div>
+        </template>
 
+        <div class="space-y-6">
             <div class="bg-white dark:bg-[#1e2336] rounded-xl border border-slate-200 dark:border-slate-800/60 shadow-sm">
-                <div class="p-6">
+                <div class="p-4 sm:p-6">
                     
-                    <div class="flex justify-between items-center mb-6">
-                        <div class="relative w-full max-w-3xl">
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-6">
+                        <div class="relative w-full sm:max-w-md">
                                 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                     <svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                                         <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
@@ -72,7 +74,7 @@ const openDeleteModal = (divisi: any) => {
                                     placeholder="Cari bedasarkan Divisi"
                                 />
                             </div>
-                            <PrimaryButton @click="openCreateModal" class="ml-4 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-md flex items-center">
+                            <PrimaryButton @click="openCreateModal" class="w-full sm:w-auto justify-center bg-green-500 hover:bg-green-600 text-white font-semibold rounded-md flex items-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
                                     <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd" />
                                 </svg>
