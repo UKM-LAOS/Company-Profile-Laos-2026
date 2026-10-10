@@ -25,6 +25,16 @@ class Divisi extends Model
     }
 
     /**
+     * Get all committee members assigned to this division.
+     *
+     * @return HasMany<Pengurus, $this>
+     */
+    public function pengurus(): HasMany
+    {
+        return $this->hasMany(Pengurus::class, 'divisi_id');
+    }
+
+    /**
      * Get all work programs organized by this division.
      *
      * @return HasMany<Program, $this>

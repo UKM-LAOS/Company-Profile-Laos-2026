@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PengurusController;
 use App\Http\Controllers\DivisiController;
 use App\Http\Controllers\ProfileController;
@@ -18,6 +20,8 @@ Route::get('/', function () {
         'phpVersion' => PHP_VERSION,
     ]);
 })->name('home');
+
+Route::get('/tentang-kami', [AboutController::class, 'index'])->name('tentang-kami');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
@@ -48,6 +52,10 @@ Route::middleware(['auth', 'can:view_committee'])->group(function () {
         ->parameters(['pengurus' => 'pengurus']);
 });
 
+Route::middleware(['auth', 'can:view_news'])->group(function () {
+    Route::resource('blogs', BlogController::class);
+});
+  
 Route::middleware(['auth', 'can:view_divisions'])->group(function () {
     Route::resource('divisis', DivisiController::class)->except(['create', 'show', 'edit']);
 });
