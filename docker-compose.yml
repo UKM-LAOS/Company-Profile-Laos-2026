@@ -1,0 +1,49 @@
+services:
+  app:
+    build: .
+    container_name: cp_laos_app
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8001:80"
+    env_file:
+      - .env
+    environment:
+      DB_HOST: db
+      DB_PORT: 3306
+      APP_URL: ${APP_URL:-http://localhost:8001}
+    volumes:
+      - storage_data:/var/www/html/storage
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - cp_laos
+
+  db:
+    image: mysql:8.0
+    container_name: cp_laos_mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: ${DB_DATABASE:-cp_laos}
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD:-secret}
+      MYSQL_PASSWORD: ${DB_PASSWORD:-secret}
+      MYSQL_USER: ${DB_USERNAME:-cp_laos}
+    volumes:
+      - db_data:/var/lib/mysql
+    ports:
+      - "127.0.0.1:3307:3306"
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p${DB_PASSWORD:-secret}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    networks:
+      - cp_laos
+
+volumes:
+  db_data:
+  storage_data:
+
+networks:
+  cp_laos:
+    driver: bridge

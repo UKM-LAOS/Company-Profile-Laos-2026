@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PengurusController;
 use App\Http\Controllers\DivisiController;
@@ -22,6 +23,8 @@ Route::get('/', function () {
         'programs' => \App\Models\Program::all(),
     ]);
 })->name('home');
+
+Route::get('/tentang-kami', [AboutController::class, 'index'])->name('tentang-kami');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
