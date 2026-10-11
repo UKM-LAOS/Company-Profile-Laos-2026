@@ -2,9 +2,11 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Facades\Storage;
 
 class Blog extends Model
 {
@@ -16,6 +18,7 @@ class Blog extends Model
         'judul',
         'slug',
         'kategori',
+        'thumbnail',
         'konten',
         'meta_description',
         'is_unggulan',
@@ -36,6 +39,80 @@ class Blog extends Model
             'published_at' => 'datetime',
             'views' => 'integer',
         ];
+    }
+
+    protected $appends = [
+        'first_image',
+        'thumbnail_url',
+        'ringkasan',
+        'tanggal_rilis_formatted',
+    ];
+
+    /**
+     * Scope a query to only include published blogs.
+     *
+     * @param Builder<Blog> $query
+     * @return Builder<Blog>
+     */
+    public function scopePublished(Builder $query): Builder
+    {
+        return $query->where('status', 'published')
+            ->whereNotNull('published_at')
+            ->where('published_at', '<=', now());
+    }
+
+    /**
+     * Get the first image extracted from content or null.
+     */
+    public function getFirstImageAttribute(): ?string
+    {
+        $content = $this->attributes['konten'] ?? '';
+        if ($content !== '' && preg_match('/<img[^>]+src=["\']([^"\']+)["\']/i', $content, $matches)) {
+            return $matches[1];
+        }
+        return null;
+    }
+
+    /**
+     * Get thumbnail URL for display.
+     */
+    public function getThumbnailUrlAttribute(): string
+    {
+        $thumbnail = $this->attributes['thumbnail'] ?? null;
+        if (!empty($thumbnail)) {
+            if (str_starts_with($thumbnail, 'http://') || str_starts_with($thumbnail, 'https://')) {
+                return $thumbnail;
+            }
+            return Storage::disk('public')->url($thumbnail);
+        }
+
+        return $this->first_image ?? asset('assets/blog-default.jpg');
+    }
+
+    /**
+     * Get excerpt / ringkasan.
+     */
+    public function getRingkasanAttribute(): string
+    {
+        if (!empty($this->attributes['meta_description'])) {
+            return $this->attributes['meta_description'];
+        }
+        $content = $this->attributes['konten'] ?? '';
+        if ($content !== '') {
+            $plain = trim(strip_tags($content));
+            return \Illuminate\Support\Str::limit($plain, 130);
+        }
+        return '';
+    }
+
+    /**
+     * Get formatted publication date in Indonesian locale.
+     */
+    public function getTanggalRilisFormattedAttribute(): string
+    {
+        return $this->published_at
+            ? $this->published_at->locale('id')->translatedFormat('d F Y')
+            : '';
     }
 
     /**

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\PublicBlogController;
 use App\Http\Controllers\PengurusController;
 use App\Http\Controllers\DivisiController;
 use App\Http\Controllers\ProgramController;
@@ -24,6 +25,8 @@ Route::get('/', function () {
     ]);
 })->name('home');
 
+Route::get('/blog', [PublicBlogController::class, 'index'])->name('blog.index');
+Route::get('/blog/{slug}', [PublicBlogController::class, 'show'])->name('blog.show');
 Route::get('/tentang-kami', [AboutController::class, 'index'])->name('tentang-kami');
 
 Route::get('/dashboard', function () {

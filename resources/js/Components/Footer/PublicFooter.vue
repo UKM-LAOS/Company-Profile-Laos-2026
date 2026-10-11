@@ -103,31 +103,19 @@ defineProps<{
                     <h3 class="mb-4 font-semibold text-white">Quick Links</h3>
                     <ul class="space-y-3 text-sm text-emerald-100/80">
                         <li>
-                            <Link
-                                :href="route('home')"
-                                class="transition hover:text-white"
-                                >Home</Link
-                            >
+                            <Link :href="route('home')" class="transition hover:text-white">Home</Link>
                         </li>
                         <li>
-                            <a href="#" class="transition hover:text-white"
-                                >Blog</a
-                            >
+                            <Link :href="route('blog.index')" class="transition hover:text-white">Blog</Link>
                         </li>
                         <li>
-                            <a href="#" class="transition hover:text-white"
-                                >Program Kerja</a
-                            >
+                            <a href="#" class="transition hover:text-white">Program Kerja</a>
                         </li>
                         <li>
-                            <a href="#" class="transition hover:text-white"
-                                >Tentang Kami</a
-                            >
+                            <Link :href="route('tentang-kami')" class="transition hover:text-white">Tentang Kami</Link>
                         </li>
                         <li>
-                            <a href="#" class="transition hover:text-white"
-                                >Pengurus</a
-                            >
+                            <a href="#" class="transition hover:text-white">Pengurus</a>
                         </li>
                     </ul>
                 </div>

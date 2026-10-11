@@ -142,7 +142,6 @@ function getInitials(nama: string): string {
                 </div>
             </div>
         </template>
-
         <div class="space-y-6">
             <!-- Search & Refresh Control Card (Matches Programs & Pengurus) -->
             <div

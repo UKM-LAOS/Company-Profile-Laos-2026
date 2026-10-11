@@ -32,10 +32,24 @@ class BlogRequest extends FormRequest
             'divisi_id' => ['required', 'exists:divisis,id'],
             'judul' => ['required', 'string', 'max:255', Rule::unique(Blog::class)->ignore($blogId)],
             'kategori' => ['required', 'string', 'max:100'],
+            'thumbnail' => ['nullable', 'image', 'mimes:jpg,jpeg,png,webp', 'max:2048'],
+            'hapus_thumbnail' => ['sometimes', 'boolean'],
             'konten' => ['required', 'string'],
             'meta_description' => ['nullable', 'string', 'max:255'],
             'is_unggulan' => ['boolean'],
             'status' => ['required', 'string', 'in:draft,published'],
+        ];
+    }
+
+    /**
+     * @return array<string, string>
+     */
+    public function messages(): array
+    {
+        return [
+            'thumbnail.image' => 'File thumbnail harus berupa gambar.',
+            'thumbnail.mimes' => 'Format thumbnail harus berupa JPG, JPEG, PNG, atau WEBP.',
+            'thumbnail.max' => 'Ukuran thumbnail maksimal 2 MB.',
         ];
     }
 }

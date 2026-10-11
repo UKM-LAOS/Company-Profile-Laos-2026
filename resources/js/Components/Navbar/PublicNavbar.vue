@@ -24,32 +24,27 @@ const isMobileMenuOpen = ref(false);
                 </div>
 
                 <!-- Desktop Menu -->
-                <div class="hidden space-x-8 md:flex">
+                <div class="hidden md:flex space-x-8 items-center">
                     <Link
                         :href="route('home')"
-                        class="text-sm font-semibold text-green-500 transition hover:text-green-600"
-                        >Home</Link
+                        :class="route().current('home') ? 'text-green-500 font-semibold text-sm hover:text-green-600 transition' : 'text-gray-600 font-medium text-sm hover:text-green-500 transition'"
                     >
-                    <a
-                        href="#"
-                        class="text-sm font-medium text-gray-600 transition hover:text-green-500"
-                        >Blog</a
+                        Home
+                    </Link>
+                    <Link
+                        :href="route('blog.index')"
+                        :class="route().current('blog.*') ? 'text-green-500 font-semibold text-sm hover:text-green-600 transition' : 'text-gray-600 font-medium text-sm hover:text-green-500 transition'"
                     >
-                    <a
-                        href="#"
-                        class="text-sm font-medium text-gray-600 transition hover:text-green-500"
-                        >Program Kerja</a
+                        Blog
+                    </Link>
+                    <a href="#" class="text-gray-600 font-medium text-sm hover:text-green-500 transition">Program Kerja</a>
+                    <Link
+                        :href="route('tentang-kami')"
+                        :class="route().current('tentang-kami') ? 'text-green-500 font-semibold text-sm hover:text-green-600 transition' : 'text-gray-600 font-medium text-sm hover:text-green-500 transition'"
                     >
-                    <a
-                        href="#"
-                        class="text-sm font-medium text-gray-600 transition hover:text-green-500"
-                        >Tentang Kami</a
-                    >
-                    <a
-                        href="#"
-                        class="text-sm font-medium text-gray-600 transition hover:text-green-500"
-                        >Pengurus</a
-                    >
+                        Tentang Kami
+                    </Link>
+                    <a href="#" class="text-gray-600 font-medium text-sm hover:text-green-500 transition">Pengurus</a>
                 </div>
 
                 <!-- Mobile menu button -->
@@ -92,41 +87,31 @@ const isMobileMenuOpen = ref(false);
         </div>
 
         <!-- Mobile Menu -->
-        <div
-            v-show="isMobileMenuOpen"
-            class="absolute left-0 w-full border-b border-gray-100 bg-white shadow-lg md:hidden"
-        >
-            <div class="space-y-1 px-4 pt-2 pb-6">
+        <div v-show="isMobileMenuOpen" class="md:hidden bg-white border-b border-gray-100 shadow-lg absolute w-full left-0">
+            <div class="px-4 pt-2 pb-6 space-y-1">
                 <Link
                     :href="route('home')"
                     @click="isMobileMenuOpen = false"
-                    class="block rounded-md bg-green-50 px-3 py-3 text-base font-medium text-green-600"
-                    >Home</Link
+                    :class="route().current('home') ? 'block px-3 py-3 rounded-md text-base font-medium text-green-600 bg-green-50' : 'block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-green-600 hover:bg-gray-50'"
                 >
-                <a
-                    href="#"
+                    Home
+                </Link>
+                <Link
+                    :href="route('blog.index')"
                     @click="isMobileMenuOpen = false"
-                    class="block rounded-md px-3 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-green-600"
-                    >Blog</a
+                    :class="route().current('blog.*') ? 'block px-3 py-3 rounded-md text-base font-medium text-green-600 bg-green-50' : 'block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-green-600 hover:bg-gray-50'"
                 >
-                <a
-                    href="#"
+                    Blog
+                </Link>
+                <a href="#" @click="isMobileMenuOpen = false" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-green-600 hover:bg-gray-50">Program Kerja</a>
+                <Link
+                    :href="route('tentang-kami')"
                     @click="isMobileMenuOpen = false"
-                    class="block rounded-md px-3 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-green-600"
-                    >Program Kerja</a
+                    :class="route().current('tentang-kami') ? 'block px-3 py-3 rounded-md text-base font-medium text-green-600 bg-green-50' : 'block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-green-600 hover:bg-gray-50'"
                 >
-                <a
-                    href="#"
-                    @click="isMobileMenuOpen = false"
-                    class="block rounded-md px-3 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-green-600"
-                    >Tentang Kami</a
-                >
-                <a
-                    href="#"
-                    @click="isMobileMenuOpen = false"
-                    class="block rounded-md px-3 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-green-600"
-                    >Pengurus</a
-                >
+                    Tentang Kami
+                </Link>
+                <a href="#" @click="isMobileMenuOpen = false" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-green-600 hover:bg-gray-50">Pengurus</a>
             </div>
         </div>
     </nav>
