@@ -21,6 +21,8 @@ Route::get('/', function () {
     ]);
 })->name('home');
 
+Route::get('/program-kerja', [ProgramController::class, 'publicIndex'])->name('program-kerja.index');
+
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
