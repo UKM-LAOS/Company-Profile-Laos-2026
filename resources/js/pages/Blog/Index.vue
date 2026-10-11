@@ -11,6 +11,7 @@ export interface BlogItem {
     judul: string;
     slug: string;
     kategori: string;
+    thumbnail?: string | null;
     konten?: string;
     meta_description?: string | null;
     is_unggulan: boolean;

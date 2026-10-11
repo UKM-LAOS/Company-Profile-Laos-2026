@@ -8,13 +8,15 @@ import AppDropdownFilter from '@/Components/AppDropdownFilter.vue';
 import TiptapEditor from '@/Components/Common/TiptapEditor.vue';
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 import { Head, Link, useForm } from '@inertiajs/vue3';
-import { computed } from 'vue';
+import { computed, ref } from 'vue';
 
 const props = defineProps<{
     blog?: {
         id: number;
         judul: string;
         kategori: string;
+        thumbnail?: string | null;
+        thumbnail_url?: string | null;
         konten: string;
         meta_description: string | null;
         is_unggulan: boolean;
@@ -26,7 +28,21 @@ const props = defineProps<{
 
 const isEdit = !!props.blog;
 
-const form = useForm({
+const thumbnailInput = ref<HTMLInputElement | null>(null);
+const previewUrl = ref<string | null>(props.blog?.thumbnail_url ?? null);
+
+const form = useForm<{
+    judul: string;
+    kategori: string;
+    konten: string;
+    meta_description: string;
+    is_unggulan: boolean;
+    status: string;
+    divisi_id: string;
+    thumbnail: File | null;
+    hapus_thumbnail: boolean;
+    _method?: string;
+}>({
     judul: props.blog?.judul ?? '',
     kategori: props.blog?.kategori ?? '',
     konten: props.blog?.konten ?? '',
@@ -34,6 +50,8 @@ const form = useForm({
     is_unggulan: props.blog?.is_unggulan ?? false,
     status: props.blog?.status ?? 'draft',
     divisi_id: props.blog?.divisi_id ? String(props.blog.divisi_id) : '',
+    thumbnail: null,
+    hapus_thumbnail: false,
 });
 
 const divisiOptions = computed(() => {
@@ -48,11 +66,40 @@ const statusOptions = [
     { value: 'published', label: 'Terbit (Publikasikan sekarang)' },
 ];
 
+function handleThumbnailChange(e: Event) {
+    const target = e.target as HTMLInputElement;
+    if (target.files && target.files[0]) {
+        const file = target.files[0];
+        form.thumbnail = file;
+        form.hapus_thumbnail = false;
+        previewUrl.value = URL.createObjectURL(file);
+    }
+}
+
+function removeThumbnail() {
+    form.thumbnail = null;
+    form.hapus_thumbnail = true;
+    previewUrl.value = null;
+    if (thumbnailInput.value) {
+        thumbnailInput.value.value = '';
+    }
+}
+
 function submit() {
+    form.transform((data) => ({
+        ...data,
+        ...(isEdit ? { _method: 'put' } : {}),
+    }));
+
+    const options = {
+        forceFormData: true,
+        preserveScroll: true,
+    };
+
     if (isEdit && props.blog) {
-        form.put(route('blogs.update', props.blog.id));
+        form.post(route('blogs.update', props.blog.id), options);
     } else {
-        form.post(route('blogs.store'));
+        form.post(route('blogs.store'), options);
     }
 }
 </script>
@@ -150,6 +197,75 @@ function submit() {
                             :message="form.errors.divisi_id"
                             class="mt-2"
                         />
+                    </div>
+                </div>
+
+                <!-- Thumbnail / Gambar Sampul -->
+                <div
+                    class="rounded-2xl border border-slate-200/80 bg-slate-50/50 p-4 sm:p-5 dark:border-slate-800 dark:bg-slate-900/50"
+                >
+                    <div class="flex items-center justify-between mb-3">
+                        <div>
+                            <InputLabel value="Gambar Sampul / Thumbnail (Opsional)" />
+                            <p class="text-xs text-slate-500 dark:text-slate-400">
+                                Disimpan ke storage publik (JPG, PNG, atau WEBP, maks 2 MB).
+                            </p>
+                        </div>
+                        <button
+                            v-if="previewUrl"
+                            type="button"
+                            class="text-xs font-semibold text-rose-600 hover:text-rose-700 dark:text-rose-400 cursor-pointer transition"
+                            @click="removeThumbnail"
+                        >
+                            Hapus Gambar
+                        </button>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row items-center gap-4">
+                        <!-- Preview Box -->
+                        <div
+                            class="relative flex h-32 w-full sm:w-48 shrink-0 items-center justify-center overflow-hidden rounded-xl border-2 border-dashed border-slate-300 bg-white text-slate-400 dark:border-slate-700 dark:bg-slate-900"
+                        >
+                            <img
+                                v-if="previewUrl"
+                                :src="previewUrl"
+                                alt="Preview Thumbnail"
+                                class="h-full w-full object-cover"
+                            />
+                            <div v-else class="p-3 text-center">
+                                <svg
+                                    class="mx-auto h-8 w-8 text-slate-300 dark:text-slate-600"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="1.5"
+                                        d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+                                    />
+                                </svg>
+                                <span class="mt-1 block text-xs text-slate-400"
+                                    >Belum ada gambar</span
+                                >
+                            </div>
+                        </div>
+
+                        <!-- File Input -->
+                        <div class="w-full flex-1">
+                            <input
+                                ref="thumbnailInput"
+                                type="file"
+                                accept="image/jpeg,image/png,image/webp,image/jpg"
+                                class="block w-full text-sm text-slate-500 file:mr-4 file:rounded-xl file:border-0 file:bg-emerald-50 file:px-4 file:py-2.5 file:text-sm file:font-semibold file:text-emerald-700 hover:file:bg-emerald-100 dark:text-slate-400 dark:file:bg-emerald-950 dark:file:text-emerald-300"
+                                @change="handleThumbnailChange"
+                            />
+                            <InputError
+                                :message="form.errors.thumbnail"
+                                class="mt-2"
+                            />
+                        </div>
                     </div>
                 </div>
 

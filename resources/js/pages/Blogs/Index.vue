@@ -17,6 +17,8 @@ interface BlogItem {
     judul: string;
     slug: string;
     kategori: string;
+    thumbnail?: string | null;
+    thumbnail_url?: string;
     status: string;
     published_at: string | null;
     author_id: number;
@@ -236,25 +238,34 @@ function formatDate(dateStr: string | null): string {
             >
                 <!-- JUDUL & SLUG -->
                 <template #cell-judul="{ item }">
-                    <div class="w-48 sm:w-64 md:w-72 lg:w-80">
-                        <p
-                            class="truncate text-sm font-semibold text-slate-900 dark:text-white"
-                            :title="item.judul"
-                        >
-                            {{ item.judul }}
-                            <span
-                                v-if="item.is_unggulan"
-                                title="Artikel Unggulan"
-                                class="ml-1 text-amber-500"
-                                >★</span
+                    <div class="flex items-center gap-3 w-48 sm:w-64 md:w-72 lg:w-80 py-1">
+                        <div class="h-10 w-14 shrink-0 overflow-hidden rounded-lg border border-slate-200 bg-slate-100 dark:border-slate-700 dark:bg-slate-800">
+                            <img
+                                :src="item.thumbnail_url"
+                                :alt="item.judul"
+                                class="h-full w-full object-cover"
+                            />
+                        </div>
+                        <div class="min-w-0 flex-1">
+                            <p
+                                class="truncate text-sm font-semibold text-slate-900 dark:text-white"
+                                :title="item.judul"
                             >
-                        </p>
-                        <p
-                            class="mt-0.5 truncate font-mono text-[11px] text-slate-400 dark:text-slate-500"
-                            :title="'/blog/' + item.slug"
-                        >
-                            /blog/{{ item.slug }}
-                        </p>
+                                {{ item.judul }}
+                                <span
+                                    v-if="item.is_unggulan"
+                                    title="Artikel Unggulan"
+                                    class="ml-1 text-amber-500"
+                                    >★</span
+                                >
+                            </p>
+                            <p
+                                class="mt-0.5 truncate font-mono text-[11px] text-slate-400 dark:text-slate-500"
+                                :title="'/blog/' + item.slug"
+                            >
+                                /blog/{{ item.slug }}
+                            </p>
+                        </div>
                     </div>
                 </template>
 

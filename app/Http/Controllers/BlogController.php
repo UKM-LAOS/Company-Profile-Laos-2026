@@ -8,13 +8,17 @@ use App\Models\Divisi;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Inertia\Inertia;
 use Inertia\Response;
 
 class BlogController extends Controller
 {
+    public const THUMBNAIL_DIRECTORY = 'blogs/thumbnails';
+
     public function index(Request $request): Response|RedirectResponse
     {
         $request->validate([
@@ -31,7 +35,7 @@ class BlogController extends Controller
 
         $blogs = Blog::query()
             ->with(['author:id,name', 'divisi:id,nama'])
-            ->select(['id', 'judul', 'slug', 'kategori', 'status', 'published_at', 'author_id', 'divisi_id', 'is_unggulan'])
+            ->select(['id', 'judul', 'slug', 'kategori', 'thumbnail', 'status', 'published_at', 'author_id', 'divisi_id', 'is_unggulan'])
             ->when($filters['search'] !== '', function (Builder $query) use ($filters): void {
                 $query->where(function (Builder $q) use ($filters): void {
                     $q->where('judul', 'like', "%{$filters['search']}%")
@@ -94,6 +98,13 @@ class BlogController extends Controller
             $validated['published_at'] = now();
         }
 
+        $thumbnail = $request->file('thumbnail');
+        if ($thumbnail instanceof UploadedFile) {
+            $validated['thumbnail'] = $thumbnail->store(self::THUMBNAIL_DIRECTORY, 'public') ?: null;
+        } else {
+            unset($validated['thumbnail']);
+        }
+
         Blog::create($validated);
 
         return redirect()->route('blogs.index')->with('success', 'Berita berhasil ditambahkan.');
@@ -120,6 +131,23 @@ class BlogController extends Controller
 
         if ($validated['status'] === 'published' && $blog->status !== 'published' && !$blog->published_at) {
             $validated['published_at'] = now();
+        }
+
+        $oldThumbnail = $blog->thumbnail;
+        $thumbnail = $request->file('thumbnail');
+
+        if ($thumbnail instanceof UploadedFile) {
+            $validated['thumbnail'] = $thumbnail->store(self::THUMBNAIL_DIRECTORY, 'public') ?: null;
+            if (is_string($oldThumbnail) && Storage::disk('public')->exists($oldThumbnail)) {
+                Storage::disk('public')->delete($oldThumbnail);
+            }
+        } elseif ($request->boolean('hapus_thumbnail')) {
+            $validated['thumbnail'] = null;
+            if (is_string($oldThumbnail) && Storage::disk('public')->exists($oldThumbnail)) {
+                Storage::disk('public')->delete($oldThumbnail);
+            }
+        } else {
+            unset($validated['thumbnail']);
         }
 
         $blog->update($validated);

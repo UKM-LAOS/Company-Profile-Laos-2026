@@ -4,6 +4,8 @@ use App\Models\Blog;
 use App\Models\Divisi;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Facades\Storage;
 use Inertia\Testing\AssertableInertia as Assert;
 use Spatie\Permission\Models\Permission;
 use Spatie\Permission\PermissionRegistrar;
@@ -233,3 +235,81 @@ test('user can delete a blog post', function () {
 
     $this->assertSoftDeleted('blogs', ['id' => $blog->id]);
 });
+
+// ==========================================
+// THUMBNAIL STORAGE TESTS
+// ==========================================
+
+test('user can create blog with thumbnail file stored in public disk', function () {
+    Storage::fake('public');
+    $user = blogUser(['view_news', 'create_news']);
+
+    $file = UploadedFile::fake()->image('cover.jpg', 600, 400);
+    $payload = blogPayload([
+        'judul' => 'Artikel dengan Thumbnail',
+        'thumbnail' => $file,
+    ]);
+
+    $this->actingAs($user)
+        ->post(route('blogs.store'), $payload)
+        ->assertRedirect(route('blogs.index'));
+
+    $blog = Blog::where('judul', 'Artikel dengan Thumbnail')->first();
+    expect($blog)->not->toBeNull()
+        ->and($blog->thumbnail)->not->toBeNull();
+
+    Storage::disk('public')->assertExists($blog->thumbnail);
+    expect($blog->thumbnail_url)->toContain('/storage/' . $blog->thumbnail);
+});
+
+test('user can update blog to replace thumbnail and old file is deleted', function () {
+    Storage::fake('public');
+    $user = blogUser(['view_news', 'edit_news']);
+
+    $oldFile = UploadedFile::fake()->image('old_thumb.png', 400, 400);
+    $payload = blogPayload(['author_id' => $user->id, 'thumbnail' => $oldFile]);
+    $oldPath = $oldFile->store('blogs/thumbnails', 'public');
+    $payload['thumbnail'] = $oldPath;
+
+    $blog = Blog::create($payload);
+    Storage::disk('public')->assertExists($oldPath);
+
+    $newFile = UploadedFile::fake()->image('new_thumb.webp', 800, 600);
+    $updatePayload = array_merge(blogPayload(), [
+        'judul' => 'Judul Setelah Ganti Thumbnail',
+        'thumbnail' => $newFile,
+    ]);
+
+    $this->actingAs($user)
+        ->put(route('blogs.update', $blog), $updatePayload)
+        ->assertRedirect(route('blogs.index'));
+
+    $blog->refresh();
+    Storage::disk('public')->assertMissing($oldPath);
+    Storage::disk('public')->assertExists($blog->thumbnail);
+});
+
+test('user can remove thumbnail with hapus_thumbnail', function () {
+    Storage::fake('public');
+    $user = blogUser(['view_news', 'edit_news']);
+
+    $oldFile = UploadedFile::fake()->image('to_delete.jpg', 400, 400);
+    $oldPath = $oldFile->store('blogs/thumbnails', 'public');
+
+    $payload = blogPayload(['author_id' => $user->id, 'thumbnail' => $oldPath]);
+    $blog = Blog::create($payload);
+    Storage::disk('public')->assertExists($oldPath);
+
+    $updatePayload = array_merge(blogPayload(), [
+        'hapus_thumbnail' => true,
+    ]);
+
+    $this->actingAs($user)
+        ->put(route('blogs.update', $blog), $updatePayload)
+        ->assertRedirect(route('blogs.index'));
+
+    $blog->refresh();
+    expect($blog->thumbnail)->toBeNull();
+    Storage::disk('public')->assertMissing($oldPath);
+});
+

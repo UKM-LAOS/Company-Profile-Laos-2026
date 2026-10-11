@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Facades\Storage;
 
 class Blog extends Model
 {
@@ -17,6 +18,7 @@ class Blog extends Model
         'judul',
         'slug',
         'kategori',
+        'thumbnail',
         'konten',
         'meta_description',
         'is_unggulan',
@@ -76,6 +78,14 @@ class Blog extends Model
      */
     public function getThumbnailUrlAttribute(): string
     {
+        $thumbnail = $this->attributes['thumbnail'] ?? null;
+        if (!empty($thumbnail)) {
+            if (str_starts_with($thumbnail, 'http://') || str_starts_with($thumbnail, 'https://')) {
+                return $thumbnail;
+            }
+            return Storage::disk('public')->url($thumbnail);
+        }
+
         return $this->first_image ?? asset('assets/blog-default.jpg');
     }
 
