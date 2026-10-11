@@ -312,7 +312,9 @@ function submit() {
                                 v-model="form.pengurus_id"
                                 class="mt-1 block w-full rounded-xl border border-slate-200 bg-white px-3.5 py-2.5 text-sm text-slate-800 shadow-xs focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 focus:outline-none dark:border-slate-800 dark:bg-slate-900 dark:text-slate-100"
                             >
-                                <option value="">Tidak ada / Pilih Nanti</option>
+                                <option value="">
+                                    Tidak ada / Pilih Nanti
+                                </option>
                                 <option
                                     v-for="p in penguruses"
                                     :key="p.id"

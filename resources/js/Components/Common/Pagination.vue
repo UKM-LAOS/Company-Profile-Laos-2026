@@ -115,7 +115,7 @@ function formatLabel(label: string): string {
                 </Link>
                 <span
                     v-else
-                    class="inline-flex h-7 w-7 items-center justify-center text-slate-300 dark:text-slate-700 cursor-not-allowed"
+                    class="inline-flex h-7 w-7 cursor-not-allowed items-center justify-center text-slate-300 dark:text-slate-700"
                 >
                     <AppIcon name="chevron-left" class-name="h-3.5 w-3.5" />
                 </span>
@@ -162,7 +162,7 @@ function formatLabel(label: string): string {
                 </Link>
                 <span
                     v-else
-                    class="inline-flex h-7 w-7 items-center justify-center text-slate-300 dark:text-slate-700 cursor-not-allowed"
+                    class="inline-flex h-7 w-7 cursor-not-allowed items-center justify-center text-slate-300 dark:text-slate-700"
                 >
                     <AppIcon name="chevron-right" class-name="h-3.5 w-3.5" />
                 </span>

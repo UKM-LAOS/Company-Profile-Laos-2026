@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ProgramRequest;
 use App\Models\Divisi;
+use App\Models\Pengurus;
 use App\Models\Program;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\RedirectResponse;
@@ -75,7 +76,7 @@ class ProgramController extends Controller
             ->orderBy('nama')
             ->get();
 
-        $penguruses = \App\Models\Pengurus::query()
+        $penguruses = Pengurus::query()
             ->select(['id', 'nama', 'jabatan', 'foto'])
             ->orderBy('urutan')
             ->get();

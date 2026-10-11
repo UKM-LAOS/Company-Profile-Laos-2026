@@ -120,16 +120,39 @@ function openDeleteModal(program: ProgramItem) {
 }
 
 const MONTH_NAMES_ID = [
-    'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni',
-    'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember',
+    'Januari',
+    'Februari',
+    'Maret',
+    'April',
+    'Mei',
+    'Juni',
+    'Juli',
+    'Agustus',
+    'September',
+    'Oktober',
+    'November',
+    'Desember',
 ];
 
 const MONTH_NAMES_SHORT_ID = [
-    'Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun',
-    'Jul', 'Agu', 'Sep', 'Okt', 'Nov', 'Des',
+    'Jan',
+    'Feb',
+    'Mar',
+    'Apr',
+    'Mei',
+    'Jun',
+    'Jul',
+    'Agu',
+    'Sep',
+    'Okt',
+    'Nov',
+    'Des',
 ];
 
-function formatTargetWaktu(startStr?: string | null, endStr?: string | null): string {
+function formatTargetWaktu(
+    startStr?: string | null,
+    endStr?: string | null,
+): string {
     if (!startStr && !endStr) return '-';
     if (startStr && (!endStr || startStr === endStr)) {
         try {
@@ -148,7 +171,8 @@ function formatTargetWaktu(startStr?: string | null, endStr?: string | null): st
         try {
             const dStart = new Date(startStr);
             const dEnd = new Date(endStr);
-            if (isNaN(dStart.getTime()) || isNaN(dEnd.getTime())) return `${startStr} - ${endStr}`;
+            if (isNaN(dStart.getTime()) || isNaN(dEnd.getTime()))
+                return `${startStr} - ${endStr}`;
 
             const startDay = String(dStart.getDate()).padStart(2, '0');
             const endDay = String(dEnd.getDate()).padStart(2, '0');
@@ -156,7 +180,10 @@ function formatTargetWaktu(startStr?: string | null, endStr?: string | null): st
             const endYear = dEnd.getFullYear();
 
             // Same month and same year
-            if (dStart.getMonth() === dEnd.getMonth() && startYear === endYear) {
+            if (
+                dStart.getMonth() === dEnd.getMonth() &&
+                startYear === endYear
+            ) {
                 const month = MONTH_NAMES_ID[dStart.getMonth()];
                 return `${startDay} - ${endDay} ${month} ${startYear}`;
             }
@@ -189,11 +216,14 @@ const PIC_PALETTES = [
 function getProgramPIC(program: ProgramItem): ProgramPIC {
     if (program.pengurus) {
         const words = program.pengurus.nama.split(' ');
-        let initials = words.length > 1 ? (words[0][0] + words[1][0]) : words[0].substring(0, 2);
+        let initials =
+            words.length > 1
+                ? words[0][0] + words[1][0]
+                : words[0].substring(0, 2);
         initials = initials.toUpperCase();
-        
+
         const idx = Math.abs(program.pengurus.id) % PIC_PALETTES.length;
-        
+
         return {
             nama: program.pengurus.nama,
             jabatan: program.pengurus.jabatan,
@@ -217,21 +247,43 @@ function getProgramExecutionStatus(program: ProgramItem): ExecutionStatus {
     const parseDateAtMidnight = (dateStr?: string | null): Date | null => {
         if (!dateStr) return null;
         const parts = dateStr.slice(0, 10).split('-').map(Number);
-        if (parts.length === 3 && !isNaN(parts[0]) && !isNaN(parts[1]) && !isNaN(parts[2])) {
+        if (
+            parts.length === 3 &&
+            !isNaN(parts[0]) &&
+            !isNaN(parts[1]) &&
+            !isNaN(parts[2])
+        ) {
             return new Date(parts[0], parts[1] - 1, parts[2]);
         }
         const d = new Date(dateStr);
-        return isNaN(d.getTime()) ? null : new Date(d.getFullYear(), d.getMonth(), d.getDate());
+        return isNaN(d.getTime())
+            ? null
+            : new Date(d.getFullYear(), d.getMonth(), d.getDate());
     };
 
     const parseDateAtEndOfDay = (dateStr?: string | null): Date | null => {
         if (!dateStr) return null;
         const parts = dateStr.slice(0, 10).split('-').map(Number);
-        if (parts.length === 3 && !isNaN(parts[0]) && !isNaN(parts[1]) && !isNaN(parts[2])) {
+        if (
+            parts.length === 3 &&
+            !isNaN(parts[0]) &&
+            !isNaN(parts[1]) &&
+            !isNaN(parts[2])
+        ) {
             return new Date(parts[0], parts[1] - 1, parts[2], 23, 59, 59, 999);
         }
         const d = new Date(dateStr);
-        return isNaN(d.getTime()) ? null : new Date(d.getFullYear(), d.getMonth(), d.getDate(), 23, 59, 59, 999);
+        return isNaN(d.getTime())
+            ? null
+            : new Date(
+                  d.getFullYear(),
+                  d.getMonth(),
+                  d.getDate(),
+                  23,
+                  59,
+                  59,
+                  999,
+              );
     };
 
     const startDate = parseDateAtMidnight(program.open_regis_peserta);
@@ -243,7 +295,8 @@ function getProgramExecutionStatus(program: ProgramItem): ExecutionStatus {
                 key: 'mendatang',
                 label: 'Mendatang',
                 progress: 0,
-                badgeClass: 'bg-slate-100 text-slate-600 border-slate-200 dark:bg-slate-800 dark:text-slate-400 dark:border-slate-700',
+                badgeClass:
+                    'bg-slate-100 text-slate-600 border-slate-200 dark:bg-slate-800 dark:text-slate-400 dark:border-slate-700',
                 dotClass: 'bg-slate-400',
                 textClass: 'text-slate-500 dark:text-slate-400 font-semibold',
                 barClass: 'bg-slate-300 dark:bg-slate-600',
@@ -254,7 +307,8 @@ function getProgramExecutionStatus(program: ProgramItem): ExecutionStatus {
                 key: 'selesai',
                 label: 'Selesai',
                 progress: 100,
-                badgeClass: 'bg-[#006D37]/10 text-[#006D37] border-[#006D37]/30 dark:bg-emerald-950/40 dark:text-emerald-300 dark:border-emerald-800',
+                badgeClass:
+                    'bg-[#006D37]/10 text-[#006D37] border-[#006D37]/30 dark:bg-emerald-950/40 dark:text-emerald-300 dark:border-emerald-800',
                 dotClass: 'bg-[#006D37]',
                 textClass: 'text-[#006D37] dark:text-emerald-400 font-bold',
                 barClass: 'bg-[#006D37] dark:bg-emerald-500',
@@ -273,7 +327,8 @@ function getProgramExecutionStatus(program: ProgramItem): ExecutionStatus {
             key: 'berjalan',
             label: 'Berjalan',
             progress: calcProgress,
-            badgeClass: 'bg-emerald-50 text-emerald-700 border-emerald-200 dark:bg-emerald-950/50 dark:text-emerald-300 dark:border-emerald-800',
+            badgeClass:
+                'bg-emerald-50 text-emerald-700 border-emerald-200 dark:bg-emerald-950/50 dark:text-emerald-300 dark:border-emerald-800',
             dotClass: 'bg-emerald-500 animate-pulse',
             textClass: 'text-[#10b981] font-semibold',
             barClass: 'bg-[#10b981]',
@@ -285,7 +340,8 @@ function getProgramExecutionStatus(program: ProgramItem): ExecutionStatus {
             key: 'selesai',
             label: 'Selesai',
             progress: 100,
-            badgeClass: 'bg-[#006D37]/10 text-[#006D37] border-[#006D37]/30 dark:bg-emerald-950/40 dark:text-emerald-300 dark:border-emerald-800',
+            badgeClass:
+                'bg-[#006D37]/10 text-[#006D37] border-[#006D37]/30 dark:bg-emerald-950/40 dark:text-emerald-300 dark:border-emerald-800',
             dotClass: 'bg-[#006D37]',
             textClass: 'text-[#006D37] dark:text-emerald-400 font-bold',
             barClass: 'bg-[#006D37] dark:bg-emerald-500',
@@ -296,7 +352,8 @@ function getProgramExecutionStatus(program: ProgramItem): ExecutionStatus {
             key: 'berjalan',
             label: 'Berjalan',
             progress: 50,
-            badgeClass: 'bg-emerald-50 text-emerald-700 border-emerald-200 dark:bg-emerald-950/50 dark:text-emerald-300 dark:border-emerald-800',
+            badgeClass:
+                'bg-emerald-50 text-emerald-700 border-emerald-200 dark:bg-emerald-950/50 dark:text-emerald-300 dark:border-emerald-800',
             dotClass: 'bg-emerald-500 animate-pulse',
             textClass: 'text-[#10b981] font-semibold',
             barClass: 'bg-[#10b981]',
@@ -307,7 +364,8 @@ function getProgramExecutionStatus(program: ProgramItem): ExecutionStatus {
         key: 'mendatang',
         label: 'Mendatang',
         progress: 0,
-        badgeClass: 'bg-slate-100 text-slate-600 border-slate-200 dark:bg-slate-800 dark:text-slate-400 dark:border-slate-700',
+        badgeClass:
+            'bg-slate-100 text-slate-600 border-slate-200 dark:bg-slate-800 dark:text-slate-400 dark:border-slate-700',
         dotClass: 'bg-slate-400',
         textClass: 'text-slate-500 dark:text-slate-400 font-semibold',
         barClass: 'bg-slate-300 dark:bg-slate-600',
@@ -325,7 +383,11 @@ function getDivisiBadgeClass(divisiNama?: string): string {
     if (name.includes('humas') || name.includes('keorganisasian')) {
         return 'bg-[#d1e7dd] text-[#0f5132] border border-[#a3cfbb]/60 dark:bg-teal-950/70 dark:text-teal-300 dark:border-teal-800';
     }
-    if (name.includes('hrm') || name.includes('litbang') || name.includes('bph')) {
+    if (
+        name.includes('hrm') ||
+        name.includes('litbang') ||
+        name.includes('bph')
+    ) {
         return 'bg-[#d4edda] text-[#155724] border border-[#c3e6cb]/60 dark:bg-emerald-950/70 dark:text-emerald-300 dark:border-emerald-800';
     }
     if (name.includes('web')) {
@@ -400,7 +462,8 @@ function exportToCsv() {
                         Kelola Program Kerja
                     </h1>
                     <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">
-                        Kelola agenda kegiatan, timeline pelaksanaan, PIC divisi, serta status program kerja UKM LAOS.
+                        Kelola agenda kegiatan, timeline pelaksanaan, PIC
+                        divisi, serta status program kerja UKM LAOS.
                     </p>
                 </div>
 
@@ -463,7 +526,10 @@ function exportToCsv() {
                         Ekspor Data
                     </AppButton>
 
-                    <RefreshButton :loading="isRefreshing" @click="refreshData" />
+                    <RefreshButton
+                        :loading="isRefreshing"
+                        @click="refreshData"
+                    />
                 </div>
             </div>
 
@@ -472,17 +538,33 @@ function exportToCsv() {
                 class="overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-xs dark:border-slate-800/80 dark:bg-slate-900"
             >
                 <div class="scrollbar-thin overflow-x-auto">
-                    <table class="w-full min-w-[1020px] border-collapse text-left text-sm">
+                    <table
+                        class="w-full min-w-[1020px] border-collapse text-left text-sm"
+                    >
                         <thead>
                             <tr
                                 class="border-b border-slate-100 bg-[#f8fafc]/90 text-[11px] font-bold tracking-wider text-slate-400 uppercase dark:border-slate-800 dark:bg-slate-800/60 dark:text-slate-400"
                             >
-                                <th class="py-4 pr-4 pl-6 min-w-[340px] lg:w-[38%] lg:min-w-[420px]">PROGRAM KERJA</th>
-                                <th class="px-4 py-4 min-w-[150px]">DIVISI</th>
-                                <th class="px-4 py-4 min-w-[170px]">TARGET WAKTU</th>
-                                <th class="px-4 py-4 min-w-[200px]">PIC / PENANGGUNG JAWAB</th>
-                                <th class="px-4 py-4 min-w-[180px]">STATUS & PROGRES</th>
-                                <th class="py-4 pr-6 pl-4 text-right min-w-[80px]">AKSI</th>
+                                <th
+                                    class="min-w-[340px] py-4 pr-4 pl-6 lg:w-[38%] lg:min-w-[420px]"
+                                >
+                                    PROGRAM KERJA
+                                </th>
+                                <th class="min-w-[150px] px-4 py-4">DIVISI</th>
+                                <th class="min-w-[170px] px-4 py-4">
+                                    TARGET WAKTU
+                                </th>
+                                <th class="min-w-[200px] px-4 py-4">
+                                    PIC / PENANGGUNG JAWAB
+                                </th>
+                                <th class="min-w-[180px] px-4 py-4">
+                                    STATUS & PROGRES
+                                </th>
+                                <th
+                                    class="min-w-[80px] py-4 pr-6 pl-4 text-right"
+                                >
+                                    AKSI
+                                </th>
                             </tr>
                         </thead>
                         <tbody
@@ -495,10 +577,12 @@ function exportToCsv() {
                             >
                                 <!-- Program Kerja Column -->
                                 <td class="py-4.5 pr-4 pl-6 align-top">
-                                    <div class="flex items-start gap-3.5 min-w-[300px] max-w-xl">
+                                    <div
+                                        class="flex max-w-xl min-w-[300px] items-start gap-3.5"
+                                    >
                                         <div
                                             v-if="item.foto_url"
-                                            class="shrink-0 h-14 w-14 overflow-hidden rounded-xl border border-slate-200/60 shadow-xs dark:border-slate-700"
+                                            class="h-14 w-14 shrink-0 overflow-hidden rounded-xl border border-slate-200/60 shadow-xs dark:border-slate-700"
                                         >
                                             <img
                                                 :src="item.foto_url"
@@ -508,11 +592,14 @@ function exportToCsv() {
                                         </div>
                                         <div
                                             v-else
-                                            class="shrink-0 flex h-14 w-14 items-center justify-center rounded-xl border border-slate-200/60 bg-slate-50 dark:border-slate-800 dark:bg-slate-900/50"
+                                            class="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl border border-slate-200/60 bg-slate-50 dark:border-slate-800 dark:bg-slate-900/50"
                                         >
-                                            <AppIcon name="proker" class-name="h-6 w-6 text-slate-300 dark:text-slate-600" />
+                                            <AppIcon
+                                                name="proker"
+                                                class-name="h-6 w-6 text-slate-300 dark:text-slate-600"
+                                            />
                                         </div>
-                                        
+
                                         <div class="flex-1">
                                             <button
                                                 type="button"
@@ -524,18 +611,25 @@ function exportToCsv() {
                                             <p
                                                 class="mt-1 line-clamp-2 text-xs leading-relaxed text-slate-500 dark:text-slate-400"
                                             >
-                                                {{ item.deskripsi || 'Belum ada deskripsi program kerja.' }}
+                                                {{
+                                                    item.deskripsi ||
+                                                    'Belum ada deskripsi program kerja.'
+                                                }}
                                             </p>
                                         </div>
                                     </div>
                                 </td>
 
                                 <!-- Divisi Column -->
-                                <td class="px-4 py-4.5 align-top whitespace-nowrap">
+                                <td
+                                    class="px-4 py-4.5 align-top whitespace-nowrap"
+                                >
                                     <span
                                         :class="[
                                             'inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold',
-                                            getDivisiBadgeClass(item.divisi?.nama),
+                                            getDivisiBadgeClass(
+                                                item.divisi?.nama,
+                                            ),
                                         ]"
                                     >
                                         {{ item.divisi?.nama || 'Umum' }}
@@ -544,14 +638,16 @@ function exportToCsv() {
 
                                 <!-- Target Waktu Column -->
                                 <td
-                                    class="px-4 py-4.5 align-top text-xs text-slate-600 whitespace-nowrap dark:text-slate-300"
+                                    class="px-4 py-4.5 align-top text-xs whitespace-nowrap text-slate-600 dark:text-slate-300"
                                 >
                                     <div class="flex items-center gap-2">
                                         <AppIcon
                                             name="calendar"
                                             class-name="h-4 w-4 text-slate-400 shrink-0"
                                         />
-                                        <span class="font-medium text-slate-700 dark:text-slate-300">
+                                        <span
+                                            class="font-medium text-slate-700 dark:text-slate-300"
+                                        >
                                             {{
                                                 formatTargetWaktu(
                                                     item.open_regis_peserta,
@@ -563,7 +659,9 @@ function exportToCsv() {
                                 </td>
 
                                 <!-- PIC / Penanggung Jawab Column -->
-                                <td class="px-4 py-4.5 align-top whitespace-nowrap">
+                                <td
+                                    class="px-4 py-4.5 align-top whitespace-nowrap"
+                                >
                                     <div class="flex items-center gap-2.5">
                                         <div
                                             :class="[
@@ -582,22 +680,30 @@ function exportToCsv() {
                                             <div
                                                 class="text-[11px] text-slate-400"
                                             >
-                                                {{ getProgramPIC(item).jabatan }}
+                                                {{
+                                                    getProgramPIC(item).jabatan
+                                                }}
                                             </div>
                                         </div>
                                     </div>
                                 </td>
 
                                 <!-- Status & Progres Column -->
-                                <td class="px-4 py-4.5 align-top whitespace-nowrap">
+                                <td
+                                    class="px-4 py-4.5 align-top whitespace-nowrap"
+                                >
                                     <div class="space-y-1.5">
                                         <div
                                             :class="[
                                                 'text-xs',
-                                                getProgramExecutionStatus(item).textClass,
+                                                getProgramExecutionStatus(item)
+                                                    .textClass,
                                             ]"
                                         >
-                                            {{ getProgramExecutionStatus(item).label }}
+                                            {{
+                                                getProgramExecutionStatus(item)
+                                                    .label
+                                            }}
                                         </div>
 
                                         <div
@@ -609,7 +715,9 @@ function exportToCsv() {
                                                 <div
                                                     :class="[
                                                         'h-full rounded-full',
-                                                        getProgramExecutionStatus(item).barClass,
+                                                        getProgramExecutionStatus(
+                                                            item,
+                                                        ).barClass,
                                                     ]"
                                                     :style="{
                                                         width: `${getProgramExecutionStatus(item).progress}%`,
@@ -620,8 +728,9 @@ function exportToCsv() {
                                                 class="font-medium text-slate-600 dark:text-slate-400"
                                             >
                                                 {{
-                                                    getProgramExecutionStatus(item)
-                                                        .progress
+                                                    getProgramExecutionStatus(
+                                                        item,
+                                                    ).progress
                                                 }}%
                                             </span>
                                         </div>
@@ -681,7 +790,9 @@ function exportToCsv() {
 
                             <!-- Empty State -->
                             <tr
-                                v-if="!programs.data || programs.data.length === 0"
+                                v-if="
+                                    !programs.data || programs.data.length === 0
+                                "
                             >
                                 <td colspan="6" class="py-12 text-center">
                                     <div
@@ -728,7 +839,9 @@ function exportToCsv() {
                         <strong
                             class="font-bold text-slate-800 dark:text-slate-200"
                         >
-                            {{ programs.from ?? 1 }}-{{ programs.to ?? programs.total }}
+                            {{ programs.from ?? 1 }}-{{
+                                programs.to ?? programs.total
+                            }}
                         </strong>
                         dari
                         <strong

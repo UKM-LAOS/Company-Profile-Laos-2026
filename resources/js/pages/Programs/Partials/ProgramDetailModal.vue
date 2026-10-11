@@ -154,7 +154,7 @@ function statusBadge(status: string) {
                         Deskripsi Program Kerja
                     </div>
                     <div
-                        class="mt-1 text-sm whitespace-pre-line leading-relaxed text-slate-700 dark:text-slate-300"
+                        class="mt-1 text-sm leading-relaxed whitespace-pre-line text-slate-700 dark:text-slate-300"
                     >
                         {{ program.deskripsi }}
                     </div>
@@ -204,9 +204,7 @@ function statusBadge(status: string) {
                             <span
                                 class="font-medium text-slate-800 dark:text-slate-200"
                             >
-                                {{
-                                    formatDateIndo(program.open_regis_peserta)
-                                }}
+                                {{ formatDateIndo(program.open_regis_peserta) }}
                                 &mdash;
                                 {{
                                     formatDateIndo(program.close_regis_peserta)
@@ -274,9 +272,7 @@ function statusBadge(status: string) {
                             <span
                                 class="font-medium text-slate-800 dark:text-slate-200"
                             >
-                                {{
-                                    formatDateIndo(program.open_regis_panitia)
-                                }}
+                                {{ formatDateIndo(program.open_regis_panitia) }}
                                 &mdash;
                                 {{
                                     formatDateIndo(program.close_regis_panitia)
