@@ -68,7 +68,7 @@ class RoleAndPermissionSeeder extends Seeder
         $superAdminUnej = User::firstOrCreate(
             ['email' => 'admin@laos.unej.ac.id'],
             [
-                'name' => 'Super Admin UKM',
+                'name' => 'UKM Logicware and Open Source',
                 'password' => Hash::make('password'),
                 'email_verified_at' => now(),
             ]
@@ -78,7 +78,7 @@ class RoleAndPermissionSeeder extends Seeder
         $superAdminUser = User::firstOrCreate(
             ['email' => 'superadmin@laos.test'],
             [
-                'name' => 'Super Admin LAOS',
+                'name' => 'UKM LAOS',
                 'password' => Hash::make('password'),
                 'email_verified_at' => now(),
             ]

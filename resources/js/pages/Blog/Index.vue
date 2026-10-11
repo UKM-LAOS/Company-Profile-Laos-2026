@@ -48,12 +48,6 @@ const props = defineProps<{
 
 const search = ref(props.filters.search ?? '');
 const selectedKategori = ref(props.filters.kategori ?? '');
-const activeHeroIndex = ref(0);
-
-// Hero slide navigation
-function setHeroIndex(index: number) {
-    activeHeroIndex.value = index;
-}
 
 // Filter handling
 let searchTimeout: ReturnType<typeof setTimeout> | null = null;
@@ -102,13 +96,13 @@ function resetFilters() {
 
         <main class="flex-1">
             <!-- Hero Section -->
-            <section class="relative bg-slate-900 text-white overflow-hidden min-h-[380px] lg:min-h-[460px] flex items-center">
+            <section class="relative bg-slate-900 text-white overflow-hidden min-h-[360px] lg:min-h-[420px] flex items-center">
                 <!-- Background Image & Overlay -->
                 <div class="absolute inset-0 z-0">
                     <img
                         src="/assets/blog-hero-bg.jpg"
                         alt="UKM LAOS Blog Hero"
-                        class="w-full h-full object-cover object-center brightness-60 scale-105 filter blur-[0.5px]"
+                        class="w-full h-full object-cover object-center brightness-60 filter blur-[0.5px]"
                     />
                     <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/70 to-slate-900/40"></div>
                 </div>
@@ -127,22 +121,9 @@ function resetFilters() {
                         </h1>
 
                         <!-- Subtitle Description -->
-                        <p class="text-gray-200 text-sm sm:text-base lg:text-lg leading-relaxed max-w-2xl mb-8">
+                        <p class="text-gray-200 text-sm sm:text-base lg:text-lg leading-relaxed max-w-2xl">
                             Ikuti perjalanan inspiratif, program kreatif, dan kisah penggerak perubahan dari berbagai kegiatan UKM LAOS. Temukan insight, tips, dan berita terbaru yang membangun semangat sosial di kalangan generasi muda.
                         </p>
-                    </div>
-
-                    <!-- Hero Carousel Dots (visual matching mockup) -->
-                    <div class="flex items-center gap-2 mt-6">
-                        <button
-                            v-for="(dot, idx) in 5"
-                            :key="idx"
-                            type="button"
-                            @click="setHeroIndex(idx)"
-                            class="h-2 rounded-full transition-all duration-300"
-                            :class="activeHeroIndex === idx ? 'w-8 bg-white' : 'w-2 bg-white/40 hover:bg-white/70'"
-                            :title="`Slide ${idx + 1}`"
-                        ></button>
                     </div>
                 </div>
             </section>
@@ -225,7 +206,7 @@ function resetFilters() {
                                         :src="blog.thumbnail_url"
                                         :alt="blog.judul"
                                         loading="lazy"
-                                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                        class="w-full h-full object-cover"
                                     />
                                     <!-- Category Pill Badge over image -->
                                     <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-xs text-emerald-800 text-xs font-semibold px-2.5 py-1 rounded-md shadow-xs">
@@ -294,7 +275,7 @@ function resetFilters() {
                             :from="blogs.from"
                             :to="blogs.to"
                             :total="blogs.total"
-                            item-name="tautan terdaftar"
+                            item-name="artikel"
                             variant="circular"
                         />
                     </div>

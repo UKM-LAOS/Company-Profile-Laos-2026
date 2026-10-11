@@ -238,8 +238,8 @@ function formatDate(dateStr: string | null): string {
             >
                 <!-- JUDUL & SLUG -->
                 <template #cell-judul="{ item }">
-                    <div class="flex items-center gap-3 w-48 sm:w-64 md:w-72 lg:w-80 py-1">
-                        <div class="h-10 w-14 shrink-0 overflow-hidden rounded-lg border border-slate-200 bg-slate-100 dark:border-slate-700 dark:bg-slate-800">
+                    <div class="flex items-start gap-3 min-w-[220px] max-w-sm sm:max-w-md py-1">
+                        <div class="h-10 w-14 shrink-0 overflow-hidden rounded-lg border border-slate-200 bg-slate-100 dark:border-slate-700 dark:bg-slate-800 mt-0.5">
                             <img
                                 :src="item.thumbnail_url"
                                 :alt="item.judul"
@@ -248,7 +248,7 @@ function formatDate(dateStr: string | null): string {
                         </div>
                         <div class="min-w-0 flex-1">
                             <p
-                                class="truncate text-sm font-semibold text-slate-900 dark:text-white"
+                                class="text-sm font-semibold text-slate-900 dark:text-white break-words whitespace-normal leading-snug"
                                 :title="item.judul"
                             >
                                 {{ item.judul }}
@@ -260,7 +260,7 @@ function formatDate(dateStr: string | null): string {
                                 >
                             </p>
                             <p
-                                class="mt-0.5 truncate font-mono text-[11px] text-slate-400 dark:text-slate-500"
+                                class="mt-1 font-mono text-[11px] text-slate-400 dark:text-slate-500 break-all whitespace-normal"
                                 :title="'/blog/' + item.slug"
                             >
                                 /blog/{{ item.slug }}

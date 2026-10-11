@@ -219,7 +219,7 @@ function copyToClipboard() {
                                         <img
                                             :src="related.thumbnail_url"
                                             :alt="related.judul"
-                                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                            class="w-full h-full object-cover"
                                         />
                                     </div>
                                     <div class="p-4 flex-1 flex flex-col justify-between">
