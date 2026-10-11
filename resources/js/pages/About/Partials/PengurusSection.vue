@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { computed, nextTick, onMounted, onUpdated, ref, watch } from "vue";
-import PengurusCard from "./PengurusCard.vue";
-import PeriodDropdown from "./PeriodDropdown.vue";
-import { normalizePeriode, type PengurusItem } from "../types";
+import { computed, nextTick, onMounted, onUpdated, ref, watch } from 'vue';
+import PengurusCard from './PengurusCard.vue';
+import PeriodDropdown from './PeriodDropdown.vue';
+import { normalizePeriode, type PengurusItem } from '../types';
 
 const props = defineProps<{
     pengurus: PengurusItem[];
@@ -13,11 +13,11 @@ const currentPage = ref(1);
 
 const committee = computed(() => props.pengurus ?? []);
 
-const periodOptions = ["2024/2025", "2025/2026", "2026/2027"];
-const selectedPeriode = ref("2025/2026");
+const periodOptions = ['2024/2025', '2025/2026', '2026/2027'];
+const selectedPeriode = ref('2025/2026');
 
 const filteredPengurus = computed(() => {
-    if (selectedPeriode.value === "") return committee.value;
+    if (selectedPeriode.value === '') return committee.value;
     const target = normalizePeriode(selectedPeriode.value);
     return committee.value.filter(
         (item) => normalizePeriode(item.periode) === target,
@@ -46,16 +46,16 @@ watch(totalPages, (pages) => {
 });
 
 function setupMarquees(): void {
-    document.querySelectorAll<HTMLElement>("[data-marquee]").forEach((el) => {
-        const inner = el.querySelector<HTMLElement>("[data-marquee-inner]");
+    document.querySelectorAll<HTMLElement>('[data-marquee]').forEach((el) => {
+        const inner = el.querySelector<HTMLElement>('[data-marquee-inner]');
         if (!inner) return;
         const overflowing = inner.scrollWidth > el.clientWidth + 1;
-        el.classList.toggle("is-overflowing", overflowing);
+        el.classList.toggle('is-overflowing', overflowing);
         if (overflowing) {
             const distance = inner.scrollWidth - el.clientWidth;
-            inner.style.setProperty("--marquee-distance", `${distance}px`);
+            inner.style.setProperty('--marquee-distance', `${distance}px`);
         } else {
-            inner.style.removeProperty("--marquee-distance");
+            inner.style.removeProperty('--marquee-distance');
         }
     });
 }

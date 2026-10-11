@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { onMounted, onUnmounted, ref } from "vue";
-import { periodeDisplay } from "../types";
+import { onMounted, onUnmounted, ref } from 'vue';
+import { periodeDisplay } from '../types';
 
 defineProps<{
     modelValue: string;
@@ -8,14 +8,14 @@ defineProps<{
 }>();
 
 const emit = defineEmits<{
-    "update:modelValue": [value: string];
+    'update:modelValue': [value: string];
 }>();
 
 const isOpen = ref(false);
 const dropdownRef = ref<HTMLElement | null>(null);
 
 function select(option: string): void {
-    emit("update:modelValue", option);
+    emit('update:modelValue', option);
     isOpen.value = false;
 }
 
@@ -29,11 +29,11 @@ function handleClickOutside(event: MouseEvent): void {
 }
 
 onMounted(() => {
-    document.addEventListener("click", handleClickOutside);
+    document.addEventListener('click', handleClickOutside);
 });
 
 onUnmounted(() => {
-    document.removeEventListener("click", handleClickOutside);
+    document.removeEventListener('click', handleClickOutside);
 });
 </script>
 

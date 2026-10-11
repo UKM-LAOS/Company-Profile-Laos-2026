@@ -21,7 +21,7 @@ class DivisiController extends Controller
         $divisis = Divisi::query()
             ->when($search, function ($query, $search) {
                 $query->where('nama', 'like', "%{$search}%")
-                      ->orWhere('deskripsi', 'like', "%{$search}%");
+                    ->orWhere('deskripsi', 'like', "%{$search}%");
             })
             ->latest()
             ->paginate(10)
@@ -39,7 +39,7 @@ class DivisiController extends Controller
     public function store(DivisiRequest $request)
     {
         $validated = $request->validated();
-        
+
         $validated['slug'] = Str::slug($validated['nama']);
 
         if ($request->hasFile('logo')) {
@@ -57,7 +57,7 @@ class DivisiController extends Controller
     public function update(DivisiRequest $request, Divisi $divisi)
     {
         $validated = $request->validated();
-        
+
         if ($divisi->nama !== $validated['nama']) {
             $validated['slug'] = Str::slug($validated['nama']);
         }
@@ -84,7 +84,7 @@ class DivisiController extends Controller
         if ($divisi->logo) {
             Storage::disk('public')->delete($divisi->logo);
         }
-        
+
         $divisi->delete();
 
         return redirect()->route('divisis.index')->with('success', 'Divisi berhasil dihapus.');

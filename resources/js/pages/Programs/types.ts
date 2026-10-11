@@ -14,16 +14,9 @@ export interface PengurusOption {
     foto_url?: string | null;
 }
 
-export type RegistrationStatus =
-    | 'none'
-    | 'upcoming'
-    | 'open'
-    | 'closed';
+export type RegistrationStatus = 'none' | 'upcoming' | 'open' | 'closed';
 
-export type ProgramExecutionStatusKey =
-    | 'mendatang'
-    | 'berjalan'
-    | 'selesai';
+export type ProgramExecutionStatusKey = 'mendatang' | 'berjalan' | 'selesai';
 
 export interface ProgramItem {
     id: number;

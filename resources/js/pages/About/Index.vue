@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { Head, Link } from "@inertiajs/vue3";
-import { ref } from "vue";
-import AboutHero from "./Partials/AboutHero.vue";
-import AboutVisiMisi from "./Partials/AboutVisiMisi.vue";
-import PengurusSection from "./Partials/PengurusSection.vue";
-import type { PengurusItem } from "./types";
+import { Head, Link } from '@inertiajs/vue3';
+import { ref } from 'vue';
+import AboutHero from './Partials/AboutHero.vue';
+import AboutVisiMisi from './Partials/AboutVisiMisi.vue';
+import PengurusSection from './Partials/PengurusSection.vue';
+import type { PengurusItem } from './types';
 
 defineProps<{
     pengurus: PengurusItem[];
@@ -14,19 +14,19 @@ const isNavOpen = ref(false);
 
 const logoMeanings = [
     {
-        title: "Tipografi",
-        text: "Font yang digunakan tampak modern dan bersih, mencerminkan kesan sederhana, dan mudah dikenali.",
-        icon: "/assets/tipografi.svg",
+        title: 'Tipografi',
+        text: 'Font yang digunakan tampak modern dan bersih, mencerminkan kesan sederhana, dan mudah dikenali.',
+        icon: '/assets/tipografi.svg',
     },
     {
-        title: "Warna",
+        title: 'Warna',
         text: '"Kuning" melambangkan dasar Universitas Jember yang berarti "Kejayaan".',
-        icon: "/assets/warna.svg",
+        icon: '/assets/warna.svg',
     },
     {
-        title: "Gambar",
+        title: 'Gambar',
         text: 'berwarna "Hijau" merupakan logo Open Source.',
-        icon: "/assets/gambar.svg",
+        icon: '/assets/gambar.svg',
     },
 ];
 </script>
@@ -45,10 +45,8 @@ const logoMeanings = [
                         src="/assets/Logo-Laos.svg"
                         alt="Logo UKM LAOS"
                         class="h-9 w-9"
-                        onerror="
-                            this.onerror = null;
-                            this.src = '/assets/logo.png';
-                        "
+                        onerror="this.onerror = null;
+                        this.src = '/assets/logo.png';"
                     />
                     <span class="text-lg font-semibold text-[#2DCC70]"
                         >UKM LAOS</span
@@ -164,7 +162,7 @@ const logoMeanings = [
         <!-- Tentang Kami -->
         <section class="mx-auto max-w-7xl px-5 py-14 text-center sm:px-8">
             <h2 class="text-3xl font-medium text-[#1E1E1E]">Tentang Kami</h2>
-            <p class="mt-6 text-xl leading-relaxed text-[#636363] text-center">
+            <p class="mt-6 text-center text-xl leading-relaxed text-[#636363]">
                 Unit Kegiatan Mahasiswa Linux and Open Source atau disebut juga
                 UKM LAOS merupakan salah satu organisasi yang berfokus sebagai
                 wadah mahasiswa untuk memajukan kreatifitas dalam pengembangan
@@ -183,7 +181,7 @@ const logoMeanings = [
                     Makna Logo
                 </h2>
                 <p
-                    class="mx-auto mt-3 text-xl max-w-fit text-center text-[#636363]"
+                    class="mx-auto mt-3 max-w-fit text-center text-xl text-[#636363]"
                 >
                     Logo UKM LAOS memiliki dua warna utama dengan makna
                     simbolis:
@@ -196,10 +194,8 @@ const logoMeanings = [
                             src="/assets/logo-laos.webp"
                             alt="Logo UKM LAOS"
                             class="w-64 max-w-full drop-shadow-[0_12px_20px_rgba(234,179,8,0.25)] sm:w-80"
-                            onerror="
-                                this.onerror = null;
-                                this.src = '/assets/logo.png';
-                            "
+                            onerror="this.onerror = null;
+                            this.src = '/assets/logo.png';"
                         />
                     </div>
                     <ul class="space-y-10 sm:space-y-12 lg:ml-12">
@@ -243,10 +239,8 @@ const logoMeanings = [
                             "
                             alt="Logo UKM LAOS"
                             class="h-9 w-9"
-                            onerror="
-                                this.onerror = null;
-                                this.src = '/assets/logo-laos.webp';
-                            "
+                            onerror="this.onerror = null;
+                            this.src = '/assets/logo-laos.webp';"
                         />
                         <span class="text-lg font-semibold">UKM LAOS</span>
                     </div>

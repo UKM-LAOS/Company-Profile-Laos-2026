@@ -25,11 +25,11 @@ export interface SosmedLink {
 }
 
 export function normalizePeriode(value: string): string {
-    return value.trim().replace(/-/g, "/");
+    return value.trim().replace(/-/g, '/');
 }
 
 export function periodeDisplay(periode: string): string {
-    return periode.replace("/", "-");
+    return periode.replace('/', '-');
 }
 
 export function photoUrl(item: PengurusItem): string | null {
@@ -46,25 +46,25 @@ export function initials(nama: string): string {
         .split(/\s+/)
         .filter(Boolean)
         .slice(0, 2)
-        .map((w) => w[0]?.toUpperCase() ?? "")
-        .join("");
+        .map((w) => w[0]?.toUpperCase() ?? '')
+        .join('');
 }
 
-const SOSMED_ORDER = ["github", "linkedin", "instagram"] as const;
+const SOSMED_ORDER = ['github', 'linkedin', 'instagram'] as const;
 
 const SOSMED_ICONS: Record<string, { icon: string; label: string }> = {
-    instagram: { icon: "/assets/instagram.svg", label: "Instagram" },
-    linkedin: { icon: "/assets/linkedin.svg", label: "LinkedIn" },
-    github: { icon: "/assets/github.svg", label: "GitHub" },
+    instagram: { icon: '/assets/instagram.svg', label: 'Instagram' },
+    linkedin: { icon: '/assets/linkedin.svg', label: 'LinkedIn' },
+    github: { icon: '/assets/github.svg', label: 'GitHub' },
 };
 
 function sosmedMap(item: PengurusItem): Record<string, unknown> {
-    if (typeof item.sosmed === "string") {
+    if (typeof item.sosmed === 'string') {
         try {
             const parsed: unknown = JSON.parse(item.sosmed);
             if (
                 parsed &&
-                typeof parsed === "object" &&
+                typeof parsed === 'object' &&
                 !Array.isArray(parsed)
             ) {
                 return parsed as Record<string, unknown>;
@@ -73,7 +73,7 @@ function sosmedMap(item: PengurusItem): Record<string, unknown> {
             return {};
         }
         return {};
-    } else if (item.sosmed && typeof item.sosmed === "object") {
+    } else if (item.sosmed && typeof item.sosmed === 'object') {
         return item.sosmed as Record<string, unknown>;
     }
     return {};
@@ -84,7 +84,7 @@ export function sosmedLinks(item: PengurusItem): SosmedLink[] {
     return SOSMED_ORDER.map((key) => {
         const value = raw[key];
         const url =
-            typeof value === "string" && value.trim() !== ""
+            typeof value === 'string' && value.trim() !== ''
                 ? value.trim()
                 : null;
         return {

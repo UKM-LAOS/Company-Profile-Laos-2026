@@ -35,10 +35,10 @@ class BlogController extends Controller
             ->when($filters['search'] !== '', function (Builder $query) use ($filters): void {
                 $query->where(function (Builder $q) use ($filters): void {
                     $q->where('judul', 'like', "%{$filters['search']}%")
-                      ->orWhere('kategori', 'like', "%{$filters['search']}%")
-                      ->orWhereHas('author', function (Builder $authorQuery) use ($filters): void {
-                          $authorQuery->where('name', 'like', "%{$filters['search']}%");
-                      });
+                        ->orWhere('kategori', 'like', "%{$filters['search']}%")
+                        ->orWhereHas('author', function (Builder $authorQuery) use ($filters): void {
+                            $authorQuery->where('name', 'like', "%{$filters['search']}%");
+                        });
                 });
             })
             ->when($filters['kategori'] !== '', fn (Builder $query) => $query->where('kategori', $filters['kategori']))
@@ -79,6 +79,7 @@ class BlogController extends Controller
         Gate::authorize('create_news');
 
         $divisis = Divisi::select('id', 'nama')->orderBy('nama')->get();
+
         return Inertia::render('Blogs/Form', [
             'divisis' => $divisis,
         ]);
@@ -104,6 +105,7 @@ class BlogController extends Controller
         Gate::authorize('edit_news');
 
         $divisis = Divisi::select('id', 'nama')->orderBy('nama')->get();
+
         return Inertia::render('Blogs/Form', [
             'blog' => $blog,
             'divisis' => $divisis,
@@ -113,12 +115,12 @@ class BlogController extends Controller
     public function update(BlogRequest $request, Blog $blog): RedirectResponse
     {
         $validated = $request->validated();
-        
+
         if ($blog->judul !== $validated['judul']) {
             $validated['slug'] = Str::slug($validated['judul']);
         }
 
-        if ($validated['status'] === 'published' && $blog->status !== 'published' && !$blog->published_at) {
+        if ($validated['status'] === 'published' && $blog->status !== 'published' && ! $blog->published_at) {
             $validated['published_at'] = now();
         }
 

@@ -1,16 +1,16 @@
 <script setup lang="ts">
 const missions = [
     {
-        text: "Menjadi relasi berbagai pihak yang mendukung dan mengimplementasikan Linux and Open Source.",
-        icon: "/assets/relasi.svg",
+        text: 'Menjadi relasi berbagai pihak yang mendukung dan mengimplementasikan Linux and Open Source.',
+        icon: '/assets/relasi.svg',
     },
     {
-        text: "Mengenalkan Linux dan Open Source software kepada masyarakat khususnya pada instansi pendidikan.",
-        icon: "/assets/edukasi.svg",
+        text: 'Mengenalkan Linux dan Open Source software kepada masyarakat khususnya pada instansi pendidikan.',
+        icon: '/assets/edukasi.svg',
     },
     {
-        text: "Ikut serta dan aktif bersama aktivis Linux se-Indonesia mengenalkan OS Linux kepada masyarakat.",
-        icon: "/assets/Aktivis.svg",
+        text: 'Ikut serta dan aktif bersama aktivis Linux se-Indonesia mengenalkan OS Linux kepada masyarakat.',
+        icon: '/assets/Aktivis.svg',
     },
 ];
 </script>
@@ -52,7 +52,7 @@ const missions = [
                     alt="Ikon misi UKM LAOS"
                     class="mx-auto mb-4 h-10 w-10 sm:h-12 sm:w-12"
                 />
-                <p class="text-xl max-w-fit leading-relaxed text-gray-600">
+                <p class="max-w-fit text-xl leading-relaxed text-gray-600">
                     {{ mission.text }}
                 </p>
             </article>

@@ -5,7 +5,7 @@ import {
     photoUrl,
     sosmedLinks,
     type PengurusItem,
-} from "../types";
+} from '../types';
 
 defineProps<{
     item: PengurusItem;
@@ -38,10 +38,8 @@ defineProps<{
                     width="14"
                     height="14"
                     class="h-3.5 w-3.5 object-contain"
-                    onerror="
-                        this.onerror = null;
-                        this.src = '/assets/logo.png';
-                    "
+                    onerror="this.onerror = null;
+                    this.src = '/assets/logo.png';"
                 />
                 <span class="text-[11px] font-semibold text-white"
                     >UKM LAOS</span
@@ -75,11 +73,11 @@ defineProps<{
             <div class="w-full">
                 <div
                     data-marquee
-                    class="marquee m-0 w-full-width overflow-hidden p-0"
+                    class="marquee w-full-width m-0 overflow-hidden p-0"
                 >
                     <h3
                         data-marquee-inner
-                        class="marquee-inner m-0 p-0 text-center text-[12.5px] gap-0 leading-tight font-medium whitespace-nowrap text-[#1E1E1E]"
+                        class="marquee-inner m-0 gap-0 p-0 text-center text-[12.5px] leading-tight font-medium whitespace-nowrap text-[#1E1E1E]"
                     >
                         {{ item.nama }}
                     </h3>

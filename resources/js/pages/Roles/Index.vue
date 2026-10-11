@@ -209,16 +209,17 @@ function formatDate(dateStr: string): string {
             </div>
 
             <!-- Tab 1: Roles List Table -->
-            <div v-if="activeTab === 'roles'" class="space-y-4">
+            <div v-if="activeTab === 'roles'" class="space-y-6">
                 <!-- Search and Refresh Toolbar -->
-                <div class="flex items-center gap-3">
-                    <div class="flex-1">
-                        <SearchInput
-                            v-model="searchQuery"
-                            placeholder="Cari nama peran..."
-                            @search="handleSearch"
-                        />
-                    </div>
+                <div
+                    class="flex flex-col gap-3 rounded-2xl border border-slate-200/80 bg-white p-4 shadow-xs lg:flex-row lg:items-center dark:border-slate-800/80 dark:bg-slate-900"
+                >
+                    <SearchInput
+                        v-model="searchQuery"
+                        class="flex-1"
+                        placeholder="Cari nama peran..."
+                        @search="handleSearch"
+                    />
                     <RefreshButton
                         :loading="isRefreshing"
                         @click="refreshData"

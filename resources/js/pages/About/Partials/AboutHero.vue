@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Link } from "@inertiajs/vue3";
+import { Link } from '@inertiajs/vue3';
 </script>
 
 <template>
@@ -34,9 +34,9 @@ import { Link } from "@inertiajs/vue3";
         <div
             class="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-10 px-5 py-14 sm:px-8 lg:grid-cols-[7fr_5fr] lg:py-20"
         >
-            <div class="w-full max-w-2xl lg:-mt-8 lg:max-w-3xl lg:-ml-15">
+            <div class="w-full max-w-2xl lg:-mt-8 lg:-ml-15 lg:max-w-3xl">
                 <h1
-                    class="text-4xl leading-tight font-extrabold text-[#5D5D5D] sm:text-5xl lg:whitespace-nowrap lg:text-6xl"
+                    class="text-4xl leading-tight font-extrabold text-[#5D5D5D] sm:text-5xl lg:text-6xl lg:whitespace-nowrap"
                 >
                     Mengenal Lebih Dekat
                     <br class="hidden lg:block" />
@@ -58,7 +58,7 @@ import { Link } from "@inertiajs/vue3";
                 </Link>
             </div>
             <div
-                class="mt-6 flex w-full justify-center lg:justify-end lg:-mr-25"
+                class="mt-6 flex w-full justify-center lg:-mr-25 lg:justify-end"
             >
                 <img
                     src="/assets/Group 456480386.png"
