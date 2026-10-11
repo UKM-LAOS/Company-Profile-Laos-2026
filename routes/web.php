@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\PublicBlogController;
 use App\Http\Controllers\PengurusController;
 use App\Http\Controllers\DivisiController;
 use App\Http\Controllers\ProgramController;
@@ -22,6 +23,9 @@ Route::get('/', function () {
         'programs' => \App\Models\Program::all(),
     ]);
 })->name('home');
+
+Route::get('/blog', [PublicBlogController::class, 'index'])->name('blog.index');
+Route::get('/blog/{slug}', [PublicBlogController::class, 'show'])->name('blog.show');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');

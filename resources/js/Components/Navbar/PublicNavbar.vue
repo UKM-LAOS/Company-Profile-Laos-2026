@@ -16,9 +16,19 @@ const isMobileMenuOpen = ref(false);
                 </div>
 
                 <!-- Desktop Menu -->
-                <div class="hidden md:flex space-x-8">
-                    <Link :href="route('home')" class="text-green-500 font-semibold text-sm hover:text-green-600 transition">Home</Link>
-                    <a href="#" class="text-gray-600 font-medium text-sm hover:text-green-500 transition">Blog</a>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <Link
+                        :href="route('home')"
+                        :class="route().current('home') ? 'text-green-500 font-semibold text-sm hover:text-green-600 transition' : 'text-gray-600 font-medium text-sm hover:text-green-500 transition'"
+                    >
+                        Home
+                    </Link>
+                    <Link
+                        :href="route('blog.index')"
+                        :class="route().current('blog.*') ? 'text-green-500 font-semibold text-sm hover:text-green-600 transition' : 'text-gray-600 font-medium text-sm hover:text-green-500 transition'"
+                    >
+                        Blog
+                    </Link>
                     <a href="#" class="text-gray-600 font-medium text-sm hover:text-green-500 transition">Program Kerja</a>
                     <a href="#" class="text-gray-600 font-medium text-sm hover:text-green-500 transition">Tentang Kami</a>
                     <a href="#" class="text-gray-600 font-medium text-sm hover:text-green-500 transition">Pengurus</a>
@@ -41,8 +51,20 @@ const isMobileMenuOpen = ref(false);
         <!-- Mobile Menu -->
         <div v-show="isMobileMenuOpen" class="md:hidden bg-white border-b border-gray-100 shadow-lg absolute w-full left-0">
             <div class="px-4 pt-2 pb-6 space-y-1">
-                <Link :href="route('home')" @click="isMobileMenuOpen = false" class="block px-3 py-3 rounded-md text-base font-medium text-green-600 bg-green-50">Home</Link>
-                <a href="#" @click="isMobileMenuOpen = false" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-green-600 hover:bg-gray-50">Blog</a>
+                <Link
+                    :href="route('home')"
+                    @click="isMobileMenuOpen = false"
+                    :class="route().current('home') ? 'block px-3 py-3 rounded-md text-base font-medium text-green-600 bg-green-50' : 'block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-green-600 hover:bg-gray-50'"
+                >
+                    Home
+                </Link>
+                <Link
+                    :href="route('blog.index')"
+                    @click="isMobileMenuOpen = false"
+                    :class="route().current('blog.*') ? 'block px-3 py-3 rounded-md text-base font-medium text-green-600 bg-green-50' : 'block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-green-600 hover:bg-gray-50'"
+                >
+                    Blog
+                </Link>
                 <a href="#" @click="isMobileMenuOpen = false" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-green-600 hover:bg-gray-50">Program Kerja</a>
                 <a href="#" @click="isMobileMenuOpen = false" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-green-600 hover:bg-gray-50">Tentang Kami</a>
                 <a href="#" @click="isMobileMenuOpen = false" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-green-600 hover:bg-gray-50">Pengurus</a>
