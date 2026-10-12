@@ -7,11 +7,11 @@ const heroImages = {
 };
 </script>
 
-<template>
-    <section class="relative min-h-[580px] lg:min-h-[640px] flex flex-col justify-center overflow-hidden bg-[#EEFAF4]">
+<template> 
+    <section class="relative flex min-h-screen flex-col justify-center overflow-hidden bg-[#EEFAF4] dark:bg-[#071F13] pt-20 pb-12 lg:pt-20 lg:pb-0 transition-colors duration-300">
         <!-- Vector Pastel Mint Architecture Arches & Flowing Ribbon Lines matching Figma -->
         <svg
-            class="pointer-events-none absolute inset-0 w-full h-full select-none"
+            class="pointer-events-none absolute inset-0 w-full h-full select-none dark:opacity-20 transition-opacity duration-300"
             viewBox="0 0 1440 640"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -128,16 +128,16 @@ const heroImages = {
         </svg>
 
         <!-- Main Content Grid -->
-        <div class="relative z-10 mx-auto w-full max-w-7xl px-5 sm:px-8 py-12 lg:py-16">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+        <div class="relative z-10 mx-auto w-full max-w-7xl px-6 sm:px-12 md:px-16 lg:px-20 xl:px-24 py-12 lg:py-16">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 xl:gap-20 items-center">
                 <!-- Left Hero Content -->
                 <div class="lg:col-span-6 space-y-6">
-                    <h1 class="text-4xl sm:text-5xl lg:text-[54px] font-extrabold text-[#3F3F46] leading-[1.15] tracking-tight">
+                    <h1 class="text-4xl sm:text-5xl lg:text-[54px] font-extrabold text-[#3F3F46] dark:text-white leading-[1.15] tracking-tight">
                         Penasaran <span class="text-[#2DCC70]">UKM</span><br />
                         <span class="text-[#2DCC70]">LAOS</span> ngapain aja?
                     </h1>
 
-                    <p class="text-base sm:text-[17px] text-[#52525B] leading-relaxed max-w-lg font-normal">
+                    <p class="text-base sm:text-[17px] text-[#52525B] dark:text-slate-300 leading-relaxed max-w-lg font-normal">
                         UKM LAOS aktif dan inovatif dalam mengembangkan potensi anggota dalam bidang ilmu komputer dengan menyelenggarakan berbagai program kerja yang bermanfaat.
                     </p>
 
@@ -211,7 +211,7 @@ const heroImages = {
                                 <!-- Left Sub-Column (Collab + Typing) -->
                                 <div class="col-span-6 flex flex-col gap-3 sm:gap-3.5">
                                     <!-- Card 1: Collab -->
-                                    <div class="h-[145px] sm:h-[155px] rounded-[22px] sm:rounded-[24px] overflow-hidden shadow-xs bg-slate-100 border border-white">
+                                    <div class="h-[145px] sm:h-[155px] rounded-[22px] sm:rounded-[24px] overflow-hidden shadow-xs bg-slate-100 dark:bg-slate-800 border border-white dark:border-slate-800">
                                         <img
                                             :src="heroImages.collab"
                                             alt="Kolaborasi tim UKM LAOS"
@@ -220,7 +220,7 @@ const heroImages = {
                                         />
                                     </div>
                                     <!-- Card 2: Typing Hands -->
-                                    <div class="h-[95px] sm:h-[105px] rounded-[22px] sm:rounded-[24px] overflow-hidden shadow-xs bg-slate-100 border border-white">
+                                    <div class="h-[95px] sm:h-[105px] rounded-[22px] sm:rounded-[24px] overflow-hidden shadow-xs bg-slate-100 dark:bg-slate-800 border border-white dark:border-slate-800">
                                         <img
                                             :src="heroImages.coding"
                                             alt="Aktivitas hands-on laptop"
@@ -232,7 +232,7 @@ const heroImages = {
 
                                 <!-- Right Sub-Column: Studio Control Room -->
                                 <div class="col-span-6">
-                                    <div class="h-[252px] sm:h-[272px] rounded-[22px] sm:rounded-[24px] overflow-hidden shadow-xs bg-slate-900 border border-white">
+                                    <div class="h-[252px] sm:h-[272px] rounded-[22px] sm:rounded-[24px] overflow-hidden shadow-xs bg-slate-900 border border-white dark:border-slate-800">
                                         <img
                                             :src="heroImages.studio"
                                             alt="Studio lab teknologi UKM LAOS"
@@ -244,7 +244,7 @@ const heroImages = {
                             </div>
 
                             <!-- Bottom Wide Card: Hackathon / Auditorium -->
-                            <div class="w-full h-[155px] sm:h-[170px] rounded-[22px] sm:rounded-[24px] overflow-hidden shadow-xs bg-slate-900 border border-white">
+                            <div class="w-full h-[155px] sm:h-[170px] rounded-[22px] sm:rounded-[24px] overflow-hidden shadow-xs bg-slate-900 border border-white dark:border-slate-800">
                                 <img
                                     :src="heroImages.seminar"
                                     alt="Kegiatan auditorium dan hackathon"

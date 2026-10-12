@@ -63,13 +63,21 @@ class PublicBlogController extends Controller
             ->pluck('kategori')
             ->all();
 
-        $heroBlogs = Blog::query()
+        $pinnedBlogs = Blog::query()
             ->published()
             ->with(['author:id,name', 'divisi:id,nama'])
-            ->orderByDesc('is_unggulan')
+            ->where('is_unggulan', true)
             ->orderByDesc('published_at')
-            ->take(5)
             ->get();
+
+        $heroBlogs = $pinnedBlogs->isNotEmpty()
+            ? $pinnedBlogs
+            : Blog::query()
+                ->published()
+                ->with(['author:id,name', 'divisi:id,nama'])
+                ->orderByDesc('published_at')
+                ->take(5)
+                ->get();
 
         $divisis = Divisi::select('id', 'nama', 'slug', 'logo', 'deskripsi')->orderBy('nama')->get();
 

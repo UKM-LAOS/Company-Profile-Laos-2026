@@ -14,7 +14,7 @@ defineProps<{
 
 <template>
     <article
-        class="flex h-52.5 w-full max-w-54.5 flex-col overflow-hidden rounded-[10px] bg-white shadow-sm transition hover:shadow-md"
+        class="flex h-52.5 w-full max-w-54.5 flex-col overflow-hidden rounded-[10px] bg-white dark:bg-slate-900 border border-transparent dark:border-slate-800 shadow-sm transition hover:shadow-md"
     >
         <div class="relative h-33.75 shrink-0 overflow-hidden bg-[#2DCC70]">
             <img
@@ -46,7 +46,7 @@ defineProps<{
                 >
             </div>
             <div
-                class="absolute bottom-0 left-1/2 z-10 h-26.25 w-26.25 -translate-x-1/2 overflow-hidden rounded-t-[10px] rounded-b-none border border-b-0 border-white bg-white"
+                class="absolute bottom-0 left-1/2 z-10 h-26.25 w-26.25 -translate-x-1/2 overflow-hidden rounded-t-[10px] rounded-b-none border border-b-0 border-white dark:border-slate-900 bg-white dark:bg-slate-900"
             >
                 <img
                     v-if="photoUrl(item)"
@@ -68,7 +68,7 @@ defineProps<{
             </div>
         </div>
         <div
-            class="relative z-20 flex flex-1 flex-col items-center justify-start gap-0 overflow-hidden bg-white px-2 pt-1 pb-1.5 text-center"
+            class="relative z-20 flex flex-1 flex-col items-center justify-start gap-0 overflow-hidden bg-white dark:bg-slate-900 px-2 pt-1 pb-1.5 text-center"
         >
             <div class="w-full">
                 <div
@@ -77,7 +77,7 @@ defineProps<{
                 >
                     <h3
                         data-marquee-inner
-                        class="marquee-inner m-0 gap-0 p-0 text-center text-[12.5px] leading-tight font-medium whitespace-nowrap text-[#1E1E1E]"
+                        class="marquee-inner m-0 gap-0 p-0 text-center text-[12.5px] leading-tight font-medium whitespace-nowrap text-[#1E1E1E] dark:text-white"
                     >
                         {{ item.nama }}
                     </h3>
@@ -88,7 +88,7 @@ defineProps<{
                 >
                     <p
                         data-marquee-inner
-                        class="marquee-inner m-0 p-0 text-center text-[9.5px] leading-tight whitespace-nowrap text-[#636363]"
+                        class="marquee-inner m-0 p-0 text-center text-[9.5px] leading-tight whitespace-nowrap text-[#636363] dark:text-slate-400"
                     >
                         {{ divisionLabel(item) }}
                     </p>
@@ -108,7 +108,7 @@ defineProps<{
                         'flex h-4 w-4 items-center justify-center rounded-full transition',
                         link.active
                             ? 'cursor-pointer bg-[#2DCC70] hover:scale-110 hover:opacity-90'
-                            : 'pointer-events-none cursor-not-allowed bg-[#E0E0E0] opacity-60',
+                            : 'pointer-events-none cursor-not-allowed bg-[#E0E0E0] dark:bg-slate-800 opacity-60',
                     ]"
                 >
                     <img

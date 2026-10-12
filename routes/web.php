@@ -21,7 +21,7 @@ Route::get('/', function () {
         'laravelVersion' => Application::VERSION,
         'phpVersion' => PHP_VERSION,
         'divisis' => \App\Models\Divisi::all(),
-        'programs' => \App\Models\Program::all(),
+        'programs' => \App\Models\Program::with('divisi')->get(),
     ]);
 })->name('home');
 

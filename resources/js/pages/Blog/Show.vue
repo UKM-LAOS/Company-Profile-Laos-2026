@@ -57,12 +57,12 @@ function copyToClipboard() {
         <meta property="og:image" :content="blog.thumbnail_url" />
     </Head>
 
-    <div class="min-h-screen font-sans text-gray-900 bg-white flex flex-col selection:bg-emerald-500 selection:text-white">
+    <div class="min-h-screen font-sans text-gray-900 dark:text-slate-100 bg-white dark:bg-slate-950 flex flex-col selection:bg-emerald-500 selection:text-white transition-colors duration-300">
         <PublicNavbar />
 
         <main class="flex-1">
             <!-- Article Header / Banner Section (Matches Mockup 2) -->
-            <section class="relative bg-slate-900 text-white overflow-hidden py-16 sm:py-20 lg:py-28">
+            <section class="relative bg-slate-900 text-white overflow-hidden pt-28 pb-16 sm:pt-32 sm:pb-20 lg:pt-36 lg:pb-28">
                 <!-- Background Image & Overlay -->
                 <div class="absolute inset-0 z-0">
                     <img
@@ -118,13 +118,13 @@ function copyToClipboard() {
             </section>
 
             <!-- Main Article Content Body -->
-            <article class="py-12 sm:py-16 lg:py-20 bg-white">
+            <article class="py-12 sm:py-16 lg:py-20 bg-white dark:bg-slate-950 transition-colors duration-300">
                 <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                     <!-- Back Link -->
                     <div class="mb-8">
                         <Link
                             :href="route('blog.index')"
-                            class="inline-flex items-center gap-2 text-sm font-semibold text-emerald-600 hover:text-emerald-700 transition group"
+                            class="inline-flex items-center gap-2 text-sm font-semibold text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition group"
                         >
                             <svg class="w-4 h-4 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
@@ -140,8 +140,8 @@ function copyToClipboard() {
                     ></div>
 
                     <!-- Share Section (Matches Mockup 2) -->
-                    <div class="mt-14 pt-8 border-t border-gray-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                        <div class="text-sm sm:text-base font-semibold text-gray-800">
+                    <div class="mt-14 pt-8 border-t border-gray-200 dark:border-slate-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                        <div class="text-sm sm:text-base font-semibold text-gray-800 dark:text-slate-200">
                             Bagikan posting ini :
                         </div>
 
@@ -153,7 +153,7 @@ function copyToClipboard() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 title="Bagikan ke WhatsApp"
-                                class="w-10 h-10 rounded-full bg-emerald-50 text-emerald-600 hover:bg-emerald-600 hover:text-white transition-all duration-200 flex items-center justify-center shadow-xs"
+                                class="w-10 h-10 rounded-full bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 hover:bg-emerald-600 hover:text-white transition-all duration-200 flex items-center justify-center shadow-xs"
                             >
                                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.299.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.353.101.173.45 1.016 1.34 1.579.57.362 1.05.474 1.2.546.15.072.239.058.328-.043.089-.101.376-.434.477-.584.101-.15.202-.125.337-.075s.867.409 1.016.483.249.111.286.173c.037.062.037.361-.107.766zM12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.981-1.396A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.167c-1.637 0-3.167-.47-4.464-1.28l-.32-.2-2.965.83.842-2.893-.209-.333A8.138 8.138 0 013.833 12c0-4.503 3.664-8.167 8.167-8.167 4.503 0 8.167 3.664 8.167 8.167 0 4.503-3.664 8.167-8.167 8.167z"/>
@@ -166,7 +166,7 @@ function copyToClipboard() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 title="Bagikan ke LinkedIn"
-                                class="w-10 h-10 rounded-full bg-blue-50 text-blue-600 hover:bg-blue-600 hover:text-white transition-all duration-200 flex items-center justify-center shadow-xs"
+                                class="w-10 h-10 rounded-full bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 hover:bg-blue-600 hover:text-white transition-all duration-200 flex items-center justify-center shadow-xs"
                             >
                                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
@@ -179,7 +179,7 @@ function copyToClipboard() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 title="Bagikan ke Twitter / X"
-                                class="w-10 h-10 rounded-full bg-slate-100 text-slate-700 hover:bg-slate-900 hover:text-white transition-all duration-200 flex items-center justify-center shadow-xs"
+                                class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-900 hover:text-white transition-all duration-200 flex items-center justify-center shadow-xs"
                             >
                                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
@@ -191,7 +191,7 @@ function copyToClipboard() {
                                 @click="copyToClipboard"
                                 type="button"
                                 :title="copied ? 'Tautan tersalin!' : 'Salin tautan artikel'"
-                                class="w-10 h-10 rounded-full bg-slate-100 text-slate-600 hover:bg-emerald-600 hover:text-white transition-all duration-200 flex items-center justify-center shadow-xs relative"
+                                class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-emerald-600 hover:text-white transition-all duration-200 flex items-center justify-center shadow-xs relative"
                             >
                                 <svg v-if="!copied" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
@@ -204,18 +204,18 @@ function copyToClipboard() {
                     </div>
 
                     <!-- Related Articles (Optional UX enhancement) -->
-                    <div v-if="relatedBlogs && relatedBlogs.length > 0" class="mt-20 pt-12 border-t border-gray-100">
-                        <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-8">
+                    <div v-if="relatedBlogs && relatedBlogs.length > 0" class="mt-20 pt-12 border-t border-gray-100 dark:border-slate-800">
+                        <h3 class="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-8">
                             Artikel Terbaru Lainnya
                         </h3>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                             <article
                                 v-for="related in relatedBlogs"
                                 :key="related.id"
-                                class="group bg-white rounded-2xl border border-gray-100 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col overflow-hidden"
+                                class="group bg-white dark:bg-slate-900 rounded-2xl border border-gray-100 dark:border-slate-800 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col overflow-hidden"
                             >
                                 <Link :href="route('blog.show', related.slug)" class="block flex-1 flex flex-col">
-                                    <div class="aspect-[16/10] overflow-hidden bg-slate-100">
+                                    <div class="aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800">
                                         <img
                                             :src="related.thumbnail_url"
                                             :alt="related.judul"
@@ -224,12 +224,12 @@ function copyToClipboard() {
                                     </div>
                                     <div class="p-4 flex-1 flex flex-col justify-between">
                                         <div>
-                                            <span class="text-xs font-semibold text-emerald-600 uppercase">{{ related.kategori }}</span>
-                                            <h4 class="text-sm font-bold text-gray-900 group-hover:text-emerald-600 transition-colors line-clamp-2 mt-1 mb-2">
+                                            <span class="text-xs font-semibold text-emerald-600 dark:text-emerald-400 uppercase">{{ related.kategori }}</span>
+                                            <h4 class="text-sm font-bold text-gray-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors line-clamp-2 mt-1 mb-2">
                                                 {{ related.judul }}
                                             </h4>
                                         </div>
-                                        <div class="text-[11px] text-gray-400 pt-2 border-t border-gray-50">
+                                        <div class="text-[11px] text-gray-400 dark:text-slate-500 pt-2 border-t border-gray-50 dark:border-slate-800">
                                             Waktu Post: {{ related.tanggal_rilis_formatted }}
                                         </div>
                                     </div>
@@ -391,5 +391,47 @@ function copyToClipboard() {
     background-color: transparent;
     color: inherit;
     padding: 0;
+}
+
+/* Dark mode typography adjustments */
+.dark .article-content {
+    color: #cbd5e1;
+}
+
+.dark .article-content h1,
+.dark .article-content h2,
+.dark .article-content h3,
+.dark .article-content h4,
+.dark .article-content strong,
+.dark .article-content b {
+    color: #f8fafc;
+}
+
+.dark .article-content p {
+    color: #cbd5e1;
+}
+
+.dark .article-content blockquote {
+    color: #94a3b8;
+    background-color: rgba(6, 78, 59, 0.3);
+    border-left-color: #10b981;
+}
+
+.dark .article-content a {
+    color: #34d399;
+}
+
+.dark .article-content a:hover {
+    color: #6ee7b7;
+}
+
+.dark .article-content code {
+    background-color: #1e293b;
+    color: #f1f5f9;
+}
+
+.dark .article-content pre {
+    background-color: #020617;
+    border: 1px solid #1e293b;
 }
 </style>

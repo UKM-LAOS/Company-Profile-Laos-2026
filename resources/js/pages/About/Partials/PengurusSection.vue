@@ -75,12 +75,12 @@ onUpdated(() => {
         class="mx-auto max-w-7xl scroll-mt-24 px-5 py-14 sm:px-8"
     >
         <h2
-            class="text-center text-5xl font-semibold tracking-wide text-[#1E1E1E]"
+            class="text-center text-5xl font-semibold tracking-wide text-[#1E1E1E] dark:text-white"
         >
             PENGURUS UKM LAOS
         </h2>
         <div class="mt-4 flex flex-wrap items-center justify-center gap-3">
-            <p class="text-lg text-[#636363]">UKM LAOS Periode</p>
+            <p class="text-lg text-[#636363] dark:text-slate-300">UKM LAOS Periode</p>
             <PeriodDropdown
                 v-model="selectedPeriode"
                 :options="periodOptions"
@@ -99,10 +99,10 @@ onUpdated(() => {
         </div>
         <div
             v-if="filteredPengurus.length === 0"
-            class="mx-auto mt-10 w-full max-w-xl rounded-2xl border border-slate-200 bg-white px-4 py-16 text-center shadow-sm"
+            class="mx-auto mt-10 w-full max-w-xl rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 py-16 text-center shadow-sm"
         >
             <svg
-                class="mx-auto h-14 w-14 text-slate-300"
+                class="mx-auto h-14 w-14 text-slate-300 dark:text-slate-600"
                 viewBox="0 0 24 24"
                 fill="none"
                 aria-hidden="true"
@@ -125,10 +125,10 @@ onUpdated(() => {
                     stroke-linecap="round"
                 />
             </svg>
-            <p class="mt-5 text-[18px] font-medium text-[#1E1E1E]">
+            <p class="mt-5 text-[18px] font-medium text-[#1E1E1E] dark:text-white">
                 Belum ada data pengurus
             </p>
-            <p class="mt-2 text-[14px] text-[#636363]">
+            <p class="mt-2 text-[14px] text-[#636363] dark:text-slate-400">
                 Data pengurus untuk periode ini belum ditambahkan.
             </p>
         </div>
@@ -140,11 +140,11 @@ onUpdated(() => {
             <button
                 type="button"
                 :disabled="currentPage === 1"
-                class="rounded-full border border-slate-200 px-4 py-1.5 text-sm font-medium transition disabled:cursor-not-allowed disabled:opacity-40"
+                class="rounded-full border border-slate-200 dark:border-slate-700 px-4 py-1.5 text-sm font-medium transition disabled:cursor-not-allowed disabled:opacity-40"
                 :class="
                     currentPage === 1
-                        ? 'bg-slate-100 text-slate-400'
-                        : 'bg-white text-slate-600 hover:border-[#2DCC70] hover:text-[#2DCC70]'
+                        ? 'bg-slate-100 text-slate-400 dark:bg-slate-800 dark:text-slate-500'
+                        : 'bg-white text-slate-600 dark:bg-slate-800 dark:text-slate-200 hover:border-[#2DCC70] hover:text-[#2DCC70]'
                 "
                 @click="goToPage(currentPage - 1)"
             >
@@ -158,7 +158,7 @@ onUpdated(() => {
                 :class="
                     page === currentPage
                         ? 'bg-[#2DCC70] text-white'
-                        : 'bg-slate-100 text-slate-500 hover:bg-slate-200'
+                        : 'bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700'
                 "
                 @click="goToPage(page)"
             >
@@ -167,11 +167,11 @@ onUpdated(() => {
             <button
                 type="button"
                 :disabled="currentPage === totalPages"
-                class="rounded-full border border-slate-200 px-4 py-1.5 text-sm font-medium transition disabled:cursor-not-allowed disabled:opacity-40"
+                class="rounded-full border border-slate-200 dark:border-slate-700 px-4 py-1.5 text-sm font-medium transition disabled:cursor-not-allowed disabled:opacity-40"
                 :class="
                     currentPage === totalPages
-                        ? 'bg-slate-100 text-slate-400'
-                        : 'bg-white text-slate-600 hover:border-[#2DCC70] hover:text-[#2DCC70]'
+                        ? 'bg-slate-100 text-slate-400 dark:bg-slate-800 dark:text-slate-500'
+                        : 'bg-white text-slate-600 dark:bg-slate-800 dark:text-slate-200 hover:border-[#2DCC70] hover:text-[#2DCC70]'
                 "
                 @click="goToPage(currentPage + 1)"
             >

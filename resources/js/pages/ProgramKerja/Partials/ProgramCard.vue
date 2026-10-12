@@ -26,11 +26,11 @@ function handleImageError(event: Event) {
 
 <template>
     <article
-        class="group flex flex-col md:flex-row items-center md:items-stretch gap-6 lg:gap-10 p-2 sm:p-3 rounded-3xl transition-all duration-200 hover:bg-slate-50/70"
+        class="group flex flex-col md:flex-row items-center md:items-stretch gap-6 lg:gap-10 p-2 sm:p-3 rounded-3xl transition-all duration-200 hover:bg-slate-50/70 dark:hover:bg-slate-900/50"
     >
         <!-- Thumbnail / Photo Container -->
         <div
-            class="relative w-full md:w-[440px] shrink-0 h-60 sm:h-64 md:h-[260px] rounded-2xl md:rounded-3xl overflow-hidden shadow-sm bg-slate-900 border border-slate-100/80"
+            class="relative w-full md:w-[440px] shrink-0 h-60 sm:h-64 md:h-[260px] rounded-2xl md:rounded-3xl overflow-hidden shadow-sm bg-slate-900 border border-slate-100/80 dark:border-slate-800"
             style="max-width: 100%; min-height: 220px;"
         >
             <img
@@ -45,7 +45,7 @@ function handleImageError(event: Event) {
             <!-- Division badge if available -->
             <div
                 v-if="program.divisi"
-                class="absolute top-4 left-4 inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-white/95 text-emerald-800 shadow-xs backdrop-blur-xs"
+                class="absolute top-4 left-4 inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-white/95 text-emerald-800 dark:bg-slate-900/90 dark:text-emerald-400 dark:border dark:border-emerald-800/40 shadow-xs backdrop-blur-xs"
             >
                 {{ program.divisi.nama }}
             </div>
@@ -53,11 +53,11 @@ function handleImageError(event: Event) {
 
         <!-- Content details -->
         <div class="flex flex-col justify-center flex-1 py-1 sm:py-3 w-full">
-            <h3 class="text-2xl sm:text-[28px] font-bold text-[#1E1E1E] tracking-tight leading-snug group-hover:text-[#2DCC70] transition-colors">
+            <h3 class="text-2xl sm:text-[28px] font-bold text-[#1E1E1E] dark:text-white tracking-tight leading-snug group-hover:text-[#2DCC70] transition-colors">
                 {{ program.judul_program }}
             </h3>
 
-            <p class="mt-3 text-sm sm:text-base text-[#636363] leading-relaxed line-clamp-3">
+            <p class="mt-3 text-sm sm:text-base text-[#636363] dark:text-slate-400 leading-relaxed line-clamp-3">
                 {{ program.deskripsi || 'Forum mingguan untuk diskusi, koordinasi program, sharing ide, dan evaluasi kegiatan. Tujuan: Meningkatkan komunikasi, kekompakan, dan update progress tim.' }}
             </p>
 

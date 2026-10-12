@@ -33,13 +33,13 @@ function formatDateIndo(dateStr: string | null | undefined): string {
         @click.self="emit('close')"
     >
         <div
-            class="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-100 p-6 sm:p-8 relative"
+            class="bg-white dark:bg-slate-900 rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-100 dark:border-slate-800 p-6 sm:p-8 relative text-[#1E1E1E] dark:text-slate-100"
         >
             <!-- Close Button -->
             <button
                 type="button"
                 @click="emit('close')"
-                class="absolute top-5 right-5 p-2 rounded-full text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition cursor-pointer"
+                class="absolute top-5 right-5 p-2 rounded-full text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition cursor-pointer"
                 aria-label="Tutup"
             >
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -67,7 +67,7 @@ function formatDateIndo(dateStr: string | null | undefined): string {
                 </span>
                 <span
                     v-if="program.location_name && program.location_name !== 'NUL'"
-                    class="flex items-center gap-1 text-xs text-slate-500 font-medium"
+                    class="flex items-center gap-1 text-xs text-slate-500 dark:text-slate-400 font-medium"
                 >
                     <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -77,37 +77,37 @@ function formatDateIndo(dateStr: string | null | undefined): string {
             </div>
 
             <!-- Title -->
-            <h3 class="text-2xl sm:text-3xl font-extrabold text-[#1E1E1E]">
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-[#1E1E1E] dark:text-white">
                 {{ program.judul_program }}
             </h3>
 
             <!-- Dates Info -->
-            <div class="mt-4 p-4 rounded-2xl bg-slate-50 border border-slate-100 grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm">
+            <div class="mt-4 p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-700/60 grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm">
                 <div>
                     <span class="text-slate-400 block">Pendaftaran Peserta:</span>
-                    <span class="font-semibold text-slate-700">
+                    <span class="font-semibold text-slate-700 dark:text-slate-200">
                         {{ formatDateIndo(program.open_regis_peserta) }} s/d {{ formatDateIndo(program.close_regis_peserta) }}
                     </span>
                 </div>
                 <div v-if="program.pengurus">
                     <span class="text-slate-400 block">Penanggung Jawab:</span>
-                    <span class="font-semibold text-slate-700">
+                    <span class="font-semibold text-slate-700 dark:text-slate-200">
                         {{ program.pengurus.nama }}
                     </span>
                 </div>
             </div>
 
             <!-- Full Description -->
-            <div class="mt-6 text-[#636363] text-sm sm:text-base leading-relaxed space-y-3 whitespace-pre-line">
+            <div class="mt-6 text-[#636363] dark:text-slate-300 text-sm sm:text-base leading-relaxed space-y-3 whitespace-pre-line">
                 {{ program.deskripsi || 'Belum ada deskripsi lengkap untuk kegiatan ini.' }}
             </div>
 
             <!-- Footer Actions -->
-            <div class="mt-8 pt-4 border-t border-slate-100 flex items-center justify-end gap-3">
+            <div class="mt-8 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-end gap-3">
                 <button
                     type="button"
                     @click="emit('close')"
-                    class="px-5 py-2.5 rounded-full text-sm font-medium text-slate-600 hover:bg-slate-100 transition cursor-pointer"
+                    class="px-5 py-2.5 rounded-full text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition cursor-pointer"
                 >
                     Tutup
                 </button>

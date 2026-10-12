@@ -18,18 +18,18 @@ const missions = [
 <template>
     <!-- Visi -->
     <section class="mx-auto max-w-7xl px-5 py-14 sm:px-8">
-        <h2 class="text-center text-3xl font-medium text-[#1E1E1E]">
+        <h2 class="text-center text-3xl font-medium text-[#1E1E1E] dark:text-white">
             Visi UKM LAOS
         </h2>
         <div
-            class="mt-8 rounded-xl bg-white p-8 text-center shadow-[0_0_6px_rgba(0,0,0,0.15)] sm:p-10"
+            class="mt-8 rounded-xl bg-white dark:bg-slate-900 border border-transparent dark:border-slate-800 p-8 text-center shadow-[0_0_6px_rgba(0,0,0,0.15)] dark:shadow-none sm:p-10 transition-colors duration-300"
         >
             <img
                 src="/assets/visi.svg"
                 alt="Ikon Visi UKM LAOS"
                 class="mx-auto mb-4 h-10 w-10 sm:h-12 sm:w-12"
             />
-            <p class="mx-auto max-w-7xl text-xl leading-relaxed text-[#636363]">
+            <p class="mx-auto max-w-7xl text-xl leading-relaxed text-[#636363] dark:text-slate-300">
                 Mendukung, mengenalkan dan mengembangkan Linux dan Open Source
                 pada masyarakat luas khususnya Fakultas Ilmu Komputer.
             </p>
@@ -38,21 +38,21 @@ const missions = [
 
     <!-- Misi -->
     <section class="mx-auto max-w-7xl px-5 pb-14 sm:px-8">
-        <h2 class="text-center text-3xl font-medium text-[#1E1E1E]">
+        <h2 class="text-center text-3xl font-medium text-[#1E1E1E] dark:text-white">
             Misi UKM LAOS
         </h2>
         <div class="mt-8 grid gap-5 md:grid-cols-3">
             <article
                 v-for="mission in missions"
                 :key="mission.icon"
-                class="flex flex-col items-center justify-center rounded-xl bg-white p-6 text-center shadow-[0_0_6px_rgba(0,0,0,0.15)] sm:p-8"
+                class="flex flex-col items-center justify-center rounded-xl bg-white dark:bg-slate-900 border border-transparent dark:border-slate-800 p-6 text-center shadow-[0_0_6px_rgba(0,0,0,0.15)] dark:shadow-none sm:p-8 transition-colors duration-300"
             >
                 <img
                     :src="mission.icon"
                     alt="Ikon misi UKM LAOS"
                     class="mx-auto mb-4 h-10 w-10 sm:h-12 sm:w-12"
                 />
-                <p class="max-w-fit text-xl leading-relaxed text-gray-600">
+                <p class="max-w-fit text-xl leading-relaxed text-gray-600 dark:text-slate-300">
                     {{ mission.text }}
                 </p>
             </article>

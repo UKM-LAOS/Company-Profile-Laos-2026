@@ -7,7 +7,7 @@ defineProps<{
 </script>
 
 <template>
-    <footer class="bg-[#114232] pt-16 pb-8 text-white">
+    <footer class="bg-[#176638] dark:bg-[#06180E] dark:border-t dark:border-emerald-950/60 pt-16 pb-8 text-white transition-colors duration-300">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="mb-12 grid grid-cols-1 gap-8 md:grid-cols-4">
                 <!-- Brand -->
@@ -109,7 +109,7 @@ defineProps<{
                             <Link :href="route('blog.index')" class="transition hover:text-white">Blog</Link>
                         </li>
                         <li>
-                            <a href="#" class="transition hover:text-white">Program Kerja</a>
+                            <Link :href="route('program-kerja.index')" class="transition hover:text-white">Program Kerja</Link>
                         </li>
                         <li>
                             <Link :href="route('tentang-kami')" class="transition hover:text-white">Tentang Kami</Link>

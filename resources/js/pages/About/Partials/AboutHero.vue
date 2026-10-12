@@ -4,10 +4,10 @@ import { Link } from '@inertiajs/vue3';
 
 <template>
     <section
-        class="relative flex min-h-163.75 flex-col justify-center overflow-hidden"
+        class="relative flex min-h-screen flex-col justify-center overflow-hidden pt-20 pb-12 lg:pt-20 lg:pb-0"
     >
         <div
-            class="pointer-events-none absolute inset-0 z-0"
+            class="pointer-events-none absolute inset-0 z-0 opacity-100 dark:opacity-30 transition-opacity duration-300"
             aria-hidden="true"
         >
             <img
@@ -32,33 +32,35 @@ import { Link } from '@inertiajs/vue3';
             />
         </div>
         <div
-            class="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-10 px-5 py-14 sm:px-8 lg:grid-cols-[7fr_5fr] lg:py-20"
+            class="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-12 px-6 sm:px-12 md:px-16 lg:grid-cols-12 lg:gap-16 xl:gap-24 xl:px-20"
         >
-            <div class="w-full max-w-2xl lg:-mt-8 lg:-ml-15 lg:max-w-3xl">
+            <div class="w-full lg:col-span-7">
                 <h1
-                    class="text-4xl leading-tight font-extrabold text-[#5D5D5D] sm:text-5xl lg:text-6xl lg:whitespace-nowrap"
+                    class="text-4xl leading-tight font-extrabold text-[#5D5D5D] dark:text-white sm:text-5xl lg:text-5xl xl:text-6xl"
                 >
                     Mengenal Lebih Dekat
-                    <br class="hidden lg:block" />
+                    <br class="hidden sm:block" />
                     <span class="text-[#22c55e]">UKM LAOS</span>
                 </h1>
                 <p
-                    class="mt-4 max-w-2xl text-lg font-medium text-gray-600 sm:mt-6 sm:text-xl lg:max-w-3xl lg:text-2xl"
+                    class="mt-5 max-w-xl text-base font-medium leading-relaxed text-gray-600 dark:text-slate-300 sm:mt-6 sm:text-lg lg:text-xl"
                 >
                     Tempat bagi kamu yang ingin belajar, berkreasi, dan
                     berkontribusi di dunia digital. Yuk, jadi bagian dari
                     gerakan teknologi yang inovatif!
                 </p>
-                <Link
-                    href="/program-kerja"
-                    class="mt-30 inline-flex items-center gap-2 rounded-full border-2 border-white bg-[#2DCC70] px-8 py-3.5 text-sm font-semibold text-white shadow transition hover:bg-[#176638]"
-                >
-                    Lihat Program Kerja Kami
-                    <span aria-hidden="true">&rarr;</span>
-                </Link>
+                <div class="mt-8">
+                    <Link
+                        href="/program-kerja"
+                        class="inline-flex items-center gap-2 rounded-full border-2 border-white dark:border-slate-800 bg-[#2DCC70] px-8 py-3.5 text-sm font-semibold text-white shadow-md transition-all duration-300 hover:bg-[#176638] hover:shadow-lg"
+                    >
+                        Lihat Program Kerja Kami
+                        <span aria-hidden="true">&rarr;</span>
+                    </Link>
+                </div>
             </div>
             <div
-                class="mt-6 flex w-full justify-center lg:-mr-25 lg:justify-end"
+                class="flex w-full items-center justify-center lg:col-span-5 lg:justify-end"
             >
                 <img
                     src="/assets/Group 456480386.png"
@@ -67,7 +69,7 @@ import { Link } from '@inertiajs/vue3';
                     decoding="async"
                     width="451"
                     height="414"
-                    class="mx-auto h-auto w-[80%] max-w-75 rounded-tl-none rounded-tr-none rounded-br-[70px] rounded-bl-[130px] object-cover sm:max-w-90 md:mx-0 md:h-103.5 md:w-112.75 md:max-w-none md:rounded-br-[110px] md:rounded-bl-[207px] lg:h-125 lg:w-136.25"
+                    class="mx-auto h-auto w-[85%] max-w-[280px] rounded-br-[70px] rounded-bl-[130px] object-cover sm:max-w-[340px] md:max-w-[380px] md:rounded-br-[110px] md:rounded-bl-[207px] lg:mx-0 lg:w-full lg:max-w-[440px]"
                 />
             </div>
         </div>
