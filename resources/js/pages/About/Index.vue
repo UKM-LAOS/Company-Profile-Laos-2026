@@ -39,9 +39,9 @@ const logoMeanings = [
         <AboutHero />
 
         <!-- Tentang Kami -->
-        <section class="mx-auto max-w-7xl px-5 py-14 text-center sm:px-8">
-            <h2 class="text-3xl font-medium text-[#1E1E1E] dark:text-white">Tentang Kami</h2>
-            <p class="mt-6 text-center text-xl leading-relaxed text-[#636363] dark:text-slate-300">
+        <section class="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:py-24 text-center">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-[#1E1E1E] dark:text-white tracking-tight">Tentang Kami</h2>
+            <p class="mt-6 mx-auto max-w-4xl text-center text-base sm:text-lg leading-relaxed text-[#636363] dark:text-slate-300">
                 Unit Kegiatan Mahasiswa Linux and Open Source atau disebut juga
                 UKM LAOS merupakan salah satu organisasi yang berfokus sebagai
                 wadah mahasiswa untuk memajukan kreatifitas dalam pengembangan
@@ -54,30 +54,35 @@ const logoMeanings = [
         </section>
 
         <!-- Makna Logo -->
-        <section class="bg-slate-50/60 dark:bg-slate-900/60 transition-colors duration-300">
-            <div class="mx-auto max-w-7xl px-5 py-14 sm:px-8">
-                <h2 class="text-center text-3xl font-medium text-[#1E1E1E] dark:text-white">
+        <section class="bg-slate-50 dark:bg-slate-900/60 py-16 sm:py-20 lg:py-24">
+            <div class="mx-auto max-w-7xl px-5 sm:px-8">
+                <h2 class="text-center text-3xl sm:text-4xl font-extrabold text-[#1E1E1E] dark:text-white tracking-tight">
                     Makna Logo
                 </h2>
                 <p
-                    class="mx-auto mt-3 max-w-fit text-center text-xl text-[#636363] dark:text-slate-300"
+                    class="mx-auto mt-3.5 max-w-fit text-center text-base sm:text-lg text-[#636363] dark:text-slate-300"
                 >
-                    Logo UKM LAOS memiliki dua warna utama dengan makna
-                    simbolis:
+                    Logo UKM LAOS memiliki dua warna utama dengan makna simbolis:
                 </p>
                 <div
-                    class="mt-10 grid items-center gap-10 lg:grid-cols-[320px_1fr]"
+                    class="mt-12 grid items-center justify-items-center gap-10 lg:grid-cols-[240px_1fr] lg:gap-14"
                 >
-                    <div class="flex justify-center">
+                    <div class="relative flex items-center justify-center">
+                        <!-- Soft decorative ambient glow yang ringan (GPU-accelerated) -->
+                        <div class="pointer-events-none absolute -inset-2 rounded-full bg-amber-400/10 blur-xl dark:bg-amber-400/5"></div>
                         <img
                             src="/assets/logo-laos.webp"
                             alt="Logo UKM LAOS"
-                            class="w-64 max-w-full drop-shadow-[0_12px_20px_rgba(234,179,8,0.25)] sm:w-80"
+                            width="208"
+                            height="208"
+                            loading="eager"
+                            decoding="async"
+                            class="relative z-10 w-40 sm:w-48 lg:w-52 h-auto aspect-square object-contain transform-gpu transition-transform duration-300 hover:scale-105"
                             onerror="this.onerror = null;
                             this.src = '/assets/logo.png';"
                         />
                     </div>
-                    <ul class="space-y-10 sm:space-y-12 lg:ml-12">
+                    <ul class="space-y-6 sm:space-y-8 w-full">
                         <li
                             v-for="meaning in logoMeanings"
                             :key="meaning.title"
@@ -86,16 +91,21 @@ const logoMeanings = [
                             <img
                                 :src="meaning.icon"
                                 :alt="`Ikon ${meaning.title}`"
-                                class="h-8 w-8 shrink-0 sm:h-10 sm:w-10"
+                                width="36"
+                                height="36"
+                                loading="lazy"
+                                decoding="async"
+                                class="h-8 w-8 shrink-0 sm:h-9 sm:w-9 mt-0.5 object-contain dark:brightness-110"
+                                :class="meaning.title === 'Tipografi' ? 'dark:invert' : ''"
                             />
-                            <p
-                                class="leading-relaxed text-[#4A4A4A] dark:text-slate-200 sm:text-xl"
-                            >
-                                <strong class="font-semibold text-gray-900 dark:text-white"
-                                    >{{ meaning.title }}:</strong
-                                >
-                                {{ meaning.text }}
-                            </p>
+                            <div>
+                                <h3 class="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-1">
+                                    {{ meaning.title }}
+                                </h3>
+                                <p class="text-sm sm:text-[14px] leading-relaxed text-[#4A4A4A] dark:text-slate-300">
+                                    {{ meaning.text }}
+                                </p>
+                            </div>
                         </li>
                     </ul>
                 </div>

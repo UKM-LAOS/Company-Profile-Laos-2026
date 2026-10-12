@@ -8,7 +8,7 @@ const props = defineProps<{
     pengurus: PengurusItem[];
 }>();
 
-const ITEMS_PER_PAGE = 15;
+const ITEMS_PER_PAGE = 12;
 const currentPage = ref(1);
 
 const committee = computed(() => props.pengurus ?? []);
@@ -72,15 +72,15 @@ onUpdated(() => {
 <template>
     <section
         id="pengurus"
-        class="mx-auto max-w-7xl scroll-mt-24 px-5 py-14 sm:px-8"
+        class="mx-auto max-w-7xl scroll-mt-24 px-5 py-16 sm:px-8 sm:py-20 lg:py-24"
     >
         <h2
-            class="text-center text-5xl font-semibold tracking-wide text-[#1E1E1E] dark:text-white"
+            class="text-center text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#1E1E1E] dark:text-white"
         >
             PENGURUS UKM LAOS
         </h2>
         <div class="mt-4 flex flex-wrap items-center justify-center gap-3">
-            <p class="text-lg text-[#636363] dark:text-slate-300">UKM LAOS Periode</p>
+            <p class="text-base sm:text-lg text-[#636363] dark:text-slate-300">UKM LAOS Periode</p>
             <PeriodDropdown
                 v-model="selectedPeriode"
                 :options="periodOptions"
@@ -89,7 +89,7 @@ onUpdated(() => {
 
         <div
             v-if="filteredPengurus.length > 0"
-            class="mt-10 grid grid-cols-2 justify-items-center gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-5"
+            class="mt-12 grid grid-cols-2 justify-items-center gap-4 sm:grid-cols-3 sm:gap-6 lg:grid-cols-4 lg:gap-8"
         >
             <PengurusCard
                 v-for="item in paginatedPengurus"
