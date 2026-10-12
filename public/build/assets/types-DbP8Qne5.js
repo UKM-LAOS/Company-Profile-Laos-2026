@@ -1,0 +1,1 @@
+var e=[`instagram`,`linkedin`,`github`],t={instagram:`Instagram`,linkedin:`LinkedIn`,github:`GitHub`};function n(e){return e.split(/\s+/).filter(Boolean).slice(0,2).map(e=>e[0]?.toUpperCase()??``).join(``)}export{t as n,n as r,e as t};
