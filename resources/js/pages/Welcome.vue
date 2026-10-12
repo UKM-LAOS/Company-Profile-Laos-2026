@@ -273,11 +273,11 @@ onUnmounted(() => {
         <main>
             <!-- Hero Section -->
             <section
-                class="relative flex flex-col justify-center overflow-hidden bg-gradient-to-b from-[#EEFAF4] via-[#EEFAF4] to-white dark:from-[#06170F] dark:via-[#092216] dark:to-slate-950 pt-24 pb-16 lg:pt-28 lg:pb-24"
+                class="relative flex flex-col justify-center overflow-hidden bg-gradient-to-b from-[#EEFAF4] via-[#EEFAF4] to-white dark:from-[#070517] dark:via-[#092216] dark:to-slate-950 pt-24 pb-16 lg:pt-28 lg:pb-24 h-screen"
             >
                 <!-- Vector Pastel Mint Architecture Arches & Flowing Ribbon Lines -->
                 <svg
-                    class="pointer-events-none absolute inset-0 w-full h-full select-none opacity-90 dark:opacity-25 transition-opacity duration-300"
+                    class="pointer-events-none absolute inset-0 w-full h-full select-none opacity-90 dark:opacity-10 transition-opacity duration-300"
                     viewBox="0 0 1440 640"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -605,7 +605,7 @@ onUnmounted(() => {
                             <!-- Description -->
                             <div class="mt-4 flex flex-1 items-center justify-center sm:mt-6">
                                 <p
-                                    class="text-center text-sm font-normal leading-relaxed text-[#636363] dark:text-slate-300 sm:text-[15px]"
+                                    class="text-center text-sm sm:text-[14px] font-normal leading-relaxed text-[#636363] dark:text-slate-300"
                                 >
                                     {{ manfaat.deskripsi }}
                                 </p>
@@ -618,7 +618,7 @@ onUnmounted(() => {
             <!-- Program Kerja Section (Slider Carousel Otomatis) -->
             <section
                 id="program-kerja"
-                class="relative overflow-hidden bg-gradient-to-b from-[#E3F7F2] via-white to-[#E3F7F2] dark:from-[#092216] dark:via-slate-950 dark:to-[#092216] py-20 lg:py-28 transition-colors duration-300"
+                class="relative overflow-hidden bg-gradient-to-b from-[#E3F7F2] via-white to-[#E3F7F2] dark:from-[#092216] dark:via-slate-950 dark:to-[#070517] py-20 lg:py-28 transition-colors duration-300"
             >
                 <div class="relative z-10 mx-auto max-w-7xl px-6 sm:px-12 md:px-16 lg:px-20 xl:px-24">
                     <!-- Section Header -->
@@ -664,10 +664,10 @@ onUnmounted(() => {
                                     <!-- Konten Tulisan -->
                                     <div class="p-6 sm:p-7 flex flex-col flex-1 justify-between bg-white dark:bg-slate-900">
                                         <div>
-                                            <h3 class="text-sm sm:text-base font-bold text-[#1E1E1E] dark:text-white group-hover:text-[#2DCC70] transition-colors line-clamp-2 mb-2.5 leading-snug">
+                                            <h3 class="text-lg sm:text-xl font-bold text-[#1E1E1E] dark:text-white group-hover:text-[#2DCC70] transition-colors line-clamp-2 mb-2.5 leading-snug">
                                                 {{ program.judul_program }}
                                             </h3>
-                                            <p class="text-sm sm:text-[15px] font-normal text-[#636363] dark:text-slate-300 leading-relaxed line-clamp-4 min-h-[5.5rem]">
+                                            <p class="text-sm sm:text-[14px] font-normal text-[#636363] dark:text-slate-300 leading-relaxed line-clamp-4 min-h-[5.5rem]">
                                                 {{ program.deskripsi }}
                                             </p>
                                         </div>
@@ -717,7 +717,7 @@ onUnmounted(() => {
             <!-- Divisi Kami Section -->
             <section
                 id="divisi"
-                class="relative overflow-hidden bg-[#E3F7F2] dark:bg-[#071F13] py-20 lg:py-28 transition-colors duration-300"
+                class="relative overflow-hidden bg-[#E3F7F2] dark:bg-[#070517] py-20 lg:py-28 transition-colors duration-300"
             >
                 <div class="relative z-10 mx-auto max-w-7xl px-6 sm:px-12 md:px-16 lg:px-20 xl:px-24">
                     <div class="mb-14 sm:mb-16 text-center">
@@ -764,12 +764,12 @@ onUnmounted(() => {
                             </div>
                             <div class="min-w-0 flex-1 text-center sm:text-left">
                                 <h3
-                                    class="mb-2 text-xl font-bold sm:text-2xl text-[#1E1E1E] dark:text-white"
+                                    class="mb-2 text-lg font-bold sm:text-xl text-[#1E1E1E] dark:text-white"
                                 >
                                     {{ divisi.nama }}
                                 </h3>
                                 <p
-                                    class="text-sm sm:text-[15px] font-normal leading-relaxed text-[#636363] dark:text-slate-300"
+                                    class="text-sm sm:text-[14px] font-normal leading-relaxed text-[#636363] dark:text-slate-300"
                                 >
                                     {{ divisi.deskripsi }}
                                 </p>

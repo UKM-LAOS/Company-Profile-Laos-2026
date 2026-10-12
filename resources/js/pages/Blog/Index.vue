@@ -407,12 +407,12 @@ onUnmounted(() => {
                                 <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between">
                                     <div>
                                         <!-- Title -->
-                                        <h3 class="text-base sm:text-lg font-bold text-gray-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors line-clamp-2 mb-2.5 leading-snug">
+                                        <h3 class="text-lg sm:text-xl font-bold text-gray-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors line-clamp-2 mb-2.5 leading-snug">
                                             {{ blog.judul }}
                                         </h3>
 
                                         <!-- Summary / Excerpt -->
-                                        <p class="text-sm text-gray-500 dark:text-slate-400 line-clamp-2 leading-relaxed mb-4">
+                                        <p class="text-sm sm:text-[14px] text-gray-500 dark:text-slate-400 line-clamp-2 leading-relaxed mb-4">
                                             {{ blog.ringkasan }}
                                         </p>
                                     </div>

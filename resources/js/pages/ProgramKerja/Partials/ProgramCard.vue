@@ -1,13 +1,10 @@
 <script setup lang="ts">
 import { computed } from 'vue';
+import { Link } from '@inertiajs/vue3';
 import type { ProgramItem } from '../types';
 
 const props = defineProps<{
     program: ProgramItem;
-}>();
-
-const emit = defineEmits<{
-    (event: 'click-detail', program: ProgramItem): void;
 }>();
 
 const defaultFallbackImage = 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80';
@@ -26,58 +23,57 @@ function handleImageError(event: Event) {
 
 <template>
     <article
-        class="group flex flex-col md:flex-row items-center md:items-stretch gap-6 lg:gap-10 p-2 sm:p-3 rounded-3xl transition-all duration-200 hover:bg-slate-50/70 dark:hover:bg-slate-900/50"
+        class="group flex flex-col lg:flex-row items-center lg:items-center gap-8 lg:gap-11 xl:gap-14 w-full"
     >
-        <!-- Thumbnail / Photo Container -->
-        <div
-            class="relative w-full md:w-[440px] shrink-0 h-60 sm:h-64 md:h-[260px] rounded-2xl md:rounded-3xl overflow-hidden shadow-sm bg-slate-900 border border-slate-100/80 dark:border-slate-800"
-            style="max-width: 100%; min-height: 220px;"
-        >
-            <img
-                :src="displayImage"
-                :alt="program.judul_program"
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                style="width: 100%; height: 100%; object-fit: cover; display: block;"
-                loading="lazy"
-                @error="handleImageError"
-            />
-
-            <!-- Division badge if available -->
+        <!-- Framed Thumbnail / Photo Container matching Figma node 1:247 -->
+        <div class="relative w-full lg:w-[500px] xl:w-[560px] shrink-0">
             <div
-                v-if="program.divisi"
-                class="absolute top-4 left-4 inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-white/95 text-emerald-800 dark:bg-slate-900/90 dark:text-emerald-400 dark:border dark:border-emerald-800/40 shadow-xs backdrop-blur-xs"
+                class="bg-white dark:bg-slate-900 rounded-[16px] p-2 sm:p-2.5 shadow-[0px_2px_12px_rgba(0,0,0,0.08)] dark:shadow-none border border-slate-100 dark:border-slate-800 transition-all duration-300 group-hover:shadow-[0px_8px_24px_rgba(45,204,112,0.12)]"
             >
-                {{ program.divisi.nama }}
+                <div
+                    class="relative w-full h-[240px] sm:h-[290px] lg:h-[315px] rounded-[12px] overflow-hidden bg-[#2DCC70]"
+                >
+                    <img
+                        :src="displayImage"
+                        :alt="program.judul_program"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy"
+                        @error="handleImageError"
+                    />
+                </div>
             </div>
         </div>
 
-        <!-- Content details -->
-        <div class="flex flex-col justify-center flex-1 py-1 sm:py-3 w-full">
-            <h3 class="text-2xl sm:text-[28px] font-bold text-[#1E1E1E] dark:text-white tracking-tight leading-snug group-hover:text-[#2DCC70] transition-colors">
+        <!-- Content Details matching Figma node 1:279 -->
+        <div class="flex flex-col justify-center flex-1 w-full space-y-4 sm:space-y-6 lg:space-y-8">
+            <!-- Title matching Figma text-[36px] Poppins:Medium -->
+            <!-- Title -->
+            <h3 class="text-lg sm:text-xl font-bold sm:font-semibold text-[#1E1E1E] dark:text-white tracking-tight leading-snug group-hover:text-[#2DCC70] transition-colors">
                 {{ program.judul_program }}
             </h3>
 
-            <p class="mt-3 text-sm sm:text-base text-[#636363] dark:text-slate-400 leading-relaxed line-clamp-3">
+            <!-- Description -->
+            <p class="text-sm sm:text-[14px] text-[#636363] dark:text-slate-300 leading-relaxed line-clamp-4 font-normal">
                 {{ program.deskripsi || 'Forum mingguan untuk diskusi, koordinasi program, sharing ide, dan evaluasi kegiatan. Tujuan: Meningkatkan komunikasi, kekompakan, dan update progress tim.' }}
             </p>
 
-            <!-- Action Button -->
-            <div class="mt-6">
-                <button
-                    type="button"
-                    @click="emit('click-detail', program)"
-                    class="inline-flex items-center gap-2.5 px-6 py-2.5 rounded-full bg-[#2DCC70] hover:bg-[#25b562] active:bg-emerald-700 text-white text-sm font-semibold shadow-md shadow-[#2DCC70]/20 transition-all cursor-pointer transform active:scale-95"
+            <!-- Action Button matching Figma node 1:282 -->
+            <div class="pt-1">
+                <Link
+                    :href="route('program-kerja.show', program.slug || program.id)"
+                    class="inline-flex items-center gap-2.5 h-[50px] sm:h-[56px] px-8 rounded-full bg-[#2DCC70] hover:bg-[#25B562] active:bg-[#1D9A50] text-white font-semibold text-[15px] border-2 border-white dark:border-slate-800 shadow-md shadow-[#2DCC70]/20 hover:shadow-lg hover:shadow-[#2DCC70]/30 transition-all duration-300 cursor-pointer group/btn hover:-translate-y-0.5"
                 >
                     <span>Lihat Kegiatan Kami</span>
                     <svg
-                        class="w-4 h-4 transition-transform group-hover:translate-x-1"
+                        class="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1"
                         fill="none"
                         stroke="currentColor"
+                        stroke-width="2.5"
                         viewBox="0 0 24 24"
                     >
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                     </svg>
-                </button>
+                </Link>
             </div>
         </div>
     </article>

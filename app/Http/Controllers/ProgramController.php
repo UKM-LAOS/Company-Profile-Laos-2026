@@ -154,11 +154,35 @@ class ProgramController extends Controller
         $programs = Program::query()
             ->with(['divisi:id,nama,slug', 'pengurus:id,nama,jabatan,foto'])
             ->orderByDesc('id')
-            ->paginate(5)
+            ->paginate(6)
             ->withQueryString();
 
         return Inertia::render('ProgramKerja/Index', [
             'programs' => $programs,
+        ]);
+    }
+
+    /**
+     * Public detail page of work program for /program-kerja/{identifier}
+     */
+    public function publicShow(string $identifier): Response
+    {
+        $program = Program::query()
+            ->with(['divisi:id,nama,slug', 'pengurus:id,nama,jabatan,foto'])
+            ->where('slug', $identifier)
+            ->orWhere('id', $identifier)
+            ->firstOrFail();
+
+        $relatedPrograms = Program::query()
+            ->with(['divisi:id,nama,slug'])
+            ->where('id', '!=', $program->id)
+            ->orderByDesc('id')
+            ->take(3)
+            ->get();
+
+        return Inertia::render('ProgramKerja/Show', [
+            'program' => $program,
+            'relatedPrograms' => $relatedPrograms,
         ]);
     }
 }

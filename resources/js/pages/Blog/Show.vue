@@ -225,11 +225,11 @@ function copyToClipboard() {
                                     <div class="p-4 flex-1 flex flex-col justify-between">
                                         <div>
                                             <span class="text-xs font-semibold text-emerald-600 dark:text-emerald-400 uppercase">{{ related.kategori }}</span>
-                                            <h4 class="text-sm font-bold text-gray-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors line-clamp-2 mt-1 mb-2">
+                                            <h4 class="text-lg sm:text-xl font-bold text-gray-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors line-clamp-2 mt-1 mb-2">
                                                 {{ related.judul }}
                                             </h4>
                                         </div>
-                                        <div class="text-[11px] text-gray-400 dark:text-slate-500 pt-2 border-t border-gray-50 dark:border-slate-800">
+                                        <div class="text-sm sm:text-[14px] text-gray-400 dark:text-slate-500 pt-2 border-t border-gray-50 dark:border-slate-800">
                                             Waktu Post: {{ related.tanggal_rilis_formatted }}
                                         </div>
                                     </div>

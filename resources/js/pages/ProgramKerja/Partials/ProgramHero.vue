@@ -8,25 +8,16 @@ const heroImages = {
 </script>
 
 <template> 
-    <section class="relative flex min-h-screen flex-col justify-center overflow-hidden bg-[#EEFAF4] dark:bg-[#071F13] pt-20 pb-12 lg:pt-20 lg:pb-0 transition-colors duration-300">
+    <section class="relative flex min-h-screen flex-col justify-center overflow-hidden bg-[#EEFAF4] dark:bg-[#070517] pt-20 pb-12 lg:pt-20 lg:pb-0 transition-colors duration-300">
         <!-- Vector Pastel Mint Architecture Arches & Flowing Ribbon Lines matching Figma -->
         <svg
-            class="pointer-events-none absolute inset-0 w-full h-full select-none dark:opacity-20 transition-opacity duration-300"
+            class="pointer-events-none absolute inset-0 w-full h-full select-none dark:opacity-10 transition-opacity duration-300"
             viewBox="0 0 1440 640"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
             preserveAspectRatio="xMidYMid slice"
         >
-            <!-- Far left arch ring -->
-            <circle
-                cx="40"
-                cy="320"
-                r="190"
-                stroke="#D4F3E2"
-                stroke-width="65"
-                fill="none"
-                opacity="0.9"
-            />
+           
 
             <!-- Vertical Pillar 1 (Behind "Penasaran") -->
             <rect
@@ -39,27 +30,10 @@ const heroImages = {
                 opacity="0.85"
             />
 
-            <!-- Vertical Pillar 2 (Behind "UKM" extending down) -->
-            <rect
-                x="345"
-                y="-40"
-                width="72"
-                height="530"
-                rx="36"
-                fill="#D4F3E2"
-                opacity="0.85"
-            />
+           
 
             <!-- Top Connecting Arch Bar -->
-            <rect
-                x="170"
-                y="-40"
-                width="540"
-                height="80"
-                rx="40"
-                fill="#D4F3E2"
-                opacity="0.85"
-            />
+           
 
             <!-- Vertical Pillar 3 (Behind title right) -->
             <rect
@@ -72,12 +46,7 @@ const heroImages = {
                 opacity="0.85"
             />
 
-            <!-- Bottom Center Inverted Arch Curve -->
-            <path
-                d="M 280 640 C 280 470 420 390 570 390 C 720 390 850 470 850 640 Z"
-                fill="#D4F3E2"
-                opacity="0.8"
-            />
+            
 
             <!-- Behind Photos Pillar -->
             <rect
@@ -90,12 +59,7 @@ const heroImages = {
                 opacity="0.75"
             />
 
-            <!-- Far Right Arch Curve -->
-            <path
-                d="M 1240 640 C 1240 480 1350 410 1460 410 L 1460 640 Z"
-                fill="#D4F3E2"
-                opacity="0.75"
-            />
+           
 
             <!-- Smooth Flowing Golden/Orange Wave Ribbon -->
             <path

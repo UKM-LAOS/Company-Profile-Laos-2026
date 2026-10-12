@@ -77,7 +77,7 @@ function formatDateIndo(dateStr: string | null | undefined): string {
             </div>
 
             <!-- Title -->
-            <h3 class="text-2xl sm:text-3xl font-extrabold text-[#1E1E1E] dark:text-white">
+            <h3 class="text-lg sm:text-xl font-bold text-[#1E1E1E] dark:text-white">
                 {{ program.judul_program }}
             </h3>
 
@@ -98,7 +98,7 @@ function formatDateIndo(dateStr: string | null | undefined): string {
             </div>
 
             <!-- Full Description -->
-            <div class="mt-6 text-[#636363] dark:text-slate-300 text-sm sm:text-base leading-relaxed space-y-3 whitespace-pre-line">
+            <div class="mt-6 text-[#636363] dark:text-slate-300 text-sm sm:text-[14px] leading-relaxed space-y-3 whitespace-pre-line">
                 {{ program.deskripsi || 'Belum ada deskripsi lengkap untuk kegiatan ini.' }}
             </div>
 

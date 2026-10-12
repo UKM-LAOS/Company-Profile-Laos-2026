@@ -38,25 +38,24 @@ function handleCloseModal() {
         <ProgramHero />
 
         <!-- Program Kerja Kami Section -->
-        <section id="program-list" class="py-12 sm:py-16">
-            <div class="max-w-6xl mx-auto px-5 sm:px-8">
+        <section id="program-list" class="py-12 sm:py-16 lg:py-20">
+            <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
                 <!-- Section Header -->
-                <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-[#1E1E1E] dark:text-white tracking-tight">
+                <div class="text-center max-w-2xl mx-auto mb-14 sm:mb-16 lg:mb-20">
+                    <h2 class="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#1E1E1E] dark:text-white tracking-tight">
                         Program Kerja Kami
                     </h2>
-                    <p class="mt-3 text-base sm:text-lg text-[#636363] dark:text-slate-400 leading-relaxed">
+                    <p class="mt-3.5 text-base sm:text-lg text-[#636363] dark:text-slate-400 leading-relaxed">
                         Program kami nggak cuma seru, tapi juga bikin kamu makin berkembang. Kepoin sekarang yuk!
                     </p>
                 </div>
 
-                <!-- Program List Cards -->
-                <div v-if="programs.data && programs.data.length > 0" class="space-y-10 sm:space-y-12">
+                <!-- Program List Cards matching Figma node 22:126 -->
+                <div v-if="programs.data && programs.data.length > 0" class="space-y-12 sm:space-y-16 lg:space-y-20">
                     <ProgramCard
                         v-for="program in programs.data"
                         :key="program.id"
                         :program="program"
-                        @click-detail="handleOpenDetail"
                     />
                 </div>
 
@@ -70,13 +69,13 @@ function handleCloseModal() {
                 </div>
 
                 <!-- Pagination matching Figma -->
-                <div class="mt-12 pt-6">
+                <div class="mt-14 pt-8">
                     <Pagination
                         :links="programs.links"
                         :from="programs.from"
                         :to="programs.to"
                         :total="programs.total"
-                        item-name="tautan terdaftar"
+                        item-name="program kerja"
                         variant="circular"
                     />
                 </div>
