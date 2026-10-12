@@ -26,13 +26,14 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/program-kerja', [ProgramController::class, 'publicIndex'])->name('program-kerja.index');
+Route::get('/program-kerja/{identifier}', [ProgramController::class, 'publicShow'])->name('program-kerja.show');
 Route::get('/blog', [PublicBlogController::class, 'index'])->name('blog.index');
 Route::get('/blog/{slug}', [PublicBlogController::class, 'show'])->name('blog.show');
 Route::get('/tentang-kami', [AboutController::class, 'index'])->name('tentang-kami');
 
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard', \App\Http\Controllers\DashboardController::class)
+    ->middleware(['auth', 'verified'])
+    ->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

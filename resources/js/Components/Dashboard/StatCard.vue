@@ -13,7 +13,12 @@ const props = withDefaults(
             | 'book'
             | 'dashboard'
             | 'divisi'
-            | 'proker';
+            | 'proker'
+            | 'berita'
+            | 'pengurus'
+            | 'pengguna'
+            | 'roles'
+            | 'shortlink';
         variant?: 'emerald' | 'amber' | 'blue' | 'purple';
     }>(),
     {
