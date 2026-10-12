@@ -407,13 +407,10 @@ function exportToCsv() {
         'Target Waktu',
         'PIC',
         'Jabatan PIC',
-        'Status',
-        'Progres (%)',
     ];
 
     const rows = props.programs.data.map((item) => {
         const pic = getProgramPIC(item);
-        const status = getProgramExecutionStatus(item);
         const targetWaktu = formatTargetWaktu(
             item.open_regis_peserta,
             item.close_regis_peserta,
@@ -425,8 +422,6 @@ function exportToCsv() {
             `"${targetWaktu}"`,
             `"${pic.nama.replace(/"/g, '""')}"`,
             `"${pic.jabatan.replace(/"/g, '""')}"`,
-            `"${status.label}"`,
-            `"${status.progress}"`,
         ].join(',');
     });
 
@@ -462,8 +457,7 @@ function exportToCsv() {
                         Kelola Program Kerja
                     </h1>
                     <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">
-                        Kelola agenda kegiatan, timeline pelaksanaan, PIC
-                        divisi, serta status program kerja UKM LAOS.
+                        Kelola agenda kegiatan, timeline pelaksanaan, dan PIC divisi program kerja UKM LAOS.
                     </p>
                 </div>
 
@@ -501,15 +495,6 @@ function exportToCsv() {
                         placeholder="Semua Divisi"
                         aria-label="Filter divisi"
                         :options="divisiOptions"
-                        @change="applyFilters"
-                    />
-
-                    <AppDropdownFilter
-                        id="filter-status"
-                        v-model="selectFilters.status"
-                        placeholder="Semua Status"
-                        aria-label="Filter status"
-                        :options="statusOptions"
                         @change="applyFilters"
                     />
                 </div>
@@ -556,9 +541,6 @@ function exportToCsv() {
                                 </th>
                                 <th class="min-w-[200px] px-4 py-4">
                                     PIC / PENANGGUNG JAWAB
-                                </th>
-                                <th class="min-w-[180px] px-4 py-4">
-                                    STATUS & PROGRES
                                 </th>
                                 <th
                                     class="min-w-[80px] py-4 pr-6 pl-4 text-right"
@@ -684,55 +666,6 @@ function exportToCsv() {
                                                     getProgramPIC(item).jabatan
                                                 }}
                                             </div>
-                                        </div>
-                                    </div>
-                                </td>
-
-                                <!-- Status & Progres Column -->
-                                <td
-                                    class="px-4 py-4.5 align-top whitespace-nowrap"
-                                >
-                                    <div class="space-y-1.5">
-                                        <div
-                                            :class="[
-                                                'text-xs',
-                                                getProgramExecutionStatus(item)
-                                                    .textClass,
-                                            ]"
-                                        >
-                                            {{
-                                                getProgramExecutionStatus(item)
-                                                    .label
-                                            }}
-                                        </div>
-
-                                        <div
-                                            class="flex items-center gap-2 text-[11px] text-slate-500"
-                                        >
-                                            <div
-                                                class="h-1.5 w-20 overflow-hidden rounded-full bg-slate-100 dark:bg-slate-800"
-                                            >
-                                                <div
-                                                    :class="[
-                                                        'h-full rounded-full',
-                                                        getProgramExecutionStatus(
-                                                            item,
-                                                        ).barClass,
-                                                    ]"
-                                                    :style="{
-                                                        width: `${getProgramExecutionStatus(item).progress}%`,
-                                                    }"
-                                                />
-                                            </div>
-                                            <span
-                                                class="font-medium text-slate-600 dark:text-slate-400"
-                                            >
-                                                {{
-                                                    getProgramExecutionStatus(
-                                                        item,
-                                                    ).progress
-                                                }}%
-                                            </span>
                                         </div>
                                     </div>
                                 </td>
