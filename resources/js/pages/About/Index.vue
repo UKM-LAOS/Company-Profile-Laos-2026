@@ -39,7 +39,7 @@ const logoMeanings = [
         <AboutHero />
 
         <!-- Tentang Kami -->
-        <section class="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:py-24 text-center">
+        <section v-reveal class="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:py-24 text-center">
             <h2 class="text-3xl sm:text-4xl font-extrabold text-[#1E1E1E] dark:text-white tracking-tight">Tentang Kami</h2>
             <p class="mt-6 mx-auto max-w-4xl text-center text-base sm:text-lg leading-relaxed text-[#636363] dark:text-slate-300">
                 Unit Kegiatan Mahasiswa Linux and Open Source atau disebut juga
@@ -54,7 +54,7 @@ const logoMeanings = [
         </section>
 
         <!-- Makna Logo -->
-        <section class="bg-slate-50 dark:bg-slate-900/60 py-16 sm:py-20 lg:py-24">
+        <section v-reveal class="bg-slate-50 dark:bg-slate-900/60 py-16 sm:py-20 lg:py-24">
             <div class="mx-auto max-w-7xl px-5 sm:px-8">
                 <h2 class="text-center text-3xl sm:text-4xl font-extrabold text-[#1E1E1E] dark:text-white tracking-tight">
                     Makna Logo

@@ -59,7 +59,7 @@ const isRegistrationOpen = computed(() => {
 
         <main class="flex-1">
             <!-- Hero / Header Banner Section -->
-            <section class="relative bg-gradient-to-b from-[#EEFAF4] via-[#EEFAF4]/60 to-white dark:from-[#06170F] dark:via-[#092216] dark:to-slate-950 pt-28 pb-12 sm:pt-32 sm:pb-16 lg:pt-36 lg:pb-20 transition-colors duration-300">
+            <section v-reveal class="relative bg-gradient-to-b from-[#EEFAF4] via-[#EEFAF4]/60 to-white dark:from-[#06170F] dark:via-[#092216] dark:to-slate-950 pt-28 pb-12 sm:pt-32 sm:pb-16 lg:pt-36 lg:pb-20 transition-colors duration-300">
                 <div class="relative z-10 max-w-5xl mx-auto px-5 sm:px-8 lg:px-10">
                     <!-- Breadcrumbs -->
                     <nav class="flex items-center gap-2 text-xs sm:text-sm font-medium text-[#636363] dark:text-slate-400 mb-6">
@@ -123,7 +123,7 @@ const isRegistrationOpen = computed(() => {
             </section>
 
             <!-- Main Detail Body Section -->
-            <section class="py-10 sm:py-14 lg:py-16 bg-white dark:bg-slate-950 transition-colors duration-300">
+            <section v-reveal class="py-10 sm:py-14 lg:py-16 bg-white dark:bg-slate-950 transition-colors duration-300">
                 <div class="max-w-5xl mx-auto px-5 sm:px-8 lg:px-10">
                     <!-- Photo Container with Elegant Frame -->
                     <div class="relative w-full rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg border border-slate-100 dark:border-slate-800 bg-slate-900 aspect-[16/9] mb-10 sm:mb-12">

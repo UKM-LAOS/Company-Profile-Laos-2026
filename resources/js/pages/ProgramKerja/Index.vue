@@ -38,7 +38,7 @@ function handleCloseModal() {
         <ProgramHero />
 
         <!-- Program Kerja Kami Section -->
-        <section id="program-list" class="py-12 sm:py-16 lg:py-20">
+        <section id="program-list" v-reveal class="py-12 sm:py-16 lg:py-20">
             <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
                 <!-- Section Header -->
                 <div class="text-center max-w-2xl mx-auto mb-14 sm:mb-16 lg:mb-20">

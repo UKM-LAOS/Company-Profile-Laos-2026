@@ -72,6 +72,7 @@ onUpdated(() => {
 <template>
     <section
         id="pengurus"
+        v-reveal
         class="mx-auto max-w-7xl scroll-mt-24 px-5 py-16 sm:px-8 sm:py-20 lg:py-24"
     >
         <h2
@@ -89,7 +90,7 @@ onUpdated(() => {
 
         <div
             v-if="filteredPengurus.length > 0"
-            class="mt-12 grid grid-cols-2 justify-items-center gap-4 sm:grid-cols-3 sm:gap-6 lg:grid-cols-4 lg:gap-8"
+            class="mt-12 grid grid-cols-1 justify-items-center gap-4 sm:grid-cols-3 sm:gap-6 lg:grid-cols-4 lg:gap-8"
         >
             <PengurusCard
                 v-for="item in paginatedPengurus"

@@ -273,7 +273,7 @@ onUnmounted(() => {
         <main>
             <!-- Hero Section -->
             <section
-                class="relative flex flex-col justify-center overflow-hidden bg-gradient-to-b from-[#EEFAF4] via-[#EEFAF4] to-white dark:from-[#070517] dark:via-[#092216] dark:to-slate-950 pt-24 pb-16 lg:pt-28 lg:pb-24 h-screen"
+                class="relative flex flex-col justify-start lg:justify-center overflow-hidden bg-gradient-to-b from-[#EEFAF4] via-[#EEFAF4] to-white dark:from-[#070517] dark:via-[#092216] dark:to-slate-950 pt-28 pb-16 sm:pt-32 lg:pt-28 lg:pb-24 min-h-screen lg:h-screen"
             >
                 <!-- Vector Pastel Mint Architecture Arches & Flowing Ribbon Lines -->
                 <svg
@@ -380,18 +380,20 @@ onUnmounted(() => {
                 ></div>
 
                 <div
-                    class="relative z-10 mx-auto w-full max-w-7xl px-6 sm:px-12 md:px-16 lg:px-20 xl:px-24 py-12 lg:py-16"
+                    class="relative z-10 mx-auto w-full max-w-7xl px-6 sm:px-12 md:px-16 lg:px-20 xl:px-24 pt-4 pb-12 sm:pt-6 sm:pb-16 lg:py-16"
                 >
                     <div class="items-center lg:grid lg:grid-cols-12 lg:gap-12 xl:gap-16">
                         <div
                             class="sm:text-center md:mx-auto md:max-w-2xl lg:col-span-6 lg:text-left"
                         >
                             <p
+                                v-reveal="{ delay: 80 }"
                                 class="mb-3 text-sm font-semibold tracking-normal text-[#52525B] dark:text-emerald-400 sm:text-base"
                             >
                                 Tempatnya Anak TI Berkembang!
                             </p>
                             <h1
+                                v-reveal="{ delay: 200 }"
                                 class="text-4xl font-extrabold tracking-tight text-[#3F3F46] dark:text-white leading-[1.15] sm:text-5xl md:text-6xl lg:text-[54px] xl:text-[58px]"
                             >
                                 Selamat
@@ -399,6 +401,7 @@ onUnmounted(() => {
                                 <span class="text-[#2DCC70]">Laosars!</span>
                             </h1>
                             <p
+                                v-reveal="{ delay: 320 }"
                                 class="mt-4 text-base text-[#52525B] dark:text-slate-300 leading-relaxed sm:mx-auto sm:mt-5 sm:max-w-xl sm:text-lg md:text-lg lg:mx-0 font-normal"
                             >
                                 UKM LAOS adalah Unit Kegiatan Mahasiswa yang
@@ -408,6 +411,7 @@ onUnmounted(() => {
                                 Jember.
                             </p>
                             <div
+                                v-reveal="{ delay: 440 }"
                                 class="mt-8 sm:mx-auto sm:max-w-lg sm:text-center lg:text-left"
                             >
                                 <Link
@@ -422,6 +426,7 @@ onUnmounted(() => {
 
                         <!-- Right Hero Character Collage matching Figma & Hero Assets -->
                         <div
+                            v-reveal.right="{ delay: 280 }"
                             class="relative mt-12 sm:mx-auto sm:max-w-lg lg:col-span-6 lg:mx-0 lg:mt-0 lg:flex lg:max-w-none lg:items-center lg:justify-end"
                         >
                             <div
@@ -535,7 +540,10 @@ onUnmounted(() => {
             </section>
 
             <!-- Manfaat Section -->
-            <section class="relative overflow-hidden bg-white dark:bg-slate-950 pt-20 pb-28 lg:pt-28 lg:pb-36 transition-colors duration-300">
+            <section
+                v-reveal
+                class="relative overflow-hidden bg-white dark:bg-slate-950 pt-20 pb-28 lg:pt-28 lg:pb-36 transition-colors duration-300"
+            >
                 <!-- Decorative subtle arches matching brand identity -->
                 <div
                     class="pointer-events-none absolute inset-0 z-0 overflow-hidden"
@@ -618,6 +626,7 @@ onUnmounted(() => {
             <!-- Program Kerja Section (Slider Carousel Otomatis) -->
             <section
                 id="program-kerja"
+                v-reveal
                 class="relative overflow-hidden bg-gradient-to-b from-[#E3F7F2] via-white to-[#E3F7F2] dark:from-[#092216] dark:via-slate-950 dark:to-[#070517] py-20 lg:py-28 transition-colors duration-300"
             >
                 <div class="relative z-10 mx-auto max-w-7xl px-6 sm:px-12 md:px-16 lg:px-20 xl:px-24">
@@ -717,6 +726,7 @@ onUnmounted(() => {
             <!-- Divisi Kami Section -->
             <section
                 id="divisi"
+                v-reveal
                 class="relative overflow-hidden bg-[#E3F7F2] dark:bg-[#070517] py-20 lg:py-28 transition-colors duration-300"
             >
                 <div class="relative z-10 mx-auto max-w-7xl px-6 sm:px-12 md:px-16 lg:px-20 xl:px-24">

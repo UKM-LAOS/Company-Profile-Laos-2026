@@ -36,6 +36,7 @@ import { Link } from '@inertiajs/vue3';
         >
             <div class="w-full lg:col-span-7">
                 <h1
+                    v-reveal="{ delay: 100 }"
                     class="text-4xl leading-tight font-extrabold text-[#5D5D5D] dark:text-white sm:text-5xl lg:text-5xl xl:text-6xl"
                 >
                     Mengenal Lebih Dekat
@@ -43,13 +44,14 @@ import { Link } from '@inertiajs/vue3';
                     <span class="text-[#22c55e]">UKM LAOS</span>
                 </h1>
                 <p
+                    v-reveal="{ delay: 240 }"
                     class="mt-5 max-w-xl text-base font-medium leading-relaxed text-gray-600 dark:text-slate-300 sm:mt-6 sm:text-lg lg:text-xl"
                 >
                     Tempat bagi kamu yang ingin belajar, berkreasi, dan
                     berkontribusi di dunia digital. Yuk, jadi bagian dari
                     gerakan teknologi yang inovatif!
                 </p>
-                <div class="mt-8">
+                <div v-reveal="{ delay: 380 }" class="mt-8">
                     <Link
                         href="/program-kerja"
                         class="inline-flex items-center gap-2 rounded-full border-2 border-white dark:border-slate-800 bg-[#2DCC70] px-8 py-3.5 text-sm font-semibold text-white shadow-md transition-all duration-300 hover:bg-[#176638] hover:shadow-lg"
@@ -60,6 +62,7 @@ import { Link } from '@inertiajs/vue3';
                 </div>
             </div>
             <div
+                v-reveal.right="{ delay: 260 }"
                 class="flex w-full items-center justify-center lg:col-span-5 lg:justify-end"
             >
                 <img

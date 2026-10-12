@@ -17,7 +17,7 @@ const missions = [
 
 <template>
     <!-- Visi -->
-    <section class="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:py-24">
+    <section v-reveal class="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:py-24">
         <h2 class="text-center text-3xl sm:text-4xl font-extrabold text-[#1E1E1E] dark:text-white tracking-tight">
             Visi UKM LAOS
         </h2>
@@ -37,7 +37,7 @@ const missions = [
     </section>
 
     <!-- Misi -->
-    <section class="mx-auto max-w-7xl px-5 pb-16 sm:px-8 sm:pb-20 lg:pb-24">
+    <section v-reveal class="mx-auto max-w-7xl px-5 pb-16 sm:px-8 sm:pb-20 lg:pb-24">
         <h2 class="text-center text-3xl sm:text-4xl font-extrabold text-[#1E1E1E] dark:text-white tracking-tight">
             Misi UKM LAOS
         </h2>

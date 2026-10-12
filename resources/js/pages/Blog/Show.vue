@@ -62,7 +62,7 @@ function copyToClipboard() {
 
         <main class="flex-1">
             <!-- Article Header / Banner Section (Matches Mockup 2) -->
-            <section class="relative bg-slate-900 text-white overflow-hidden pt-28 pb-16 sm:pt-32 sm:pb-20 lg:pt-36 lg:pb-28">
+            <section v-reveal class="relative bg-slate-900 text-white overflow-hidden pt-28 pb-16 sm:pt-32 sm:pb-20 lg:pt-36 lg:pb-28">
                 <!-- Background Image & Overlay -->
                 <div class="absolute inset-0 z-0">
                     <img
@@ -118,7 +118,7 @@ function copyToClipboard() {
             </section>
 
             <!-- Main Article Content Body -->
-            <article class="py-12 sm:py-16 lg:py-20 bg-white dark:bg-slate-950 transition-colors duration-300">
+            <article v-reveal class="py-12 sm:py-16 lg:py-20 bg-white dark:bg-slate-950 transition-colors duration-300">
                 <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                     <!-- Back Link -->
                     <div class="mb-8">

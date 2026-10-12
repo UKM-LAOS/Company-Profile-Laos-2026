@@ -179,6 +179,7 @@ onUnmounted(() => {
         <main class="flex-1">
             <!-- Hero Carousel Section (Pure Horizontal Slider matching Figma node 1:1481) -->
             <section
+                v-reveal
                 class="relative bg-slate-950 text-white overflow-hidden min-h-[460px] sm:min-h-[500px] lg:h-[520px] flex items-center select-none"
                 @mouseenter="isPaused = true"
                 @mouseleave="isPaused = false"
@@ -211,6 +212,7 @@ onUnmounted(() => {
                             <!-- Clickable Card Area linking to Blog Detail -->
                             <component
                                 :is="slide.slug ? Link : 'div'"
+                                v-reveal="{ delay: 120 }"
                                 :href="slide.slug ? route('blog.show', slide.slug) : undefined"
                                 class="group block max-w-4xl text-left cursor-pointer"
                             >
@@ -318,7 +320,7 @@ onUnmounted(() => {
             </section>
 
             <!-- Main Content Area -->
-            <section class="py-16 sm:py-20 lg:py-24 bg-white dark:bg-slate-950 transition-colors duration-300">
+            <section v-reveal class="py-16 sm:py-20 lg:py-24 bg-white dark:bg-slate-950 transition-colors duration-300">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <!-- Section Header -->
                     <div class="text-center mb-10 sm:mb-14">
