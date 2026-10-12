@@ -145,4 +145,21 @@ class ProgramController extends Controller
 
         return redirect()->back()->with('success', 'Program kerja berhasil dihapus.');
     }
+
+    /**
+     * Public listing of work programs for /program-kerja
+     */
+    public function publicIndex(Request $request): Response
+    {
+        $programs = Program::query()
+            ->with(['divisi:id,nama,slug', 'pengurus:id,nama,jabatan,foto'])
+            ->orderByDesc('id')
+            ->paginate(5)
+            ->withQueryString();
+
+        return Inertia::render('ProgramKerja/Index', [
+            'programs' => $programs,
+        ]);
+    }
 }
+

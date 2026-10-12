@@ -25,6 +25,7 @@ Route::get('/', function () {
     ]);
 })->name('home');
 
+Route::get('/program-kerja', [ProgramController::class, 'publicIndex'])->name('program-kerja.index');
 Route::get('/blog', [PublicBlogController::class, 'index'])->name('blog.index');
 Route::get('/blog/{slug}', [PublicBlogController::class, 'show'])->name('blog.show');
 Route::get('/tentang-kami', [AboutController::class, 'index'])->name('tentang-kami');
