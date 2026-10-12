@@ -413,11 +413,16 @@ CREATE TABLE `programs` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL,
+  `foto` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `deskripsi` mediumtext COLLATE utf8mb4_unicode_ci,
+  `pengurus_id` bigint unsigned DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `programs_judul_program_unique` (`judul_program`),
   UNIQUE KEY `programs_slug_unique` (`slug`),
   KEY `programs_divisi_id_foreign` (`divisi_id`),
-  CONSTRAINT `programs_divisi_id_foreign` FOREIGN KEY (`divisi_id`) REFERENCES `divisis` (`id`) ON DELETE CASCADE
+  KEY `programs_pengurus_id_foreign` (`pengurus_id`),
+  CONSTRAINT `programs_divisi_id_foreign` FOREIGN KEY (`divisi_id`) REFERENCES `divisis` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `programs_pengurus_id_foreign` FOREIGN KEY (`pengurus_id`) REFERENCES `penguruses` (`id`) ON DELETE SET NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -427,7 +432,7 @@ CREATE TABLE `programs` (
 
 LOCK TABLES `programs` WRITE;
 /*!40000 ALTER TABLE `programs` DISABLE KEYS */;
-INSERT INTO `programs` VALUES (1,2,'LAOS Web & API Intensive Bootcamp','laos-web-api-intensive-bootcamp','Lab Komputer Gd. Fasilkom UNEJ','2026-03-01','2026-03-10','https://forms.gle/laos-panitia-bootcamp','2026-03-15','2026-03-30','https://forms.gle/laos-peserta-bootcamp','2026-10-06 01:01:33','2026-10-06 01:01:33',NULL),(2,4,'Design Sprint & Figma Masterclass','design-sprint-figma-masterclass','Auditorium Fasilkom UNEJ / Hybrid Zoom','2026-04-01','2026-04-08','https://forms.gle/laos-panitia-design','2026-04-10','2026-04-25','https://forms.gle/laos-peserta-design','2026-10-06 01:01:33','2026-10-06 01:01:33',NULL),(3,5,'Open Recruitment Pengurus & Anggota LAOS','open-recruitment-pengurus-anggota-laos','Ruang UKM Gedung PKM UNEJ','2026-08-01','2026-08-10','https://forms.gle/laos-panitia-oprec','2026-08-15','2026-08-31','https://forms.gle/laos-peserta-oprec','2026-10-06 01:01:33','2026-10-06 01:01:33',NULL);
+INSERT INTO `programs` VALUES (1,2,'LAOS Web & API Intensive Bootcamp','laos-web-api-intensive-bootcamp','Lab Komputer Gd. Fasilkom UNEJ','2026-03-01','2026-03-10','https://forms.gle/laos-panitia-bootcamp','2026-03-15','2026-03-30','https://forms.gle/laos-peserta-bootcamp','2026-10-06 01:01:33','2026-10-06 01:01:33',NULL,NULL,'Pelatihan intensif selama 2 minggu mengenai dasar pengembangan web (HTML, CSS, JS) hingga pembuatan REST API menggunakan Laravel.',4),(2,4,'Design Sprint & Figma Masterclass','design-sprint-figma-masterclass','Auditorium Fasilkom UNEJ / Hybrid Zoom','2026-04-01','2026-04-08','https://forms.gle/laos-panitia-design','2026-04-10','2026-04-25','https://forms.gle/laos-peserta-design','2026-10-06 01:01:33','2026-10-06 01:01:33',NULL,NULL,'Workshop kolaboratif merancang antarmuka pengguna (UI/UX) modern menggunakan metodologi Design Sprint dan alat bantu Figma.',6),(3,5,'Open Recruitment Pengurus & Anggota LAOS','open-recruitment-pengurus-anggota-laos','Ruang UKM Gedung PKM UNEJ','2026-08-01','2026-08-10','https://forms.gle/laos-panitia-oprec','2026-08-15','2026-08-31','https://forms.gle/laos-peserta-oprec','2026-10-06 01:01:33','2026-10-06 01:01:33',NULL,NULL,'Penerimaan anggota dan pengurus baru UKM LAOS periode 2026. Jadilah bagian dari komunitas IT terbesar di Universitas Jember.',7);
 /*!40000 ALTER TABLE `programs` ENABLE KEYS */;
 UNLOCK TABLES;
 

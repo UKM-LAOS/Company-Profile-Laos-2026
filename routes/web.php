@@ -4,6 +4,7 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PengurusController;
 use App\Http\Controllers\DivisiController;
+use App\Http\Controllers\ProgramController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\ShortlinkController;
@@ -20,6 +21,8 @@ Route::get('/', function () {
         'phpVersion' => PHP_VERSION,
     ]);
 })->name('home');
+
+Route::get('/program-kerja', [ProgramController::class, 'publicIndex'])->name('program-kerja.index');
 
 Route::get('/tentang-kami', [AboutController::class, 'index'])->name('tentang-kami');
 
@@ -52,10 +55,18 @@ Route::middleware(['auth', 'can:view_committee'])->group(function () {
         ->parameters(['pengurus' => 'pengurus']);
 });
 
+
+Route::middleware(['auth', 'can:view_work_programs'])->group(function () {
+    Route::resource('programs', ProgramController::class)
+        ->only(['index', 'store', 'update', 'destroy']);
+});
+
+
 Route::middleware(['auth', 'can:view_news'])->group(function () {
     Route::resource('blogs', BlogController::class);
 });
   
+
 Route::middleware(['auth', 'can:view_divisions'])->group(function () {
     Route::resource('divisis', DivisiController::class)->except(['create', 'show', 'edit']);
 });

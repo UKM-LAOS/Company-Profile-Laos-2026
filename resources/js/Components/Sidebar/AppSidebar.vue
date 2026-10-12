@@ -59,8 +59,12 @@ const menuGroups: MenuGroup[] = [
             },
             {
                 title: 'Kelola Program Kerja',
-                href: '#',
+                href:
+                    typeof route === 'function'
+                        ? route('programs.index')
+                        : '/programs',
                 icon: 'proker',
+                routeName: 'programs.index',
                 permission: 'view_work_programs',
             },
             {
