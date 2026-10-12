@@ -20,33 +20,39 @@ class DivisiSeeder extends Seeder
                 'logo' => null,
             ],
             [
-                'nama' => 'Web Development',
-                'slug' => 'web-development',
-                'deskripsi' => 'Divisi teknis yang berfokus pada riset, perancangan, dan pengembangan sistem aplikasi web modern open-source.',
+                'nama' => 'Software Development',
+                'slug' => 'software-development',
+                'deskripsi' => 'Divisi teknis yang berfokus pada riset, perancangan, dan pengembangan sistem aplikasi web, mobile, serta perangkat lunak open-source.',
                 'logo' => null,
             ],
             [
-                'nama' => 'Mobile & IoT Development',
-                'slug' => 'mobile-iot-development',
-                'deskripsi' => 'Divisi yang berfokus pada eksplorasi ekosistem mobile application lintas platform dan integrasi hardware IoT.',
+                'nama' => 'Cyber Security',
+                'slug' => 'cyber-security',
+                'deskripsi' => 'Divisi yang berfokus pada eksplorasi keamanan siber, penetration testing, pertahanan jaringan, dan keamanan sistem informasi.',
                 'logo' => null,
             ],
             [
-                'nama' => 'Multimedia & UI/UX Design',
-                'slug' => 'multimedia-ui-ux-design',
-                'deskripsi' => 'Divisi kreatif yang berfokus pada user experience, antarmuka visual, branding identitas, dan media visual organisasi.',
+                'nama' => 'Human Resource Management',
+                'slug' => 'human-resource-management',
+                'deskripsi' => 'Divisi yang bertanggung jawab dalam pengembangan potensi anggota, regenerasi, keakraban internal, dan manajemen sumber daya manusia.',
                 'logo' => null,
             ],
             [
-                'nama' => 'Keorganisasian & Humas',
-                'slug' => 'keorganisasian-humas',
-                'deskripsi' => 'Divisi penghubung komunikasi eksternal, kemitraan sponsor, dan pengembangan sumber daya kader organisasi.',
+                'nama' => 'Humas',
+                'slug' => 'humas',
+                'deskripsi' => 'Divisi penghubung komunikasi eksternal, branding organisasi, kemitraan, dan relasi antar lembaga maupun komunitas teknologi.',
+                'logo' => null,
+            ],
+            [
+                'nama' => 'Multimedia',
+                'slug' => 'multimedia',
+                'deskripsi' => 'Divisi kreatif yang berfokus pada desain visual, UI/UX, videografi, fotografi, dan konten multimedia organisasi.',
                 'logo' => null,
             ],
         ];
 
         foreach ($divisis as $divisi) {
-            Divisi::firstOrCreate(
+            Divisi::updateOrCreate(
                 ['slug' => $divisi['slug']],
                 $divisi
             );

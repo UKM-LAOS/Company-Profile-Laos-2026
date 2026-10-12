@@ -15,9 +15,9 @@ class ProgramSeeder extends Seeder
     public function run(): void
     {
         $bph = Divisi::where('slug', 'badan-pengurus-harian')->first();
-        $web = Divisi::where('slug', 'web-development')->first();
-        $uiux = Divisi::where('slug', 'multimedia-ui-ux-design')->first();
-        $keorg = Divisi::where('slug', 'keorganisasian-humas')->first();
+        $web = Divisi::whereIn('slug', ['software-development', 'web-development'])->first();
+        $uiux = Divisi::whereIn('slug', ['multimedia', 'multimedia-ui-ux-design'])->first();
+        $keorg = Divisi::whereIn('slug', ['humas', 'keorganisasian-humas'])->first();
 
         $defaultDivisi = Divisi::first();
         $defaultDivisiId = $bph ? $bph->id : ($defaultDivisi ? $defaultDivisi->id : 1);

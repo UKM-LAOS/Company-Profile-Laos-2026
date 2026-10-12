@@ -16,8 +16,8 @@ class BlogSeeder extends Seeder
     public function run(): void
     {
         $admin = User::first();
-        $web = Divisi::where('slug', 'web-development')->first();
-        $uiux = Divisi::where('slug', 'multimedia-ui-ux-design')->first();
+        $web = Divisi::whereIn('slug', ['software-development', 'web-development'])->first();
+        $uiux = Divisi::whereIn('slug', ['multimedia', 'multimedia-ui-ux-design'])->first();
         $bph = Divisi::where('slug', 'badan-pengurus-harian')->first();
 
         $defaultDivisi = Divisi::first();

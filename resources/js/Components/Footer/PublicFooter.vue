@@ -4,6 +4,15 @@ import { Link } from '@inertiajs/vue3';
 defineProps<{
     divisis?: Array<any>;
 }>();
+
+const hardcodedDivisi = [
+    'Badan Pengurus Harian',
+    'Software Development',
+    'Cyber Security',
+    'Human Resource Management',
+    'Humas',
+    'Multimedia',
+];
 </script>
 
 <template>
@@ -25,28 +34,13 @@ defineProps<{
                         dan bimbingan dari pakar industri.
                     </p>
                     <div class="mt-6 flex space-x-3">
-                        <!-- Facebook -->
-                        <a
-                            href="#"
-                            class="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 transition hover:bg-white/40"
-                        >
-                            <svg
-                                class="h-4 w-4 text-white"
-                                fill="currentColor"
-                                viewBox="0 0 24 24"
-                                aria-hidden="true"
-                            >
-                                <path
-                                    fill-rule="evenodd"
-                                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
-                                    clip-rule="evenodd"
-                                />
-                            </svg>
-                        </a>
                         <!-- Instagram -->
                         <a
-                            href="#"
-                            class="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 transition hover:bg-white/40"
+                            href="https://www.instagram.com/ukmlaos/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Instagram UKM LAOS"
+                            class="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 transition hover:bg-white/40 hover:scale-110"
                         >
                             <svg
                                 class="h-4 w-4 text-white"
@@ -61,10 +55,13 @@ defineProps<{
                                 />
                             </svg>
                         </a>
-                        <!-- Twitter (X) -->
+                        <!-- LinkedIn -->
                         <a
-                            href="#"
-                            class="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 transition hover:bg-white/40"
+                            href="https://www.linkedin.com/company/ukm-laos/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="LinkedIn UKM LAOS"
+                            class="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 transition hover:bg-white/40 hover:scale-110"
                         >
                             <svg
                                 class="h-4 w-4 text-white"
@@ -73,14 +70,36 @@ defineProps<{
                                 aria-hidden="true"
                             >
                                 <path
-                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
                                 />
                             </svg>
                         </a>
-                        <!-- YouTube -->
+                        <!-- TikTok -->
                         <a
-                            href="#"
-                            class="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 transition hover:bg-white/40"
+                            href="https://www.tiktok.com/@ukmlaos"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="TikTok UKM LAOS"
+                            class="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 transition hover:bg-white/40 hover:scale-110"
+                        >
+                            <svg
+                                class="h-4 w-4 text-white"
+                                fill="currentColor"
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.47 6.27 6.27 0 0 0 1.96-4.54V9.01a8.16 8.16 0 0 0 4.81 1.56v-3.43a4.85 4.85 0 0 1-1-.45z"
+                                />
+                            </svg>
+                        </a>
+                        <!-- GitHub -->
+                        <a
+                            href="https://github.com/UKM-LAOS"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="GitHub UKM LAOS"
+                            class="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 transition hover:bg-white/40 hover:scale-110"
                         >
                             <svg
                                 class="h-4 w-4 text-white"
@@ -90,8 +109,8 @@ defineProps<{
                             >
                                 <path
                                     fill-rule="evenodd"
-                                    d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.417-4.814a2.507 2.507 0 0 1 1.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z"
                                     clip-rule="evenodd"
+                                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
                                 />
                             </svg>
                         </a>
@@ -115,7 +134,7 @@ defineProps<{
                             <Link :href="route('tentang-kami')" class="transition hover:text-white">Tentang Kami</Link>
                         </li>
                         <li>
-                            <a href="#" class="transition hover:text-white">Pengurus</a>
+                            <Link :href="`${route('tentang-kami')}#pengurus`" class="transition hover:text-white">Pengurus</Link>
                         </li>
                     </ul>
                 </div>
@@ -124,17 +143,13 @@ defineProps<{
                 <div>
                     <h3 class="mb-4 font-semibold text-white">Divisi Kami</h3>
                     <ul class="space-y-3 text-sm text-emerald-100/80">
-                        <template v-if="divisis && divisis.length > 0">
-                            <li v-for="divisi in divisis" :key="divisi.id">
-                                <a
-                                    href="#divisi"
-                                    class="transition hover:text-white"
-                                    >{{ divisi.nama }}</a
-                                >
-                            </li>
-                        </template>
-                        <li v-else class="text-emerald-100/50">
-                            Belum ada divisi
+                        <li v-for="divisi in hardcodedDivisi" :key="divisi">
+                            <Link
+                                :href="`${route('home')}#divisi`"
+                                class="transition hover:text-white"
+                            >
+                                {{ divisi }}
+                            </Link>
                         </li>
                     </ul>
                 </div>
