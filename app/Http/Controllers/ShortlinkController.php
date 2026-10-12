@@ -71,6 +71,23 @@ class ShortlinkController extends Controller
         return redirect()->back()->with('success', 'Shortlink berhasil dihapus.');
     }
 
+    public function redirect(string $code): RedirectResponse
+    {
+        $shortlink = Shortlink::where('short_code', $code)->first();
+
+        if (! $shortlink || ! $shortlink->is_active) {
+            abort(404, 'Tautan pendek tidak ditemukan atau telah dinonaktifkan.');
+        }
+
+        if ($shortlink->expires_at && $shortlink->expires_at->isPast()) {
+            abort(404, 'Tautan pendek telah kedaluwarsa.');
+        }
+
+        $shortlink->increment('click_count');
+
+        return redirect()->away($shortlink->destination_url);
+    }
+
     private function persistShortlink(Shortlink $shortlink): void
     {
         try {

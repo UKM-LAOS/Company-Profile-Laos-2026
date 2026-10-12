@@ -20,7 +20,7 @@ defineProps<{
                 UKM LAOS
             </span>
             <span
-                class="text-[11px] font-bold tracking-wider text-emerald-600 uppercase dark:text-emerald-400"
+                class="text-[10px] font-bold tracking-wider text-emerald-600 uppercase dark:text-emerald-400"
             >
                 FASILKOM UNEJ
             </span>

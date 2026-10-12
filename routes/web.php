@@ -77,3 +77,8 @@ Route::middleware(['auth', 'can:view_divisions'])->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+// Public Shortlink Redirection
+Route::get('/{code}', [ShortlinkController::class, 'redirect'])->where('code', '[A-Za-z0-9_\-]+')->name('shortlinks.redirect');
+Route::get('/s/{code}', [ShortlinkController::class, 'redirect'])->name('shortlinks.alias');
+
