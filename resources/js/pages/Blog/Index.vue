@@ -204,7 +204,9 @@ onUnmounted(() => {
                         class="relative flex w-full min-w-full flex-shrink-0 items-center"
                     >
                         <!-- Slide Background Image with Vignette & Dark Overlay -->
-                        <div class="absolute inset-0 z-0 overflow-hidden">
+                        <div
+                            class="absolute inset-0 z-0 overflow-hidden bg-slate-950"
+                        >
                             <AppImage
                                 :src="
                                     slide.thumbnail_url ||
@@ -212,14 +214,20 @@ onUnmounted(() => {
                                 "
                                 :alt="slide.judul"
                                 wrapper-class="h-full w-full"
-                                image-class="object-cover object-center"
+                                image-class="h-full w-full object-cover object-center scale-105 filter brightness-[0.32] contrast-110"
                                 loading="eager"
                             />
+                            <!-- Base uniform dark overlay with micro-blur -->
                             <div
-                                class="absolute inset-0 bg-black/65 backdrop-blur-[0.5px]"
+                                class="absolute inset-0 z-1 bg-black/75 backdrop-blur-[1px]"
                             ></div>
+                            <!-- Strong horizontal gradient to protect text on the left -->
                             <div
-                                class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-black/60"
+                                class="absolute inset-0 z-2 bg-gradient-to-r from-black/95 via-black/80 to-black/45"
+                            ></div>
+                            <!-- Subtle vertical gradient for top navbar & bottom section blend -->
+                            <div
+                                class="absolute inset-0 z-2 bg-gradient-to-t from-slate-950 via-transparent to-black/70"
                             ></div>
                         </div>
 
@@ -243,7 +251,7 @@ onUnmounted(() => {
                                     class="mb-3.5 flex items-center gap-2.5 sm:mb-4"
                                 >
                                     <span
-                                        class="inline-flex items-center gap-1.5 rounded-full border border-[#2DCC70]/40 bg-[#2DCC70]/20 px-3 py-1 text-xs font-semibold text-[#2DCC70] backdrop-blur-sm sm:text-sm"
+                                        class="inline-flex items-center gap-1.5 rounded-full border border-[#2DCC70]/50 bg-[#162e20]/90 px-3 py-1 text-xs font-semibold text-[#3eed88] shadow-md backdrop-blur-md sm:text-sm"
                                     >
                                         <svg
                                             v-if="slide.is_unggulan"
@@ -262,29 +270,29 @@ onUnmounted(() => {
                                     </span>
                                     <span
                                         v-if="slide.kategori"
-                                        class="text-xs font-medium text-gray-300 capitalize sm:text-sm"
+                                        class="text-xs font-semibold text-slate-200 capitalize drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)] sm:text-sm"
                                     >
                                         &bull; {{ slide.kategori }}
                                     </span>
                                     <span
                                         v-if="slide.tanggal_rilis_formatted"
-                                        class="hidden text-xs text-gray-400 sm:inline sm:text-sm"
+                                        class="hidden text-xs text-slate-300 drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)] sm:inline sm:text-sm"
                                     >
                                         &bull;
                                         {{ slide.tanggal_rilis_formatted }}
                                     </span>
                                 </div>
 
-                                <!-- Main Heading matching Figma node 1:1485 -->
+                                <!-- Main Heading matching Figma node 1:1485 with strong contrast -->
                                 <h1
-                                    class="mb-4 line-clamp-2 text-2xl leading-[1.2] font-bold tracking-tight text-white transition-colors duration-200 group-hover:text-[#2DCC70] sm:mb-5 sm:text-3xl md:text-4xl lg:text-[42px]"
+                                    class="mb-4 line-clamp-2 text-2xl leading-[1.2] font-extrabold tracking-tight text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.95)] transition-colors duration-200 group-hover:text-[#2DCC70] sm:mb-5 sm:text-3xl md:text-4xl lg:text-[42px]"
                                 >
                                     {{ slide.judul }}
                                 </h1>
 
                                 <!-- Subtitle / Description matching Figma node 1:1486 -->
                                 <p
-                                    class="line-clamp-3 max-w-3xl text-sm leading-relaxed font-normal text-gray-200 opacity-95 sm:text-base lg:text-lg"
+                                    class="line-clamp-3 max-w-3xl text-sm leading-relaxed font-normal text-slate-100 opacity-95 drop-shadow-[0_1px_6px_rgba(0,0,0,0.9)] sm:text-base lg:text-lg"
                                 >
                                     {{
                                         slide.ringkasan ||

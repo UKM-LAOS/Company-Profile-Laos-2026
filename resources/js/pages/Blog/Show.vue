@@ -70,16 +70,19 @@ function copyToClipboard() {
                 class="relative overflow-hidden bg-slate-900 pt-28 pb-16 text-white sm:pt-32 sm:pb-20 lg:pt-36 lg:pb-28"
             >
                 <!-- Background Image & Overlay -->
-                <div class="absolute inset-0 z-0">
+                <div class="absolute inset-0 z-0 bg-slate-950">
                     <AppImage
                         :src="blog.thumbnail_url"
                         :alt="blog.judul"
                         loading="eager"
                         wrapper-class="h-full w-full"
-                        image-class="scale-105 object-cover object-center blur-[1px] brightness-40 filter"
+                        image-class="scale-105 object-cover object-center blur-[2px] filter brightness-[0.25]"
                     />
                     <div
-                        class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-slate-900/60"
+                        class="absolute inset-0 z-1 bg-black/75 backdrop-blur-[1px]"
+                    ></div>
+                    <div
+                        class="absolute inset-0 z-2 bg-gradient-to-t from-slate-950 via-slate-950/80 to-black/60"
                     ></div>
                 </div>
 
@@ -93,7 +96,7 @@ function copyToClipboard() {
                             :href="
                                 route('blog.index', { kategori: blog.kategori })
                             "
-                            class="inline-block text-sm font-semibold tracking-wide text-emerald-400 uppercase transition hover:text-emerald-300 sm:text-base"
+                            class="inline-block text-sm font-semibold tracking-wide text-emerald-400 uppercase drop-shadow-sm transition hover:text-emerald-300 sm:text-base"
                         >
                             {{ blog.kategori }}
                         </Link>
@@ -101,7 +104,7 @@ function copyToClipboard() {
 
                     <!-- Article Title -->
                     <h1
-                        class="mb-6 text-3xl leading-tight font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl"
+                        class="mb-6 text-3xl leading-tight font-extrabold tracking-tight text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.95)] sm:text-4xl lg:text-5xl"
                     >
                         {{ blog.judul }}
                     </h1>
