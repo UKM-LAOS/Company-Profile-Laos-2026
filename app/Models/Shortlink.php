@@ -6,7 +6,19 @@ use Database\Factories\ShortlinkFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Support\Carbon;
 
+/**
+ * @property int $id
+ * @property int $user_id
+ * @property string $destination_url
+ * @property string $short_code
+ * @property int $click_count
+ * @property bool $is_active
+ * @property Carbon|null $expires_at
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
+ */
 class Shortlink extends Model
 {
     /** @use HasFactory<ShortlinkFactory> */

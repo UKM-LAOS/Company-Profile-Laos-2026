@@ -3,6 +3,7 @@ import { computed, ref, onMounted, onUnmounted } from 'vue';
 import { Head, Link } from '@inertiajs/vue3';
 import PublicNavbar from '@/Components/Navbar/PublicNavbar.vue';
 import PublicFooter from '@/Components/Footer/PublicFooter.vue';
+import AppImage from '@/Components/Common/AppImage.vue';
 
 const props = defineProps<{
     canLogin?: boolean;
@@ -165,7 +166,9 @@ const computedPrograms = computed(() => {
             deskripsi:
                 p.deskripsi ||
                 'Rangkaian program untuk mengembangkan potensi, menantang kreativitas, dan membangun skill nyata.',
-            divisi: p.divisi || defaultPrograms[idx % defaultPrograms.length].divisi,
+            divisi:
+                p.divisi ||
+                defaultPrograms[idx % defaultPrograms.length].divisi,
         }));
     }
     return defaultPrograms;
@@ -178,7 +181,9 @@ const computedDivisis = computed(() => {
             const hasCustomLogo = Boolean(d.logo);
             let logoUrl = '';
             if (d.logo) {
-                logoUrl = d.logo.startsWith('http') ? d.logo : `/storage/${d.logo}`;
+                logoUrl = d.logo.startsWith('http')
+                    ? d.logo
+                    : `/storage/${d.logo}`;
             } else {
                 logoUrl = defaultDivisis[idx % defaultDivisis.length].icon;
             }
@@ -267,17 +272,19 @@ onUnmounted(() => {
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
     </Head>
 
-    <div class="min-h-screen bg-white font-sans text-gray-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300">
+    <div
+        class="min-h-screen bg-white font-sans text-gray-900 transition-colors duration-300 dark:bg-slate-950 dark:text-slate-100"
+    >
         <PublicNavbar />
 
         <main>
             <!-- Hero Section -->
             <section
-                class="relative flex flex-col justify-start lg:justify-center overflow-hidden bg-gradient-to-b from-[#EEFAF4] via-[#EEFAF4] to-white dark:from-[#070517] dark:via-[#092216] dark:to-slate-950 pt-28 pb-16 sm:pt-32 lg:pt-28 lg:pb-24 min-h-screen lg:h-screen"
+                class="relative flex min-h-screen flex-col justify-start overflow-hidden bg-gradient-to-b from-[#EEFAF4] via-[#EEFAF4] to-white pt-28 pb-16 sm:pt-32 lg:h-screen lg:justify-center lg:pt-28 lg:pb-24 dark:from-[#070517] dark:via-[#092216] dark:to-slate-950"
             >
                 <!-- Vector Pastel Mint Architecture Arches & Flowing Ribbon Lines -->
                 <svg
-                    class="pointer-events-none absolute inset-0 w-full h-full select-none opacity-90 dark:opacity-10 transition-opacity duration-300"
+                    class="pointer-events-none absolute inset-0 h-full w-full opacity-90 transition-opacity duration-300 select-none dark:opacity-10"
                     viewBox="0 0 1440 640"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -375,34 +382,37 @@ onUnmounted(() => {
 
                 <!-- Soft Bottom Fade to Background for Seamless Transition -->
                 <div
-                    class="pointer-events-none absolute bottom-0 left-0 right-0 h-28 sm:h-36 bg-gradient-to-t from-white via-white/70 to-transparent dark:from-slate-950 dark:via-slate-950/70 dark:to-transparent z-0 transition-colors duration-300"
+                    class="pointer-events-none absolute right-0 bottom-0 left-0 z-0 h-28 bg-gradient-to-t from-white via-white/70 to-transparent transition-colors duration-300 sm:h-36 dark:from-slate-950 dark:via-slate-950/70 dark:to-transparent"
                     aria-hidden="true"
                 ></div>
 
                 <div
-                    class="relative z-10 mx-auto w-full max-w-7xl px-6 sm:px-12 md:px-16 lg:px-20 xl:px-24 pt-4 pb-12 sm:pt-6 sm:pb-16 lg:py-16"
+                    class="relative z-10 mx-auto w-full max-w-7xl px-6 pt-4 pb-12 sm:px-12 sm:pt-6 sm:pb-16 md:px-16 lg:px-20 lg:py-16 xl:px-24"
                 >
-                    <div class="items-center lg:grid lg:grid-cols-12 lg:gap-12 xl:gap-16">
+                    <div
+                        class="items-center lg:grid lg:grid-cols-12 lg:gap-12 xl:gap-16"
+                    >
                         <div
                             class="sm:text-center md:mx-auto md:max-w-2xl lg:col-span-6 lg:text-left"
                         >
                             <p
                                 v-reveal="{ delay: 80 }"
-                                class="mb-3 text-sm font-semibold tracking-normal text-[#52525B] dark:text-emerald-400 sm:text-base"
+                                class="mb-3 text-sm font-semibold tracking-normal text-[#52525B] sm:text-base dark:text-emerald-400"
                             >
                                 Tempatnya Anak TI Berkembang!
                             </p>
                             <h1
                                 v-reveal="{ delay: 200 }"
-                                class="text-4xl font-extrabold tracking-tight text-[#3F3F46] dark:text-white leading-[1.15] sm:text-5xl md:text-6xl lg:text-[54px] xl:text-[58px]"
+                                class="text-4xl leading-[1.15] font-extrabold tracking-tight text-[#3F3F46] sm:text-5xl md:text-6xl lg:text-[54px] xl:text-[58px] dark:text-white"
                             >
                                 Selamat
-                                <span class="text-[#2DCC70]">Datang,</span><br />
+                                <span class="text-[#2DCC70]">Datang,</span
+                                ><br />
                                 <span class="text-[#2DCC70]">Laosars!</span>
                             </h1>
                             <p
                                 v-reveal="{ delay: 320 }"
-                                class="mt-4 text-base text-[#52525B] dark:text-slate-300 leading-relaxed sm:mx-auto sm:mt-5 sm:max-w-xl sm:text-lg md:text-lg lg:mx-0 font-normal"
+                                class="mt-4 text-base leading-relaxed font-normal text-[#52525B] sm:mx-auto sm:mt-5 sm:max-w-xl sm:text-lg md:text-lg lg:mx-0 dark:text-slate-300"
                             >
                                 UKM LAOS adalah Unit Kegiatan Mahasiswa yang
                                 berfokus sebagai wadah untuk memajukan
@@ -464,14 +474,16 @@ onUnmounted(() => {
                                         stroke-linecap="round"
                                         stroke-linejoin="round"
                                     >
-                                        <polyline points="6 26 14 18 20 23 28 12" />
+                                        <polyline
+                                            points="6 26 14 18 20 23 28 12"
+                                        />
                                         <polyline points="20 12 28 12 28 20" />
                                     </svg>
                                 </div>
 
                                 <!-- Floating Yellow Star (Right side between top and bottom cards) -->
                                 <div
-                                    class="absolute -right-3.5 top-1/2 z-20 -translate-y-1/2 select-none sm:-right-4"
+                                    class="absolute top-1/2 -right-3.5 z-20 -translate-y-1/2 select-none sm:-right-4"
                                 >
                                     <svg
                                         class="h-7 w-7 fill-[#FACC15] text-[#FACC15] drop-shadow-sm sm:h-8 sm:w-8"
@@ -487,49 +499,53 @@ onUnmounted(() => {
                                 <div class="grid grid-cols-2 gap-3.5 sm:gap-4">
                                     <!-- 1. Kiri Atas -->
                                     <div
-                                        class="aspect-square overflow-hidden rounded-tl-[44px] rounded-tr-[20px] rounded-bl-[20px] rounded-br-[20px] border-4 border-white dark:border-slate-800 bg-[#2CC66D] shadow-md transition-transform duration-300 hover:shadow-lg sm:rounded-tl-[52px] sm:rounded-tr-[24px] sm:rounded-bl-[24px] sm:rounded-br-[24px]"
+                                        class="aspect-square overflow-hidden rounded-tl-[44px] rounded-tr-[20px] rounded-br-[20px] rounded-bl-[20px] border-4 border-white bg-[#2CC66D] shadow-md transition-transform duration-300 hover:shadow-lg sm:rounded-tl-[52px] sm:rounded-tr-[24px] sm:rounded-br-[24px] sm:rounded-bl-[24px] dark:border-slate-800"
                                     >
-                                        <img
+                                        <AppImage
                                             src="/assets/hero/kiri-atas.png"
                                             alt="Karakter 3D UKM LAOS Kiri Atas"
-                                            class="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
                                             loading="eager"
+                                            wrapper-class="h-full w-full"
+                                            image-class="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
                                         />
                                     </div>
 
                                     <!-- 2. Kanan Atas -->
                                     <div
-                                        class="aspect-square overflow-hidden rounded-[20px] border-4 border-white dark:border-slate-800 bg-[#2CC66D] shadow-md transition-transform duration-300 hover:shadow-lg sm:rounded-[24px]"
+                                        class="aspect-square overflow-hidden rounded-[20px] border-4 border-white bg-[#2CC66D] shadow-md transition-transform duration-300 hover:shadow-lg sm:rounded-[24px] dark:border-slate-800"
                                     >
-                                        <img
+                                        <AppImage
                                             src="/assets/hero/kanan-atas.png"
                                             alt="Karakter 3D UKM LAOS Kanan Atas"
-                                            class="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
                                             loading="eager"
+                                            wrapper-class="h-full w-full"
+                                            image-class="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
                                         />
                                     </div>
 
                                     <!-- 3. Kiri Bawah -->
                                     <div
-                                        class="aspect-square overflow-hidden rounded-tl-[20px] rounded-tr-[20px] rounded-bl-[44px] rounded-br-[20px] border-4 border-white dark:border-slate-800 bg-[#2CC66D] shadow-md transition-transform duration-300 hover:shadow-lg sm:rounded-tl-[24px] sm:rounded-tr-[24px] sm:rounded-bl-[52px] sm:rounded-br-[24px]"
+                                        class="aspect-square overflow-hidden rounded-tl-[20px] rounded-tr-[20px] rounded-br-[20px] rounded-bl-[44px] border-4 border-white bg-[#2CC66D] shadow-md transition-transform duration-300 hover:shadow-lg sm:rounded-tl-[24px] sm:rounded-tr-[24px] sm:rounded-br-[24px] sm:rounded-bl-[52px] dark:border-slate-800"
                                     >
-                                        <img
+                                        <AppImage
                                             src="/assets/hero/kiri-bawah.png"
                                             alt="Karakter 3D UKM LAOS Kiri Bawah"
-                                            class="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
                                             loading="eager"
+                                            wrapper-class="h-full w-full"
+                                            image-class="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
                                         />
                                     </div>
 
                                     <!-- 4. Kanan Bawah -->
                                     <div
-                                        class="aspect-square overflow-hidden rounded-tl-[20px] rounded-tr-[20px] rounded-bl-[20px] rounded-br-[44px] border-4 border-white dark:border-slate-800 bg-[#2CC66D] shadow-md transition-transform duration-300 hover:shadow-lg sm:rounded-tl-[24px] sm:rounded-tr-[24px] sm:rounded-bl-[24px] sm:rounded-br-[52px]"
+                                        class="aspect-square overflow-hidden rounded-tl-[20px] rounded-tr-[20px] rounded-br-[44px] rounded-bl-[20px] border-4 border-white bg-[#2CC66D] shadow-md transition-transform duration-300 hover:shadow-lg sm:rounded-tl-[24px] sm:rounded-tr-[24px] sm:rounded-br-[52px] sm:rounded-bl-[24px] dark:border-slate-800"
                                     >
-                                        <img
+                                        <AppImage
                                             src="/assets/hero/kanan-bawah.png"
                                             alt="Karakter 3D UKM LAOS Kanan Bawah"
-                                            class="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
                                             loading="eager"
+                                            wrapper-class="h-full w-full"
+                                            image-class="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
                                         />
                                     </div>
                                 </div>
@@ -542,7 +558,7 @@ onUnmounted(() => {
             <!-- Manfaat Section -->
             <section
                 v-reveal
-                class="relative overflow-hidden bg-white dark:bg-slate-950 pt-20 pb-28 lg:pt-28 lg:pb-36 transition-colors duration-300"
+                class="relative overflow-hidden bg-white pt-20 pb-28 transition-colors duration-300 lg:pt-28 lg:pb-36 dark:bg-slate-950"
             >
                 <!-- Decorative subtle arches matching brand identity -->
                 <div
@@ -550,25 +566,28 @@ onUnmounted(() => {
                     aria-hidden="true"
                 >
                     <div
-                        class="absolute -bottom-16 -left-16 h-72 w-72 rounded-full bg-[#D4F3E2]/40 dark:bg-emerald-950/20 blur-2xl"
+                        class="absolute -bottom-16 -left-16 h-72 w-72 rounded-full bg-[#D4F3E2]/40 blur-2xl dark:bg-emerald-950/20"
                     ></div>
                     <div
-                        class="absolute -top-16 -right-16 h-72 w-72 rounded-full bg-[#D4F3E2]/40 dark:bg-emerald-950/20 blur-2xl"
+                        class="absolute -top-16 -right-16 h-72 w-72 rounded-full bg-[#D4F3E2]/40 blur-2xl dark:bg-emerald-950/20"
                     ></div>
                 </div>
 
                 <!-- Slanted transition at the bottom -->
                 <div
-                    class="pointer-events-none absolute bottom-0 left-0 right-0 z-0 w-full overflow-hidden leading-none select-none"
+                    class="pointer-events-none absolute right-0 bottom-0 left-0 z-0 w-full overflow-hidden leading-none select-none"
                     aria-hidden="true"
                 >
                     <svg
-                        class="block h-20 w-full sm:h-28 md:h-36 lg:h-44 text-[#E3F7F2] dark:text-[#092216] transition-colors duration-300"
+                        class="block h-20 w-full text-[#E3F7F2] transition-colors duration-300 sm:h-28 md:h-36 lg:h-44 dark:text-[#092216]"
                         viewBox="0 0 1285 579"
                         fill="none"
                         preserveAspectRatio="none"
                     >
-                        <path d="M0 466.696L1285 0V579H0V466.696Z" fill="currentColor" />
+                        <path
+                            d="M0 466.696L1285 0V579H0V466.696Z"
+                            fill="currentColor"
+                        />
                     </svg>
                 </div>
 
@@ -577,43 +596,47 @@ onUnmounted(() => {
                 >
                     <div class="mx-auto max-w-3xl text-center">
                         <h2
-                            class="text-3xl font-extrabold tracking-tight text-[#1E1E1E] dark:text-white sm:text-4xl"
+                            class="text-3xl font-extrabold tracking-tight text-[#1E1E1E] sm:text-4xl dark:text-white"
                         >
                             Manfaat Laosars
                         </h2>
                         <p
-                            class="mt-4 text-base leading-relaxed text-[#636363] dark:text-slate-300 sm:text-lg"
+                            class="mt-4 text-base leading-relaxed text-[#636363] sm:text-lg dark:text-slate-300"
                         >
-                            Bergabung dengan UKM LAOS membuka berbagai peluang untuk
-                            pengembangan diri dan karir Anda
+                            Bergabung dengan UKM LAOS membuka berbagai peluang
+                            untuk pengembangan diri dan karir Anda
                         </p>
                     </div>
 
                     <!-- 3 Cards Grid -->
                     <div
-                        class="mt-12 sm:mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 items-stretch"
+                        class="mt-12 grid grid-cols-1 items-stretch gap-6 sm:mt-16 sm:grid-cols-2 lg:grid-cols-3"
                     >
                         <div
                             v-for="(manfaat, idx) in manfaatList"
                             :key="idx"
-                            class="group flex h-full flex-col justify-between rounded-xl border border-gray-100 bg-white dark:border-slate-800 dark:bg-slate-900 p-5 shadow-[0px_4px_16px_rgba(0,0,0,0.06)] dark:shadow-none transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0px_14px_30px_rgba(45,204,112,0.14)] sm:p-6"
+                            class="group flex h-full flex-col justify-between rounded-xl border border-gray-100 bg-white p-5 shadow-[0px_4px_16px_rgba(0,0,0,0.06)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0px_14px_30px_rgba(45,204,112,0.14)] sm:p-6 dark:border-slate-800 dark:bg-slate-900 dark:shadow-none"
                         >
                             <!-- Image Banner with subtle hover zoom -->
                             <div
-                                class="w-full aspect-[354/214] overflow-hidden rounded-xl flex items-center justify-center bg-transparent"
+                                class="flex aspect-[354/214] w-full items-center justify-center overflow-hidden rounded-xl bg-transparent"
                             >
-                                <img
+                                <AppImage
                                     :src="manfaat.image"
                                     :alt="manfaat.title"
-                                    class="h-full w-full object-contain transition-transform duration-500 group-hover:scale-[1.03]"
                                     loading="lazy"
+                                    object-fit="contain"
+                                    wrapper-class="h-full w-full flex items-center justify-center"
+                                    image-class="h-full w-full object-contain transition-transform duration-500 group-hover:scale-[1.03]"
                                 />
                             </div>
 
                             <!-- Description -->
-                            <div class="mt-4 flex flex-1 items-center justify-center sm:mt-6">
+                            <div
+                                class="mt-4 flex flex-1 items-center justify-center sm:mt-6"
+                            >
                                 <p
-                                    class="text-center text-sm sm:text-[14px] font-normal leading-relaxed text-[#636363] dark:text-slate-300"
+                                    class="text-center text-sm leading-relaxed font-normal text-[#636363] sm:text-[14px] dark:text-slate-300"
                                 >
                                     {{ manfaat.deskripsi }}
                                 </p>
@@ -627,56 +650,73 @@ onUnmounted(() => {
             <section
                 id="program-kerja"
                 v-reveal
-                class="relative overflow-hidden bg-gradient-to-b from-[#E3F7F2] via-white to-[#E3F7F2] dark:from-[#092216] dark:via-slate-950 dark:to-[#070517] py-20 lg:py-28 transition-colors duration-300"
+                class="relative overflow-hidden bg-gradient-to-b from-[#E3F7F2] via-white to-[#E3F7F2] py-20 transition-colors duration-300 lg:py-28 dark:from-[#092216] dark:via-slate-950 dark:to-[#070517]"
             >
-                <div class="relative z-10 mx-auto max-w-7xl px-6 sm:px-12 md:px-16 lg:px-20 xl:px-24">
+                <div
+                    class="relative z-10 mx-auto max-w-7xl px-6 sm:px-12 md:px-16 lg:px-20 xl:px-24"
+                >
                     <!-- Section Header -->
-                    <div class="mb-12 sm:mb-14 text-center">
-                        <h2 class="text-3xl font-extrabold tracking-tight text-[#1E1E1E] dark:text-white sm:text-4xl">
+                    <div class="mb-12 text-center sm:mb-14">
+                        <h2
+                            class="text-3xl font-extrabold tracking-tight text-[#1E1E1E] sm:text-4xl dark:text-white"
+                        >
                             Program Kerja
                         </h2>
-                        <p class="mx-auto mt-3 max-w-2xl text-base sm:text-lg leading-relaxed text-[#636363] dark:text-slate-300">
-                            Rangkaian program untuk mengembangkan potensi, menantang kreativitas, dan membangun skill nyata
+                        <p
+                            class="mx-auto mt-3 max-w-2xl text-base leading-relaxed text-[#636363] sm:text-lg dark:text-slate-300"
+                        >
+                            Rangkaian program untuk mengembangkan potensi,
+                            menantang kreativitas, dan membangun skill nyata
                         </p>
                     </div>
 
                     <!-- Carousel Container -->
                     <div
-                        class="overflow-hidden py-4 -my-4"
+                        class="-my-4 overflow-hidden py-4"
                         @mouseenter="isPaused = true"
                         @mouseleave="isPaused = false"
                     >
                         <div
                             class="flex transition-transform duration-700 ease-in-out"
-                            :style="{ transform: `translateX(-${currentPage * 100}%)` }"
+                            :style="{
+                                transform: `translateX(-${currentPage * 100}%)`,
+                            }"
                         >
                             <div
                                 v-for="pageIdx in totalPages"
                                 :key="pageIdx"
-                                class="w-full shrink-0 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 lg:gap-8 items-stretch"
+                                class="grid w-full shrink-0 grid-cols-1 items-stretch gap-6 sm:grid-cols-2 sm:gap-7 lg:grid-cols-3 lg:gap-8"
                             >
                                 <div
-                                    v-for="program in getProgramsForPage(pageIdx - 1)"
+                                    v-for="program in getProgramsForPage(
+                                        pageIdx - 1,
+                                    )"
                                     :key="program.id"
-                                    class="group relative flex flex-col h-full rounded-lg border border-gray-100 bg-white dark:border-slate-800 dark:bg-slate-900 shadow-[0px_4px_20px_rgba(0,0,0,0.06)] dark:shadow-none transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0px_16px_36px_rgba(45,204,112,0.16)] overflow-hidden"
+                                    class="group relative flex h-full flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-[0px_4px_20px_rgba(0,0,0,0.06)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0px_16px_36px_rgba(45,204,112,0.16)] dark:border-slate-800 dark:bg-slate-900 dark:shadow-none"
                                 >
                                     <!-- Foto Kotak di Atas -->
-                                    <div class="relative w-full aspect-[16/10] sm:aspect-[16/9] overflow-hidden bg-slate-900 shrink-0">
-                                        <img
-                                            :src="program.foto_url"
-                                            :alt="program.judul_program"
-                                            class="w-full h-full object-cover transition-transform duration-500"
-                                            loading="lazy"
-                                        />
-                                    </div>
+                                    <AppImage
+                                        :src="program.foto_url"
+                                        :alt="program.judul_program"
+                                        aspect-ratio="16/10"
+                                        loading="lazy"
+                                        wrapper-class="relative w-full shrink-0 overflow-hidden bg-slate-900 sm:aspect-[16/9]"
+                                        image-class="h-full w-full object-cover transition-transform duration-500"
+                                    />
 
                                     <!-- Konten Tulisan -->
-                                    <div class="p-6 sm:p-7 flex flex-col flex-1 justify-between bg-white dark:bg-slate-900">
+                                    <div
+                                        class="flex flex-1 flex-col justify-between bg-white p-6 sm:p-7 dark:bg-slate-900"
+                                    >
                                         <div>
-                                            <h3 class="text-lg sm:text-xl font-bold text-[#1E1E1E] dark:text-white group-hover:text-[#2DCC70] transition-colors line-clamp-2 mb-2.5 leading-snug">
+                                            <h3
+                                                class="mb-2.5 line-clamp-2 text-lg leading-snug font-bold text-[#1E1E1E] transition-colors group-hover:text-[#2DCC70] sm:text-xl dark:text-white"
+                                            >
                                                 {{ program.judul_program }}
                                             </h3>
-                                            <p class="text-sm sm:text-[14px] font-normal text-[#636363] dark:text-slate-300 leading-relaxed line-clamp-4 min-h-[5.5rem]">
+                                            <p
+                                                class="line-clamp-4 min-h-[5.5rem] text-sm leading-relaxed font-normal text-[#636363] sm:text-[14px] dark:text-slate-300"
+                                            >
                                                 {{ program.deskripsi }}
                                             </p>
                                         </div>
@@ -687,7 +727,10 @@ onUnmounted(() => {
                     </div>
 
                     <!-- Pagination Indicator Dots -->
-                    <div v-if="totalPages > 1" class="mt-10 sm:mt-12 flex justify-center items-center gap-2.5">
+                    <div
+                        v-if="totalPages > 1"
+                        class="mt-10 flex items-center justify-center gap-2.5 sm:mt-12"
+                    >
                         <button
                             v-for="pageIndex in totalPages"
                             :key="pageIndex"
@@ -697,17 +740,17 @@ onUnmounted(() => {
                             :class="[
                                 currentPage === pageIndex - 1
                                     ? 'w-8 bg-[#2DCC70]'
-                                    : 'w-2.5 bg-gray-300 dark:bg-slate-700 hover:bg-gray-400 dark:hover:bg-slate-600',
-                                'h-2.5 rounded-full transition-all duration-300 cursor-pointer'
+                                    : 'w-2.5 bg-gray-300 hover:bg-gray-400 dark:bg-slate-700 dark:hover:bg-slate-600',
+                                'h-2.5 cursor-pointer rounded-full transition-all duration-300',
                             ]"
                         />
                     </div>
 
                     <!-- Tombol Lihat Selengkapnya ke Route Program Kerja -->
-                    <div class="mt-10 sm:mt-12 flex justify-center">
+                    <div class="mt-10 flex justify-center sm:mt-12">
                         <Link
                             :href="route('program-kerja.index')"
-                            class="inline-flex items-center gap-2.5 rounded-full bg-[#2DCC70] px-8 py-3.5 text-sm font-semibold text-white shadow-md shadow-[#2DCC70]/20 transition-all duration-300 hover:bg-[#25B562] active:bg-[#1D9A50] hover:shadow-lg hover:-translate-y-0.5"
+                            class="inline-flex items-center gap-2.5 rounded-full bg-[#2DCC70] px-8 py-3.5 text-sm font-semibold text-white shadow-md shadow-[#2DCC70]/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#25B562] hover:shadow-lg active:bg-[#1D9A50]"
                         >
                             <span>Lihat Selengkapnya</span>
                             <svg
@@ -716,7 +759,12 @@ onUnmounted(() => {
                                 viewBox="0 0 24 24"
                                 stroke="currentColor"
                             >
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2.5"
+                                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                                />
                             </svg>
                         </Link>
                     </div>
@@ -727,59 +775,68 @@ onUnmounted(() => {
             <section
                 id="divisi"
                 v-reveal
-                class="relative overflow-hidden bg-[#E3F7F2] dark:bg-[#070517] py-20 lg:py-28 transition-colors duration-300"
+                class="relative overflow-hidden bg-[#E3F7F2] py-20 transition-colors duration-300 lg:py-28 dark:bg-[#070517]"
             >
-                <div class="relative z-10 mx-auto max-w-7xl px-6 sm:px-12 md:px-16 lg:px-20 xl:px-24">
-                    <div class="mb-14 sm:mb-16 text-center">
-                        <h2 class="text-3xl font-extrabold tracking-tight text-[#1E1E1E] dark:text-white sm:text-4xl">
+                <div
+                    class="relative z-10 mx-auto max-w-7xl px-6 sm:px-12 md:px-16 lg:px-20 xl:px-24"
+                >
+                    <div class="mb-14 text-center sm:mb-16">
+                        <h2
+                            class="text-3xl font-extrabold tracking-tight text-[#1E1E1E] sm:text-4xl dark:text-white"
+                        >
                             Divisi Kami
                         </h2>
-                        <p class="mx-auto mt-4 max-w-2xl text-base sm:text-lg leading-relaxed text-[#636363] dark:text-slate-300">
-                            Divisi unggulan yang bersinergi mengembangkan potensi dalam bidang teknologi
+                        <p
+                            class="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-[#636363] sm:text-lg dark:text-slate-300"
+                        >
+                            Divisi unggulan yang bersinergi mengembangkan
+                            potensi dalam bidang teknologi
                         </p>
                     </div>
 
-                    <!-- Divisi Cards Grid dengan foto dari database -->
+                    <!-- Divisi Cards Grid dengan desain sesuai Figma 192:45 -->
                     <div
-                        class="mx-auto grid max-w-6xl grid-cols-1 gap-4 md:grid-cols-2 lg:gap-5"
+                        class="mx-auto grid max-w-6xl grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2"
                     >
                         <div
-                            v-for="(divisi, idx) in computedDivisis"
+                            v-for="divisi in computedDivisis"
                             :key="divisi.id"
-                            :class="[
-                                'group relative flex flex-col sm:flex-row items-center gap-5 sm:gap-6 rounded-lg border border-white/60 bg-white dark:border-slate-800 dark:bg-slate-900 p-6 sm:p-7 shadow-[0px_4px_16px_rgba(0,0,0,0.06)] dark:shadow-none transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0px_14px_30px_rgba(45,204,112,0.14)]',
-                                idx === computedDivisis.length - 1 && computedDivisis.length % 2 === 1
-                                    ? 'md:col-span-2 md:mx-auto md:w-full md:max-w-xl'
-                                    : ''
-                            ]"
+                            class="group relative flex min-h-[320px] flex-col items-center justify-start rounded-[16px] border border-white/80 bg-white p-8 text-center shadow-[0px_4px_20px_rgba(0,0,0,0.06)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0px_16px_36px_rgba(45,204,112,0.16)] sm:min-h-[350px] sm:rounded-[20px] sm:p-10 dark:border-slate-800/80 dark:bg-slate-900 dark:shadow-none"
                         >
-                            <!-- Wadah Logo / Foto Divisi dari Database -->
+                            <!-- Wadah Logo Bulat (Pastel Mint, 108px matching Figma 192:45) -->
                             <div
-                                class="flex h-20 w-20 sm:h-24 sm:w-24 flex-shrink-0 items-center justify-center rounded-full bg-[#D5FFE7] dark:bg-emerald-950/70 transition-transform duration-300 group-hover:scale-105 overflow-hidden shadow-xs"
+                                class="mb-6 flex h-24 w-24 shrink-0 items-center justify-center overflow-hidden rounded-full bg-[#D5FFE7] shadow-xs transition-transform duration-300 group-hover:scale-105 sm:h-[108px] sm:w-[108px] dark:bg-emerald-950/70"
                             >
-                                <img
+                                <AppImage
                                     v-if="divisi.has_custom_logo"
                                     :src="divisi.logo_url"
                                     :alt="divisi.nama"
-                                    class="h-full w-full object-cover"
                                     loading="lazy"
+                                    wrapper-class="h-full w-full rounded-full"
+                                    image-class="h-full w-full rounded-full object-cover"
                                 />
-                                <img
+                                <AppImage
                                     v-else
                                     :src="divisi.logo_url"
                                     :alt="divisi.nama"
-                                    class="h-11 w-11 sm:h-12 sm:w-12 object-contain"
                                     loading="lazy"
+                                    object-fit="contain"
+                                    wrapper-class="h-12 w-12 sm:h-14 sm:w-14"
+                                    image-class="h-12 w-12 sm:h-14 sm:w-14 object-contain"
                                 />
                             </div>
-                            <div class="min-w-0 flex-1 text-center sm:text-left">
+
+                            <!-- Typography Title & Description -->
+                            <div
+                                class="flex w-full flex-col items-center text-center"
+                            >
                                 <h3
-                                    class="mb-2 text-lg font-bold sm:text-xl text-[#1E1E1E] dark:text-white"
+                                    class="mb-3 text-xl leading-snug font-medium tracking-tight text-[#1E1E1E] sm:text-2xl dark:text-white"
                                 >
                                     {{ divisi.nama }}
                                 </h3>
                                 <p
-                                    class="text-sm sm:text-[14px] font-normal leading-relaxed text-[#636363] dark:text-slate-300"
+                                    class="mx-auto max-w-[420px] text-sm leading-relaxed font-normal text-[#636363] sm:text-[15px] dark:text-slate-300"
                                 >
                                     {{ divisi.deskripsi }}
                                 </p>

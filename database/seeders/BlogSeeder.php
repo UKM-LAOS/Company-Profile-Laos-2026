@@ -32,21 +32,21 @@ class BlogSeeder extends Seeder
                 'slug' => 'tips-desain-ui-ux-untuk-ukm',
                 'kategori' => 'Informasi',
                 'konten' => '<h2>UI/UX untuk UMKM</h2>'
-                    . '<p>Desain UI/UX yang baik sangat penting untuk kesuksesan sebuah UKM di dunia digital. Antarmuka pengguna yang intuitif dan pengalaman pengguna yang menyenangkan dapat meningkatkan kepuasan pelanggan dan memperkuat identitas merek. Berikut beberapa tips untuk membantu UKM dalam menciptakan desain UI/UX yang efektif:</p>'
-                    . '<ol>'
-                    . '<li><strong>Fokus pada Pengalaman Pengguna (UX)</strong><p>Pengalaman pengguna adalah hal utama dalam desain aplikasi atau situs web. Pastikan navigasi mudah dan alur interaksi tidak membingungkan. Setiap elemen desain harus memiliki tujuan yang jelas agar pengguna merasa nyaman.</p></li>'
-                    . '<li><strong>Desain Responsif dan Mobile-Friendly</strong><p>Mengingat semakin banyak orang mengakses internet melalui ponsel, desain yang responsif sangat penting. Pastikan aplikasi atau website Anda tampil baik di berbagai perangkat, baik itu desktop maupun smartphone.</p></li>'
-                    . '<li><strong>Gunakan Warna yang Sesuai dengan Brand</strong><p>Pilih palet warna yang mewakili identitas merek Anda. Warna yang konsisten akan memperkuat brand awareness dan memberikan kesan profesional. Hindari penggunaan terlalu banyak warna yang bisa membingungkan pengguna.</p></li>'
-                    . '<li><strong>Simplicity is Key</strong><p>Desain yang sederhana dan bersih lebih disukai oleh pengguna. Hindari tampilan yang terlalu ramai atau berlebihan. Fokus pada elemen-elemen penting dan buat tata letak yang jelas dan mudah dipahami.</p></li>'
-                    . '<li><strong>Prioritaskan Kecepatan dan Kinerja</strong><p>Pengguna tidak sabar menunggu halaman yang lama dimuat. Pastikan situs atau aplikasi Anda cepat dan responsif. Optimalkan gambar dan file untuk memastikan waktu loading yang singkat.</p></li>'
-                    . '<li><strong>Gunakan Typography yang Mudah Dibaca</strong><p>Pemilihan font sangat mempengaruhi kenyamanan pengguna. Gunakan font yang jelas dan mudah dibaca di semua perangkat. Pastikan ukuran dan jarak antar huruf sesuai untuk meningkatkan keterbacaan.</p></li>'
-                    . '<li><strong>Uji dan Dapatkan Umpan Balik</strong><p>Setelah desain selesai, lakukan uji coba dengan pengguna sesungguhnya untuk mendapatkan masukan. Feedback dari pengguna sangat penting untuk meningkatkan UX dan menyempurnakan desain Anda.</p></li>'
-                    . '<li><strong>Konsistensi dalam Desain</strong><p>Pastikan elemen desain seperti tombol, ikon, dan navigasi konsisten di seluruh platform. Pengguna akan lebih mudah beradaptasi dengan desain yang memiliki pola dan elemen yang serupa di setiap halaman.</p></li>'
-                    . '</ol>'
-                    . '<img src="/assets/blog-default.jpg" alt="Wireframe Sketches UI/UX" />'
-                    . '<h2>Kesimpulan</h2>'
-                    . '<p>Desain UI/UX yang baik dapat membantu UKM menciptakan pengalaman yang menyenangkan bagi penggunanya. Fokus pada kemudahan akses, konsistensi, dan efisiensi adalah kunci untuk sukses dalam dunia digital. Dengan mengikuti tips ini, UKM Anda dapat membangun hubungan yang lebih baik dengan pelanggan dan memperkuat brand Anda di pasar yang kompetitif.</p>'
-                    . '<div data-youtube-video=""><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen="true"></iframe></div>',
+                    .'<p>Desain UI/UX yang baik sangat penting untuk kesuksesan sebuah UKM di dunia digital. Antarmuka pengguna yang intuitif dan pengalaman pengguna yang menyenangkan dapat meningkatkan kepuasan pelanggan dan memperkuat identitas merek. Berikut beberapa tips untuk membantu UKM dalam menciptakan desain UI/UX yang efektif:</p>'
+                    .'<ol>'
+                    .'<li><strong>Fokus pada Pengalaman Pengguna (UX)</strong><p>Pengalaman pengguna adalah hal utama dalam desain aplikasi atau situs web. Pastikan navigasi mudah dan alur interaksi tidak membingungkan. Setiap elemen desain harus memiliki tujuan yang jelas agar pengguna merasa nyaman.</p></li>'
+                    .'<li><strong>Desain Responsif dan Mobile-Friendly</strong><p>Mengingat semakin banyak orang mengakses internet melalui ponsel, desain yang responsif sangat penting. Pastikan aplikasi atau website Anda tampil baik di berbagai perangkat, baik itu desktop maupun smartphone.</p></li>'
+                    .'<li><strong>Gunakan Warna yang Sesuai dengan Brand</strong><p>Pilih palet warna yang mewakili identitas merek Anda. Warna yang konsisten akan memperkuat brand awareness dan memberikan kesan profesional. Hindari penggunaan terlalu banyak warna yang bisa membingungkan pengguna.</p></li>'
+                    .'<li><strong>Simplicity is Key</strong><p>Desain yang sederhana dan bersih lebih disukai oleh pengguna. Hindari tampilan yang terlalu ramai atau berlebihan. Fokus pada elemen-elemen penting dan buat tata letak yang jelas dan mudah dipahami.</p></li>'
+                    .'<li><strong>Prioritaskan Kecepatan dan Kinerja</strong><p>Pengguna tidak sabar menunggu halaman yang lama dimuat. Pastikan situs atau aplikasi Anda cepat dan responsif. Optimalkan gambar dan file untuk memastikan waktu loading yang singkat.</p></li>'
+                    .'<li><strong>Gunakan Typography yang Mudah Dibaca</strong><p>Pemilihan font sangat mempengaruhi kenyamanan pengguna. Gunakan font yang jelas dan mudah dibaca di semua perangkat. Pastikan ukuran dan jarak antar huruf sesuai untuk meningkatkan keterbacaan.</p></li>'
+                    .'<li><strong>Uji dan Dapatkan Umpan Balik</strong><p>Setelah desain selesai, lakukan uji coba dengan pengguna sesungguhnya untuk mendapatkan masukan. Feedback dari pengguna sangat penting untuk meningkatkan UX dan menyempurnakan desain Anda.</p></li>'
+                    .'<li><strong>Konsistensi dalam Desain</strong><p>Pastikan elemen desain seperti tombol, ikon, dan navigasi konsisten di seluruh platform. Pengguna akan lebih mudah beradaptasi dengan desain yang memiliki pola dan elemen yang serupa di setiap halaman.</p></li>'
+                    .'</ol>'
+                    .'<img src="/assets/blog-default.jpg" alt="Wireframe Sketches UI/UX" />'
+                    .'<h2>Kesimpulan</h2>'
+                    .'<p>Desain UI/UX yang baik dapat membantu UKM menciptakan pengalaman yang menyenangkan bagi penggunanya. Fokus pada kemudahan akses, konsistensi, dan efisiensi adalah kunci untuk sukses dalam dunia digital. Dengan mengikuti tips ini, UKM Anda dapat membangun hubungan yang lebih baik dengan pelanggan dan memperkuat brand Anda di pasar yang kompetitif.</p>'
+                    .'<div data-youtube-video=""><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen="true"></iframe></div>',
                 'meta_description' => 'Panduan desain antarmuka pengguna untuk meningkatkan kepuasan pelanggan dan memperkuat identitas merek UKM.',
                 'is_unggulan' => true,
                 'views' => 520,

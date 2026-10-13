@@ -238,8 +238,12 @@ function formatDate(dateStr: string | null): string {
             >
                 <!-- JUDUL & SLUG -->
                 <template #cell-judul="{ item }">
-                    <div class="flex items-start gap-3 min-w-[220px] max-w-sm sm:max-w-md py-1">
-                        <div class="h-10 w-14 shrink-0 overflow-hidden rounded-lg border border-slate-200 bg-slate-100 dark:border-slate-700 dark:bg-slate-800 mt-0.5">
+                    <div
+                        class="flex max-w-sm min-w-[220px] items-start gap-3 py-1 sm:max-w-md"
+                    >
+                        <div
+                            class="mt-0.5 h-10 w-14 shrink-0 overflow-hidden rounded-lg border border-slate-200 bg-slate-100 dark:border-slate-700 dark:bg-slate-800"
+                        >
                             <img
                                 :src="item.thumbnail_url"
                                 :alt="item.judul"
@@ -248,7 +252,7 @@ function formatDate(dateStr: string | null): string {
                         </div>
                         <div class="min-w-0 flex-1">
                             <p
-                                class="text-sm font-semibold text-slate-900 dark:text-white break-words whitespace-normal leading-snug"
+                                class="text-sm leading-snug font-semibold break-words whitespace-normal text-slate-900 dark:text-white"
                                 :title="item.judul"
                             >
                                 {{ item.judul }}
@@ -260,7 +264,7 @@ function formatDate(dateStr: string | null): string {
                                 >
                             </p>
                             <p
-                                class="mt-1 font-mono text-[11px] text-slate-400 dark:text-slate-500 break-all whitespace-normal"
+                                class="mt-1 font-mono text-[11px] break-all whitespace-normal text-slate-400 dark:text-slate-500"
                                 :title="'/blog/' + item.slug"
                             >
                                 /blog/{{ item.slug }}

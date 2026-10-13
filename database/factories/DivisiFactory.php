@@ -18,7 +18,7 @@ class DivisiFactory extends Factory
      */
     public function definition(): array
     {
-        $nama = fake()->unique()->words(2, true);
+        $nama = rtrim(fake()->unique()->sentence(2), '.');
 
         return [
             'nama' => ucfirst($nama),

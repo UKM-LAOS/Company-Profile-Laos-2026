@@ -204,27 +204,32 @@ function submit() {
                 <div
                     class="rounded-2xl border border-slate-200/80 bg-slate-50/50 p-4 sm:p-5 dark:border-slate-800 dark:bg-slate-900/50"
                 >
-                    <div class="flex items-center justify-between mb-3">
+                    <div class="mb-3 flex items-center justify-between">
                         <div>
-                            <InputLabel value="Gambar Sampul / Thumbnail (Opsional)" />
-                            <p class="text-xs text-slate-500 dark:text-slate-400">
-                                Disimpan ke storage publik (JPG, PNG, atau WEBP, maks 2 MB).
+                            <InputLabel
+                                value="Gambar Sampul / Thumbnail (Opsional)"
+                            />
+                            <p
+                                class="text-xs text-slate-500 dark:text-slate-400"
+                            >
+                                Disimpan ke storage publik (JPG, PNG, atau WEBP,
+                                maks 2 MB).
                             </p>
                         </div>
                         <button
                             v-if="previewUrl"
                             type="button"
-                            class="text-xs font-semibold text-rose-600 hover:text-rose-700 dark:text-rose-400 cursor-pointer transition"
+                            class="cursor-pointer text-xs font-semibold text-rose-600 transition hover:text-rose-700 dark:text-rose-400"
                             @click="removeThumbnail"
                         >
                             Hapus Gambar
                         </button>
                     </div>
 
-                    <div class="flex flex-col sm:flex-row items-center gap-4">
+                    <div class="flex flex-col items-center gap-4 sm:flex-row">
                         <!-- Preview Box -->
                         <div
-                            class="relative flex h-32 w-full sm:w-48 shrink-0 items-center justify-center overflow-hidden rounded-xl border-2 border-dashed border-slate-300 bg-white text-slate-400 dark:border-slate-700 dark:bg-slate-900"
+                            class="relative flex h-32 w-full shrink-0 items-center justify-center overflow-hidden rounded-xl border-2 border-dashed border-slate-300 bg-white text-slate-400 sm:w-48 dark:border-slate-700 dark:bg-slate-900"
                         >
                             <img
                                 v-if="previewUrl"

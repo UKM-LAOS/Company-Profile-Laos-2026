@@ -170,7 +170,7 @@ function formatExpiry(value: string | null): string {
                         >
                             <span>{{ getFullUrl(item.short_code) }}</span>
                             <svg
-                                class="h-3.5 w-3.5 opacity-60 transition-opacity group-hover:opacity-100 shrink-0"
+                                class="h-3.5 w-3.5 shrink-0 opacity-60 transition-opacity group-hover:opacity-100"
                                 viewBox="0 0 24 24"
                                 fill="none"
                                 stroke="currentColor"
@@ -178,7 +178,9 @@ function formatExpiry(value: string | null): string {
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                             >
-                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <path
+                                    d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                                ></path>
                                 <polyline points="15 3 21 3 21 9"></polyline>
                                 <line x1="10" y1="14" x2="21" y2="3"></line>
                             </svg>
@@ -187,13 +189,17 @@ function formatExpiry(value: string | null): string {
                         <!-- Tombol Salin Tautan -->
                         <button
                             type="button"
-                            class="inline-flex cursor-pointer items-center gap-1 rounded-lg border px-2 py-1 text-[11px] font-medium transition shrink-0 shadow-2xs"
+                            class="inline-flex shrink-0 cursor-pointer items-center gap-1 rounded-lg border px-2 py-1 text-[11px] font-medium shadow-2xs transition"
                             :class="
                                 copiedId === item.id
                                     ? 'border-emerald-500 bg-emerald-50 text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-300'
                                     : 'border-slate-200 bg-slate-50 text-slate-600 hover:border-slate-300 hover:bg-slate-100 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-300 dark:hover:bg-slate-700'
                             "
-                            :title="copiedId === item.id ? 'Tautan berhasil disalin!' : 'Salin URL lengkap ke clipboard'"
+                            :title="
+                                copiedId === item.id
+                                    ? 'Tautan berhasil disalin!'
+                                    : 'Salin URL lengkap ke clipboard'
+                            "
                             @click="copyToClipboard(item)"
                         >
                             <template v-if="copiedId === item.id">
@@ -206,9 +212,14 @@ function formatExpiry(value: string | null): string {
                                     stroke-linecap="round"
                                     stroke-linejoin="round"
                                 >
-                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                    <polyline
+                                        points="20 6 9 17 4 12"
+                                    ></polyline>
                                 </svg>
-                                <span class="font-semibold text-emerald-600 dark:text-emerald-400">Tersalin!</span>
+                                <span
+                                    class="font-semibold text-emerald-600 dark:text-emerald-400"
+                                    >Tersalin!</span
+                                >
                             </template>
                             <template v-else>
                                 <svg
@@ -220,8 +231,17 @@ function formatExpiry(value: string | null): string {
                                     stroke-linecap="round"
                                     stroke-linejoin="round"
                                 >
-                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    <rect
+                                        x="9"
+                                        y="9"
+                                        width="13"
+                                        height="13"
+                                        rx="2"
+                                        ry="2"
+                                    ></rect>
+                                    <path
+                                        d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                                    ></path>
                                 </svg>
                                 <span>Salin</span>
                             </template>

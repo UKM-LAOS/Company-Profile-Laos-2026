@@ -457,7 +457,8 @@ function exportToCsv() {
                         Kelola Program Kerja
                     </h1>
                     <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">
-                        Kelola agenda kegiatan, timeline pelaksanaan, dan PIC divisi program kerja UKM LAOS.
+                        Kelola agenda kegiatan, timeline pelaksanaan, dan PIC
+                        divisi program kerja UKM LAOS.
                     </p>
                 </div>
 

@@ -19,7 +19,7 @@ class ProgramFactory extends Factory
      */
     public function definition(): array
     {
-        $judul = fake()->unique()->words(3, true);
+        $judul = rtrim(fake()->unique()->sentence(3), '.');
 
         return [
             'divisi_id' => Divisi::factory(),

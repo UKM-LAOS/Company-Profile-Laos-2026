@@ -4,17 +4,19 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\DivisiRequest;
 use App\Models\Divisi;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Inertia\Inertia;
+use Inertia\Response;
 
 class DivisiController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index(Request $request)
+    public function index(Request $request): Response
     {
         $search = $request->input('search');
 
@@ -36,7 +38,7 @@ class DivisiController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(DivisiRequest $request)
+    public function store(DivisiRequest $request): RedirectResponse
     {
         $validated = $request->validated();
 
@@ -54,7 +56,7 @@ class DivisiController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(DivisiRequest $request, Divisi $divisi)
+    public function update(DivisiRequest $request, Divisi $divisi): RedirectResponse
     {
         $validated = $request->validated();
 
@@ -79,7 +81,7 @@ class DivisiController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Divisi $divisi)
+    public function destroy(Divisi $divisi): RedirectResponse
     {
         if ($divisi->logo) {
             Storage::disk('public')->delete($divisi->logo);

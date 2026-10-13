@@ -4,8 +4,8 @@ use App\Models\Blog;
 use App\Models\Divisi;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Inertia\Testing\AssertableInertia as Assert;
 use Illuminate\Support\Str;
+use Inertia\Testing\AssertableInertia as Assert;
 
 uses(RefreshDatabase::class);
 
@@ -28,7 +28,7 @@ function createPublishedBlog(array $overrides = []): Blog
         ['deskripsi' => 'Divisi Web', 'slug' => 'web-development']
     );
 
-    $judul = $overrides['judul'] ?? ('Artikel Test ' . Str::random(5));
+    $judul = $overrides['judul'] ?? ('Artikel Test '.Str::random(5));
 
     return Blog::create(array_replace([
         'divisi_id' => $divisi->id,
@@ -52,7 +52,7 @@ function createDraftBlog(array $overrides = []): Blog
         ['deskripsi' => 'Divisi Web', 'slug' => 'web-development']
     );
 
-    $judul = $overrides['judul'] ?? ('Draft Artikel Test ' . Str::random(5));
+    $judul = $overrides['judul'] ?? ('Draft Artikel Test '.Str::random(5));
 
     return Blog::create(array_replace([
         'divisi_id' => $divisi->id,

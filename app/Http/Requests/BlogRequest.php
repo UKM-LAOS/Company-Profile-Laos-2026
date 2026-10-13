@@ -26,7 +26,8 @@ class BlogRequest extends FormRequest
      */
     public function rules(): array
     {
-        $blogId = $this->route('blog') ? $this->route('blog')->id : null;
+        $blog = $this->route('blog');
+        $blogId = $blog instanceof Blog ? $blog->id : null;
 
         return [
             'divisi_id' => ['required', 'exists:divisis,id'],

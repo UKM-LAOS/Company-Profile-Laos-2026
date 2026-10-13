@@ -6,8 +6,29 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
+/**
+ * @property int $id
+ * @property int $divisi_id
+ * @property int|null $author_id
+ * @property string $judul
+ * @property string $slug
+ * @property string $kategori
+ * @property string|null $thumbnail
+ * @property string $konten
+ * @property string|null $meta_description
+ * @property bool $is_unggulan
+ * @property string $status
+ * @property Carbon|null $published_at
+ * @property int $views
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
+ * @property Carbon|null $deleted_at
+ * @property-read Divisi $divisi
+ */
 class Blog extends Model
 {
     use SoftDeletes;
@@ -51,7 +72,7 @@ class Blog extends Model
     /**
      * Scope a query to only include published blogs.
      *
-     * @param Builder<Blog> $query
+     * @param  Builder<Blog>  $query
      * @return Builder<Blog>
      */
     public function scopePublished(Builder $query): Builder
@@ -70,6 +91,7 @@ class Blog extends Model
         if ($content !== '' && preg_match('/<img[^>]+src=["\']([^"\']+)["\']/i', $content, $matches)) {
             return $matches[1];
         }
+
         return null;
     }
 
@@ -79,10 +101,11 @@ class Blog extends Model
     public function getThumbnailUrlAttribute(): string
     {
         $thumbnail = $this->attributes['thumbnail'] ?? null;
-        if (!empty($thumbnail)) {
+        if (! empty($thumbnail)) {
             if (str_starts_with($thumbnail, 'http://') || str_starts_with($thumbnail, 'https://')) {
                 return $thumbnail;
             }
+
             return Storage::disk('public')->url($thumbnail);
         }
 
@@ -94,14 +117,16 @@ class Blog extends Model
      */
     public function getRingkasanAttribute(): string
     {
-        if (!empty($this->attributes['meta_description'])) {
+        if (! empty($this->attributes['meta_description'])) {
             return $this->attributes['meta_description'];
         }
         $content = $this->attributes['konten'] ?? '';
         if ($content !== '') {
             $plain = trim(strip_tags($content));
-            return \Illuminate\Support\Str::limit($plain, 130);
+
+            return Str::limit($plain, 130);
         }
+
         return '';
     }
 
@@ -110,9 +135,14 @@ class Blog extends Model
      */
     public function getTanggalRilisFormattedAttribute(): string
     {
-        return $this->published_at
-            ? $this->published_at->locale('id')->translatedFormat('d F Y')
-            : '';
+        if (! $this->published_at instanceof Carbon) {
+            return '';
+        }
+
+        $date = clone $this->published_at;
+        $date->locale('id');
+
+        return $date->translatedFormat('d F Y');
     }
 
     /**

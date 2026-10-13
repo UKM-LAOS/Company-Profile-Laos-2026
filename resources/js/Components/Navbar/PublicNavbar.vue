@@ -43,25 +43,30 @@ onUnmounted(() => {
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="flex h-20 items-center justify-between">
                 <!-- Logo -->
-                <Link :href="route('home')" class="flex flex-shrink-0 items-center gap-2.5">
+                <Link
+                    :href="route('home')"
+                    class="flex flex-shrink-0 items-center gap-2.5"
+                >
                     <img
                         src="/assets/logo.png"
                         alt="UKM LAOS"
-                        class="h-11 sm:h-12 w-auto"
+                        class="h-11 w-auto sm:h-12"
                     />
 
                     <div class="flex flex-col">
                         <span class="text-xl font-bold text-[#2DCC70]"
                             >UKM LAOS</span
                         >
-                        <span class="text-[11px] sm:text-[12px] font-bold text-gray-600 dark:text-slate-400 -mt-1 tracking-wider">
+                        <span
+                            class="-mt-1 text-[11px] font-bold tracking-wider text-gray-600 sm:text-[12px] dark:text-slate-400"
+                        >
                             LOGICWARE AND OPEN SOURCE
                         </span>
                     </div>
                 </Link>
 
                 <!-- Desktop Menu -->
-                <div class="hidden items-center space-x-7 lg:space-x-8 md:flex">
+                <div class="hidden items-center space-x-7 md:flex lg:space-x-8">
                     <Link
                         :href="route('home')"
                         :class="[
@@ -120,8 +125,16 @@ onUnmounted(() => {
                         type="button"
                         @click="toggleTheme"
                         class="relative inline-flex h-9 w-9 items-center justify-center rounded-xl border border-gray-200/80 bg-white/80 p-2 text-gray-700 shadow-2xs backdrop-blur-xs transition-all duration-300 hover:border-[#2DCC70] hover:text-[#2DCC70] dark:border-slate-700/80 dark:bg-slate-800/80 dark:text-amber-300 dark:hover:border-amber-300 dark:hover:text-amber-200"
-                        :title="isDark ? 'Ganti ke Mode Terang' : 'Ganti ke Mode Gelap'"
-                        :aria-label="isDark ? 'Ganti ke Mode Terang' : 'Ganti ke Mode Gelap'"
+                        :title="
+                            isDark
+                                ? 'Ganti ke Mode Terang'
+                                : 'Ganti ke Mode Gelap'
+                        "
+                        :aria-label="
+                            isDark
+                                ? 'Ganti ke Mode Terang'
+                                : 'Ganti ke Mode Gelap'
+                        "
                     >
                         <!-- Sun Icon (Active in Dark Mode) -->
                         <svg
@@ -163,7 +176,11 @@ onUnmounted(() => {
                         type="button"
                         @click="toggleTheme"
                         class="inline-flex h-9 w-9 items-center justify-center rounded-xl border border-gray-200/80 bg-white/80 p-2 text-gray-700 backdrop-blur-xs transition dark:border-slate-700/80 dark:bg-slate-800/80 dark:text-amber-300"
-                        :aria-label="isDark ? 'Ganti ke Mode Terang' : 'Ganti ke Mode Gelap'"
+                        :aria-label="
+                            isDark
+                                ? 'Ganti ke Mode Terang'
+                                : 'Ganti ke Mode Gelap'
+                        "
                     >
                         <svg
                             v-if="isDark"
@@ -199,7 +216,7 @@ onUnmounted(() => {
                     <button
                         @click="isMobileMenuOpen = !isMobileMenuOpen"
                         :class="[
-                            'p-2 rounded-xl transition focus:outline-none',
+                            'rounded-xl p-2 transition focus:outline-none',
                             !isScrolled && isDarkHero && !isDark
                                 ? 'text-white hover:text-[#2DCC70]'
                                 : 'text-gray-600 hover:text-[#2DCC70] dark:text-slate-300 dark:hover:text-[#2DCC70]',
@@ -242,7 +259,7 @@ onUnmounted(() => {
         <!-- Mobile Menu Drawer -->
         <div
             v-show="isMobileMenuOpen"
-            class="absolute top-full left-0 w-full border-b border-gray-100 bg-white/95 backdrop-blur-md shadow-lg dark:border-slate-800 dark:bg-slate-900/95 md:hidden"
+            class="absolute top-full left-0 w-full border-b border-gray-100 bg-white/95 shadow-lg backdrop-blur-md md:hidden dark:border-slate-800 dark:bg-slate-900/95"
         >
             <div class="space-y-1.5 px-4 pt-3 pb-6">
                 <Link

@@ -270,4 +270,3 @@ test('programs can be filtered by time status: mendatang, berjalan, and selesai'
             ->where('programs.data.0.judul_program', 'Program Selesai')
         );
 });
-

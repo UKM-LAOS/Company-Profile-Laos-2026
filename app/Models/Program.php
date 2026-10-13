@@ -2,15 +2,38 @@
 
 namespace App\Models;
 
+use Database\Factories\ProgramFactory;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Storage;
 
+/**
+ * @property int $id
+ * @property int|null $divisi_id
+ * @property int|null $pengurus_id
+ * @property string $judul_program
+ * @property string $slug
+ * @property string|null $location_name
+ * @property string $deskripsi
+ * @property string|null $foto
+ * @property Carbon|null $open_regis_panitia
+ * @property Carbon|null $close_regis_panitia
+ * @property string|null $gform_panitia
+ * @property Carbon|null $open_regis_peserta
+ * @property Carbon|null $close_regis_peserta
+ * @property string|null $gform_peserta
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
+ * @property Carbon|null $deleted_at
+ * @property-read Divisi|null $divisi
+ */
 class Program extends Model
 {
+    /** @use HasFactory<ProgramFactory> */
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
@@ -69,7 +92,10 @@ class Program extends Model
     protected function statusPanitia(): Attribute
     {
         return Attribute::get(function (): string {
-            if (! $this->open_regis_panitia || ! $this->close_regis_panitia) {
+            if (
+                ! ($this->open_regis_panitia instanceof Carbon) ||
+                ! ($this->close_regis_panitia instanceof Carbon)
+            ) {
                 return 'none';
             }
 
@@ -97,7 +123,10 @@ class Program extends Model
     protected function statusPeserta(): Attribute
     {
         return Attribute::get(function (): string {
-            if (! $this->open_regis_peserta || ! $this->close_regis_peserta) {
+            if (
+                ! ($this->open_regis_peserta instanceof Carbon) ||
+                ! ($this->close_regis_peserta instanceof Carbon)
+            ) {
                 return 'none';
             }
 

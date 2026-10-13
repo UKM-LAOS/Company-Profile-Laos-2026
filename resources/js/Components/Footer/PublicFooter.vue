@@ -16,7 +16,9 @@ const hardcodedDivisi = [
 </script>
 
 <template>
-    <footer class="bg-[#176638] dark:bg-[#06180E] dark:border-t dark:border-emerald-950/60 pt-16 pb-8 text-white transition-colors duration-300">
+    <footer
+        class="bg-[#176638] pt-16 pb-8 text-white transition-colors duration-300 dark:border-t dark:border-emerald-950/60 dark:bg-[#06180E]"
+    >
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="mb-12 grid grid-cols-1 gap-8 md:grid-cols-4">
                 <!-- Brand -->
@@ -40,7 +42,7 @@ const hardcodedDivisi = [
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label="Instagram UKM LAOS"
-                            class="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 transition hover:bg-white/40 hover:scale-110"
+                            class="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 transition hover:scale-110 hover:bg-white/40"
                         >
                             <svg
                                 class="h-4 w-4 text-white"
@@ -61,7 +63,7 @@ const hardcodedDivisi = [
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label="LinkedIn UKM LAOS"
-                            class="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 transition hover:bg-white/40 hover:scale-110"
+                            class="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 transition hover:scale-110 hover:bg-white/40"
                         >
                             <svg
                                 class="h-4 w-4 text-white"
@@ -80,7 +82,7 @@ const hardcodedDivisi = [
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label="TikTok UKM LAOS"
-                            class="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 transition hover:bg-white/40 hover:scale-110"
+                            class="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 transition hover:scale-110 hover:bg-white/40"
                         >
                             <svg
                                 class="h-4 w-4 text-white"
@@ -99,7 +101,7 @@ const hardcodedDivisi = [
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label="GitHub UKM LAOS"
-                            class="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 transition hover:bg-white/40 hover:scale-110"
+                            class="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 transition hover:scale-110 hover:bg-white/40"
                         >
                             <svg
                                 class="h-4 w-4 text-white"
@@ -122,19 +124,39 @@ const hardcodedDivisi = [
                     <h3 class="mb-4 font-semibold text-white">Quick Links</h3>
                     <ul class="space-y-3 text-sm text-emerald-100/80">
                         <li>
-                            <Link :href="route('home')" class="transition hover:text-white">Home</Link>
+                            <Link
+                                :href="route('home')"
+                                class="transition hover:text-white"
+                                >Home</Link
+                            >
                         </li>
                         <li>
-                            <Link :href="route('blog.index')" class="transition hover:text-white">Blog</Link>
+                            <Link
+                                :href="route('blog.index')"
+                                class="transition hover:text-white"
+                                >Blog</Link
+                            >
                         </li>
                         <li>
-                            <Link :href="route('program-kerja.index')" class="transition hover:text-white">Program Kerja</Link>
+                            <Link
+                                :href="route('program-kerja.index')"
+                                class="transition hover:text-white"
+                                >Program Kerja</Link
+                            >
                         </li>
                         <li>
-                            <Link :href="route('tentang-kami')" class="transition hover:text-white">Tentang Kami</Link>
+                            <Link
+                                :href="route('tentang-kami')"
+                                class="transition hover:text-white"
+                                >Tentang Kami</Link
+                            >
                         </li>
                         <li>
-                            <Link :href="`${route('tentang-kami')}#pengurus`" class="transition hover:text-white">Pengurus</Link>
+                            <Link
+                                :href="`${route('tentang-kami')}#pengurus`"
+                                class="transition hover:text-white"
+                                >Pengurus</Link
+                            >
                         </li>
                     </ul>
                 </div>

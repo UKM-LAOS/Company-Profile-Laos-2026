@@ -67,10 +67,14 @@ export const vReveal: Directive<HTMLElement, RevealValue> = {
         );
 
         observer.observe(el);
-        (el as HTMLElement & { _revealObserver?: IntersectionObserver })._revealObserver = observer;
+        (
+            el as HTMLElement & { _revealObserver?: IntersectionObserver }
+        )._revealObserver = observer;
     },
     unmounted(el) {
-        const target = el as HTMLElement & { _revealObserver?: IntersectionObserver };
+        const target = el as HTMLElement & {
+            _revealObserver?: IntersectionObserver;
+        };
         if (target._revealObserver) {
             target._revealObserver.disconnect();
             delete target._revealObserver;

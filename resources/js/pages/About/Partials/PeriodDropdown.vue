@@ -43,7 +43,7 @@ onUnmounted(() => {
             type="button"
             aria-haspopup="listbox"
             :aria-expanded="isOpen"
-            class="flex cursor-pointer items-center gap-2 rounded-full border border-[#176638] dark:border-[#2DCC70] px-4 py-1.5 font-bold text-[#176638] dark:text-[#2DCC70] transition-colors"
+            class="flex cursor-pointer items-center gap-2 rounded-full border border-[#176638] px-4 py-1.5 font-bold text-[#176638] transition-colors dark:border-[#2DCC70] dark:text-[#2DCC70]"
             @click="isOpen = !isOpen"
         >
             {{ periodeDisplay(modelValue) }}
@@ -66,17 +66,17 @@ onUnmounted(() => {
         <div
             v-if="isOpen"
             role="listbox"
-            class="absolute top-full right-0 z-50 mt-1 min-w-35 overflow-hidden rounded-2xl border border-gray-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-lg"
+            class="absolute top-full right-0 z-50 mt-1 min-w-35 overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg dark:border-slate-800 dark:bg-slate-900"
         >
             <div
                 v-for="option in options"
                 :key="option"
                 role="option"
                 :aria-selected="option === modelValue"
-                class="cursor-pointer px-4 py-2 text-sm font-medium hover:bg-[#2DCC70]/10 hover:text-[#2DCC70] transition-colors"
+                class="cursor-pointer px-4 py-2 text-sm font-medium transition-colors hover:bg-[#2DCC70]/10 hover:text-[#2DCC70]"
                 :class="
                     option === modelValue
-                        ? 'bg-[#2DCC70]/10 text-[#2DCC70] font-bold'
+                        ? 'bg-[#2DCC70]/10 font-bold text-[#2DCC70]'
                         : 'text-[#1E1E1E] dark:text-slate-200'
                 "
                 @click="select(option)"

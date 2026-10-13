@@ -11,7 +11,6 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 use Inertia\Response;
-use Spatie\Permission\Models\Role;
 
 class DashboardController extends Controller
 {
@@ -20,7 +19,7 @@ class DashboardController extends Controller
      */
     public function __invoke(Request $request): Response
     {
-        /** @var \App\Models\User $user */
+        /** @var User $user */
         $user = $request->user();
 
         $counts = [];
@@ -37,7 +36,7 @@ class DashboardController extends Controller
                 ->map(fn ($p) => [
                     'id' => $p->id,
                     'title' => $p->judul_program,
-                    'badge' => $p->divisi?->nama ?? 'Umum',
+                    'badge' => $p->divisi ? $p->divisi->nama : 'Umum',
                     'url' => route('programs.index'),
                 ]);
         }
@@ -53,7 +52,7 @@ class DashboardController extends Controller
                 ->map(fn ($b) => [
                     'id' => $b->id,
                     'title' => $b->judul,
-                    'badge' => $b->kategori ?: ($b->divisi?->nama ?? 'Berita'),
+                    'badge' => $b->kategori,
                     'url' => route('blogs.index'),
                 ]);
         }
@@ -69,7 +68,7 @@ class DashboardController extends Controller
                 ->map(fn ($item) => [
                     'id' => $item->id,
                     'title' => $item->nama,
-                    'badge' => $item->jabatan ?: ($item->divisi?->nama ?? 'Pengurus'),
+                    'badge' => $item->jabatan ?: ($item->divisi ? $item->divisi->nama : 'Pengurus'),
                     'url' => route('pengurus.index'),
                 ]);
         }
@@ -85,7 +84,7 @@ class DashboardController extends Controller
                 ->map(fn ($d) => [
                     'id' => $d->id,
                     'title' => $d->nama,
-                    'badge' => $d->programs_count . ' Program',
+                    'badge' => $d->programs_count.' Program',
                     'url' => route('divisis.index'),
                 ]);
         }
@@ -98,12 +97,13 @@ class DashboardController extends Controller
                 ->take(5)
                 ->get()
                 ->map(function ($s) {
-                    $host = parse_url($s->original_url, PHP_URL_HOST);
+                    $host = parse_url($s->destination_url, PHP_URL_HOST);
                     $suffix = $host ? " ({$host})" : '';
+
                     return [
                         'id' => $s->id,
-                        'title' => '/' . $s->short_code . $suffix,
-                        'badge' => $s->click_count . ' Klik',
+                        'title' => '/'.$s->short_code.$suffix,
+                        'badge' => $s->click_count.' Klik',
                         'url' => route('shortlinks.index'),
                     ];
                 });
@@ -117,10 +117,10 @@ class DashboardController extends Controller
                 ->latest()
                 ->take(5)
                 ->get()
-                ->map(fn ($u) => [
+                ->map(fn (User $u) => [
                     'id' => $u->id,
-                    'title' => $u->name . ' (' . $u->email . ')',
-                    'badge' => $u->roles->first()?->name ?? 'User',
+                    'title' => $u->name.' ('.$u->email.')',
+                    'badge' => $u->roles->first() ? $u->roles->first()->name : 'User',
                     'url' => route('users.index'),
                 ]);
         }

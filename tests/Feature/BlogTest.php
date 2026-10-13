@@ -6,10 +6,10 @@ use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 use Inertia\Testing\AssertableInertia as Assert;
 use Spatie\Permission\Models\Permission;
 use Spatie\Permission\PermissionRegistrar;
-use Illuminate\Support\Str;
 
 uses(RefreshDatabase::class);
 
@@ -28,6 +28,7 @@ function blogUser(array $permissions = ['view_news', 'create_news', 'edit_news',
 {
     $user = User::factory()->create();
     $user->givePermissionTo($permissions);
+
     return $user;
 }
 
@@ -40,7 +41,7 @@ function blogPayload(array $overrides = []): array
 
     $payload = array_replace([
         'divisi_id' => $divisi->id,
-        'judul' => 'Judul Berita Test ' . Str::random(5),
+        'judul' => 'Judul Berita Test '.Str::random(5),
         'kategori' => 'Tutorial',
         'konten' => '<p>Test content</p>',
         'status' => 'published',
@@ -48,7 +49,7 @@ function blogPayload(array $overrides = []): array
         'is_unggulan' => false,
     ], $overrides);
 
-    if (!isset($payload['slug'])) {
+    if (! isset($payload['slug'])) {
         $payload['slug'] = Str::slug($payload['judul']);
     }
 
@@ -66,7 +67,7 @@ test('guest cannot access blogs index', function () {
 
 test('user without view_news permission cannot access blogs index', function () {
     $user = User::factory()->create();
-    
+
     $this->actingAs($user)
         ->get(route('blogs.index'))
         ->assertForbidden();
@@ -74,7 +75,7 @@ test('user without view_news permission cannot access blogs index', function () 
 
 test('user with view_news permission can access blogs index', function () {
     $user = blogUser(['view_news']);
-    
+
     $this->actingAs($user)
         ->get(route('blogs.index'))
         ->assertOk()
@@ -88,7 +89,7 @@ test('user with view_news permission can access blogs index', function () {
 
 test('user without create_news permission cannot access create page', function () {
     $user = blogUser(['view_news']);
-    
+
     $this->actingAs($user)
         ->get(route('blogs.create'))
         ->assertForbidden();
@@ -96,7 +97,7 @@ test('user without create_news permission cannot access create page', function (
 
 test('user with create_news permission can access create page', function () {
     $user = blogUser(['view_news', 'create_news']);
-    
+
     $this->actingAs($user)
         ->get(route('blogs.create'))
         ->assertOk()
@@ -158,7 +159,7 @@ test('user without edit_news permission cannot access edit page', function () {
     $payload = blogPayload();
     $payload['author_id'] = $user->id;
     $blog = Blog::create($payload);
-    
+
     $this->actingAs($user)
         ->get(route('blogs.edit', $blog))
         ->assertForbidden();
@@ -169,7 +170,7 @@ test('user with edit_news permission can access edit page', function () {
     $payload = blogPayload();
     $payload['author_id'] = $user->id;
     $blog = Blog::create($payload);
-    
+
     $this->actingAs($user)
         ->get(route('blogs.edit', $blog))
         ->assertOk()
@@ -182,7 +183,7 @@ test('user with edit_news permission can access edit page', function () {
 
 test('user can update a blog post', function () {
     $user = blogUser(['view_news', 'edit_news']);
-    
+
     $initialPayload = blogPayload(['judul' => 'Judul Lama', 'status' => 'draft']);
     $initialPayload['author_id'] = $user->id;
     $blog = Blog::create($initialPayload);
@@ -259,7 +260,7 @@ test('user can create blog with thumbnail file stored in public disk', function 
         ->and($blog->thumbnail)->not->toBeNull();
 
     Storage::disk('public')->assertExists($blog->thumbnail);
-    expect($blog->thumbnail_url)->toContain('/storage/' . $blog->thumbnail);
+    expect($blog->thumbnail_url)->toContain('/storage/'.$blog->thumbnail);
 });
 
 test('user can update blog to replace thumbnail and old file is deleted', function () {
@@ -312,4 +313,3 @@ test('user can remove thumbnail with hapus_thumbnail', function () {
     expect($blog->thumbnail)->toBeNull();
     Storage::disk('public')->assertMissing($oldPath);
 });
-

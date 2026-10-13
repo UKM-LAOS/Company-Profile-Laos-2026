@@ -190,12 +190,15 @@ const modules = computed(() => {
             <!-- Header Ucapan & Deskripsi -->
             <div>
                 <h1
-                    class="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white"
+                    class="text-2xl font-extrabold tracking-tight text-slate-900 sm:text-3xl dark:text-white"
                 >
                     {{ greetingTitle }}
                 </h1>
-                <p class="mt-1.5 text-sm sm:text-base text-slate-500 dark:text-slate-400">
-                    Kelola konten, kegiatan, dan seluruh modul organisasi UKM LAOS dari sini.
+                <p
+                    class="mt-1.5 text-sm text-slate-500 sm:text-base dark:text-slate-400"
+                >
+                    Kelola konten, kegiatan, dan seluruh modul organisasi UKM
+                    LAOS dari sini.
                 </p>
             </div>
 
@@ -227,19 +230,19 @@ const modules = computed(() => {
                 <div
                     v-for="widget in modules"
                     :key="widget.key"
-                    class="flex flex-col justify-between rounded-2xl border border-slate-200/90 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 shadow-xs transition hover:shadow-md"
+                    class="flex flex-col justify-between rounded-2xl border border-slate-200/90 bg-white p-6 shadow-xs transition hover:shadow-md dark:border-slate-800 dark:bg-slate-900"
                 >
                     <!-- Header Card Ringkasan -->
                     <div
-                        class="flex items-center justify-between pb-4 border-b border-slate-100 dark:border-slate-800"
+                        class="flex items-center justify-between border-b border-slate-100 pb-4 dark:border-slate-800"
                     >
                         <Link
                             :href="widget.viewUrl"
-                            class="group flex items-center gap-1.5 text-lg font-bold text-slate-900 dark:text-white hover:text-[#2DCC70] dark:hover:text-[#2DCC70] transition"
+                            class="group flex items-center gap-1.5 text-lg font-bold text-slate-900 transition hover:text-[#2DCC70] dark:text-white dark:hover:text-[#2DCC70]"
                         >
                             <span>{{ widget.title }}</span>
                             <span
-                                class="text-slate-400 dark:text-slate-500 transition-transform group-hover:translate-x-1"
+                                class="text-slate-400 transition-transform group-hover:translate-x-1 dark:text-slate-500"
                                 aria-hidden="true"
                             >
                                 &gt;
@@ -257,20 +260,22 @@ const modules = computed(() => {
                     </div>
 
                     <!-- Isi Baris List Ringkasan (Tabel Mini) -->
-                    <div class="flex-1 divide-y divide-slate-100 dark:divide-slate-800">
+                    <div
+                        class="flex-1 divide-y divide-slate-100 dark:divide-slate-800"
+                    >
                         <div
                             v-for="(item, idx) in widget.items"
                             :key="item.id || idx"
-                            class="flex items-center justify-between gap-4 py-3.5 px-1.5 rounded-lg transition hover:bg-slate-50 dark:hover:bg-slate-800/40"
+                            class="flex items-center justify-between gap-4 rounded-lg px-1.5 py-3.5 transition hover:bg-slate-50 dark:hover:bg-slate-800/40"
                         >
                             <Link
                                 :href="item.url || widget.viewUrl"
-                                class="text-sm font-medium text-slate-800 dark:text-slate-200 hover:text-[#2DCC70] dark:hover:text-[#2DCC70] hover:underline transition truncate max-w-[65%] sm:max-w-[70%]"
+                                class="max-w-[65%] truncate text-sm font-medium text-slate-800 transition hover:text-[#2DCC70] hover:underline sm:max-w-[70%] dark:text-slate-200 dark:hover:text-[#2DCC70]"
                             >
                                 {{ item.title }}
                             </Link>
                             <span
-                                class="shrink-0 rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 px-2.5 py-0.5 text-xs font-medium text-slate-600 dark:text-slate-300"
+                                class="shrink-0 rounded-full border border-slate-200 bg-slate-50 px-2.5 py-0.5 text-xs font-medium text-slate-600 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-300"
                             >
                                 {{ item.badge }}
                             </span>
@@ -290,13 +295,16 @@ const modules = computed(() => {
             <!-- Jika Akun belum memiliki izin modul apapun -->
             <div
                 v-if="modules.length === 0"
-                class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-12 text-center"
+                class="rounded-2xl border border-slate-200 bg-white p-12 text-center dark:border-slate-800 dark:bg-slate-900"
             >
-                <p class="text-base font-semibold text-slate-900 dark:text-white">
+                <p
+                    class="text-base font-semibold text-slate-900 dark:text-white"
+                >
                     Belum ada modul yang dapat diakses
                 </p>
                 <p class="mt-2 text-sm text-slate-500 dark:text-slate-400">
-                    Akun Anda belum memiliki izin hak akses untuk melihat modul CMS. Silakan hubungi Administrator.
+                    Akun Anda belum memiliki izin hak akses untuk melihat modul
+                    CMS. Silakan hubungi Administrator.
                 </p>
             </div>
         </div>

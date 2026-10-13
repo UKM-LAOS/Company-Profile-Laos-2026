@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\UniqueConstraintViolationException;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Validation\ValidationException;
 use Inertia\Inertia;
@@ -79,7 +80,7 @@ class ShortlinkController extends Controller
             abort(404, 'Tautan pendek tidak ditemukan atau telah dinonaktifkan.');
         }
 
-        if ($shortlink->expires_at && $shortlink->expires_at->isPast()) {
+        if ($shortlink->expires_at instanceof Carbon && $shortlink->expires_at->isPast()) {
             abort(404, 'Tautan pendek telah kedaluwarsa.');
         }
 

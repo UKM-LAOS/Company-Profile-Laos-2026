@@ -27,7 +27,7 @@ class PengurusRequest extends FormRequest
             }
         }
 
-        if (isset($trimmed['periode']) && is_string($trimmed['periode'])) {
+        if (isset($trimmed['periode'])) {
             $p = $trimmed['periode'];
             if (preg_match('/^(\d{2})[-\/](\d{2})$/', $p, $m)) {
                 $trimmed['periode'] = "20{$m[1]}/20{$m[2]}";
